@@ -168,58 +168,22 @@ a:hover { text-decoration-thickness: 2px; }
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero { padding: 72px 0 80px; }
+.hero { padding: 16px 0 80px; }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-.eyebrow::before {
-  content: "";
-  width: 28px;
-  height: 2px;
-  background: var(--spark);
-}
 
-.hero-name {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: .01em;
-  color: var(--ink-soft);
-  margin-bottom: 12px;
-}
 
-/* Hierarchy: .hero-title is the largest text on the page, .hero-tagline sits
-   clearly below it, .hero-sub is body copy. */
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 4.25rem);
+  font-size: clamp(2.4rem, 7.5vw, 5.25rem);
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -.015em;
-  max-width: 20ch;
-  margin-bottom: 20px;
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  max-width: 15ch;
+  margin-bottom: 24px;
   text-wrap: balance;
   overflow-wrap: break-word;
 }
-.hero-sep { color: var(--ink-soft); font-weight: 400; }
 
-.hero-tagline {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
-  font-weight: 400;
-  line-height: 1.3;
-  margin-bottom: 20px;
-}
-/* each half stays whole, so the line only ever breaks after the dash */
-.hero-tagline span { display: inline-block; }
 
 /* Profile / connect card */
 .profile-card {
@@ -228,8 +192,8 @@ a:hover { text-decoration-thickness: 2px; }
   gap: 16px;
   width: fit-content;
   max-width: 100%;
-  margin-bottom: 40px;
-  padding: 14px 20px 14px 14px;
+  margin-bottom: 56px;
+  padding: 10px 16px 10px 10px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -473,16 +437,13 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 @media (min-width: 900px) {
-  .hero { padding: 120px 0 112px; }
+  .hero { padding: 16px 0 112px; }
+  .profile-card { margin-bottom: 72px; }
   .section { padding: 112px 0; }
   .split { grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
   .split > .section-head { margin-bottom: 0; }
   .contact-form { margin-top: 0; }
 
-  /* card sits beside the hero copy */
-  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: start; }
-  .hero-main { grid-column: 1; grid-row: 1; }
-  .profile-card { grid-column: 2; grid-row: 1; margin: 8px 0 0; }
 
   .cards { grid-template-columns: repeat(4, 1fr); }
 
