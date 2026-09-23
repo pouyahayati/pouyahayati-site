@@ -13,7 +13,6 @@
   --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 8px 24px rgba(0, 0, 0, .07);
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-marker: 'Permanent Marker', 'Comic Sans MS', cursive;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --radius: 14px;
@@ -176,9 +175,9 @@ a:hover { text-decoration-thickness: 2px; }
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  font-family: var(--font-marker);
-  font-size: .9rem;
-  letter-spacing: .04em;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--ink);
 }
@@ -189,8 +188,7 @@ a:hover { text-decoration-thickness: 2px; }
   background: var(--spark);
 }
 
-.hero-title {
-  font-family: var(--font-body);
+.hero-name {
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: .01em;
@@ -198,26 +196,73 @@ a:hover { text-decoration-thickness: 2px; }
   margin-bottom: 12px;
 }
 
-.hero-tagline {
+/* Hierarchy: .hero-title is the largest text on the page, .hero-tagline sits
+   clearly below it, .hero-sub is body copy. */
+.hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 7vw, 4.75rem);
+  font-size: clamp(2rem, 6vw, 4.25rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -.015em;
-  max-width: 17ch;
-  margin-bottom: 28px;
-  padding-bottom: .06em; /* room for italic descenders */
+  max-width: 20ch;
+  margin-bottom: 20px;
   text-wrap: balance;
   overflow-wrap: break-word;
 }
-.hero-tagline .marker {
-  font-family: var(--font-marker);
-  font-size: .9em;
-  letter-spacing: 0;
-  white-space: nowrap;
-  /* thin orange underline, drawn as a background so it hugs the word */
-  background: linear-gradient(var(--spark), var(--spark)) no-repeat 0 92% / 100% .08em;
+.hero-sep { color: var(--ink-soft); font-weight: 400; }
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
+/* each half stays whole, so the line only ever breaks after the dash */
+.hero-tagline span { display: inline-block; }
+
+/* Profile / connect card */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 40px;
+  padding: 14px 20px 14px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+.profile-photo {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 35%;
+  border: 1px solid var(--line);
+}
+.profile-name {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.profile-links { display: flex; gap: 8px; }
+.profile-links a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transition: color .2s, border-color .2s;
+}
+.profile-links a:hover { color: var(--spark); border-color: var(--spark); }
+.profile-links svg { width: 18px; height: 18px; }
 
 .hero-sub {
   font-size: clamp(1.05rem, 2.4vw, 1.25rem);
@@ -423,7 +468,6 @@ a:hover { text-decoration-thickness: 2px; }
 @media (min-width: 640px) {
   :root { --gutter: 32px; }
   .nav-list li:not(:last-child) { display: block; }
-  .eyebrow { font-size: 1.05rem; }
   .cards { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .contact-form { padding: 32px; }
 }
@@ -434,6 +478,11 @@ a:hover { text-decoration-thickness: 2px; }
   .split { grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
   .split > .section-head { margin-bottom: 0; }
   .contact-form { margin-top: 0; }
+
+  /* card sits beside the hero copy */
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: start; }
+  .hero-main { grid-column: 1; grid-row: 1; }
+  .profile-card { grid-column: 2; grid-row: 1; margin: 8px 0 0; }
 
   .cards { grid-template-columns: repeat(4, 1fr); }
 
