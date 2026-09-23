@@ -7,7 +7,7 @@
   --surface: #FFFFFF;
   --ink: #111111;
   --ink-soft: #555555;
-  --spark: #FF5A1F;      /* orange accent: small elements only */
+  --spark: #FF6B35;      /* orange accent: small elements only */
   --spark-ink: #0A0A0A;
   --line: #E0E0E0;
   /* solid black header, as on lush.com */
@@ -104,7 +104,8 @@ a:hover { text-decoration-thickness: 2px; }
 .logo {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.7rem;
+  line-height: 1;
   letter-spacing: .02em;
   color: var(--nav-ink);
   text-decoration: none;
@@ -159,7 +160,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero { padding: 24px 0 80px; }
+.hero { padding: 40px 0 80px; }
 
 
 
@@ -193,7 +194,7 @@ a:hover { text-decoration-thickness: 2px; }
   gap: 16px;
   width: fit-content;
   max-width: 100%;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
   padding: 10px 16px 10px 10px;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -204,10 +205,17 @@ a:hover { text-decoration-thickness: 2px; }
   flex: none;
   width: 64px;
   height: 64px;
+  overflow: hidden;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 35%;
   border: 1px solid var(--line);
+}
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.7);
+  transform-origin: 50% 44%; /* face centre in the source photo */
 }
 .profile-name {
   margin: 0 0 6px;
@@ -261,12 +269,13 @@ a:hover { text-decoration-thickness: 2px; }
 .stat-wide { grid-column: 1 / -1; }
 .hero-stats dd {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+  font-size: clamp(1.25rem, 3.4vw, 1.5rem);
+  font-weight: 600;
   line-height: 1.2;
+  letter-spacing: -.02em;
   color: var(--ink);
 }
-.stat-wide dd { font-size: clamp(1.1rem, 3vw, 1.2rem); }
+.stat-wide dd { font-size: clamp(1rem, 2.8vw, 1.1rem); font-weight: 500; letter-spacing: -.01em; }
 .hero-stats .sep { color: var(--spark); padding: 0 .15em; }
 .hero-stats dt {
   margin-top: 6px;
@@ -450,8 +459,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 @media (min-width: 900px) {
-  .hero { padding: 24px 0 112px; }
-  .profile-card { margin-bottom: 72px; }
+  .hero { padding: 64px 0 112px; }
+  .profile-card { margin-bottom: 64px; }
   .section { padding: 112px 0; }
   .split { grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
   .split > .section-head { margin-bottom: 0; }
