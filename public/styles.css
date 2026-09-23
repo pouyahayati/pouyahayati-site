@@ -159,8 +159,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .btn-primary { background: var(--ink); color: var(--bg); }
 .btn-primary:hover { background: var(--spark); color: var(--spark-ink); }
-.btn-primary:hover svg { transform: translateX(3px); }
-.btn-primary svg { transition: transform .2s; }
+.btn-primary:hover svg { transform: translateX(3px); color: var(--spark-ink); }
+.btn-primary svg { color: var(--spark); transition: transform .2s, color .2s; }
 .btn-ghost { color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
 .btn:disabled { opacity: .6; cursor: progress; }
@@ -178,10 +178,20 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -.01em;
-  max-width: 15ch;
-  margin-bottom: 24px;
-  text-wrap: balance;
+  margin-bottom: 28px;
   overflow-wrap: break-word;
+}
+/* line 2 always starts on its own line */
+.hero-title .line { display: block; }
+/* short orange rule under the headline */
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 24px;
+  background: var(--spark);
+  border-radius: 2px;
 }
 
 
@@ -223,9 +233,13 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--ink);
   border: 1px solid var(--line);
   border-radius: 50%;
-  transition: color .2s, border-color .2s;
+  transition: color .2s, border-color .2s, box-shadow .2s;
 }
-.profile-links a:hover { color: var(--spark); border-color: var(--spark); }
+.profile-links a:hover {
+  color: var(--spark);
+  border-color: var(--spark);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--spark) 18%, transparent);
+}
 .profile-links svg { width: 18px; height: 18px; }
 
 .hero-sub {
@@ -235,30 +249,42 @@ a:hover { text-decoration-thickness: 2px; }
   margin-bottom: 32px;
 }
 
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 56px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
+/* Stats / proof panel: below the buttons on small screens, beside the copy on wide ones */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+  margin: 48px 0 0;
   padding-top: 24px;
   border-top: 1px solid var(--line);
-  max-width: 720px;
 }
-.hero-stats dt {
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-bottom: 4px;
+.stat {
+  display: flex;
+  flex-direction: column-reverse; /* value above label visually; label stays first in the markup */
+  padding-left: 14px;
+  border-left: 2px solid var(--spark);
 }
+.stat-wide { grid-column: 1 / -1; }
 .hero-stats dd {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 3.5vw, 1.6rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+  line-height: 1.2;
+  color: var(--ink);
 }
+.stat-wide dd { font-size: clamp(1.1rem, 3vw, 1.2rem); }
+.hero-stats .sep { color: var(--spark); padding: 0 .15em; }
+.hero-stats dt {
+  margin-top: 6px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 
 /* ==========================================================================
    Sections
@@ -459,4 +485,27 @@ a:hover { text-decoration-thickness: 2px; }
     height: 2px;
   }
   .step h3 { padding-top: 0; }
+}
+
+@media (min-width: 1024px) {
+  /* copy on the left, proof panel on the right */
+  .hero-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 48px;
+    align-items: center;
+  }
+  /* sized so "Digital Growth Strategist." stays on one line from 1024px up */
+  .hero-title { font-size: min(3.75rem, 5vw); }
+  .hero-title .line { white-space: nowrap; }
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0;
+    padding: 28px 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .stat-wide dd { font-size: .95rem; white-space: nowrap; }
 }
