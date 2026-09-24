@@ -152,8 +152,6 @@ a:hover { text-decoration-thickness: 2px; }
 .btn-primary:hover { background: var(--spark); color: var(--spark-ink); }
 .btn-primary:hover svg { transform: translateX(3px); color: var(--spark-ink); }
 .btn-primary svg { color: var(--spark); transition: transform .2s, color .2s; }
-.btn-ghost { color: var(--ink); background: var(--surface); border-color: var(--ink); }
-.btn-ghost:hover { color: var(--ink); border-color: var(--spark); }
 .btn:disabled { opacity: .6; cursor: progress; }
 
 /* ==========================================================================
