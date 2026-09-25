@@ -443,10 +443,6 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--ink-soft);
 }
 /* the note only describes the drawn charts, so hide it when script.js can't draw them */
-/* secondary metric (e.g. sales next to clicks): same chart, compact */
-.chart-sm { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
-.chart-sm .chart-value { font-size: 1.3rem; }
-.chart-sm .chart-plot { height: 52px; }
 .chart-note { display: none; margin: 16px 0 0; font-size: .82rem; color: var(--ink-soft); }
 .js .chart-note { display: block; }
 
