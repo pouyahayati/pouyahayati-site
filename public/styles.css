@@ -361,38 +361,33 @@ a:hover { text-decoration-thickness: 2px; }
   border-radius: var(--radius);
   transition: border-color .25s, transform .25s, box-shadow .25s;
 }
-.case-shot {
-  display: block;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--bg-alt);
+/* Logo tiles: every project gets the same neutral frame, logo centred at a fixed size */
+.logo-tile {
+  display: grid;
+  place-items: center;
+  height: 136px;
+  padding: 24px;
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
-.case-shot img {
+.logo-tile img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform .5s ease;
+  max-width: min(72%, 240px);
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform .4s ease;
 }
+/* square marks read smaller than wide wordmarks at the same height, so give them more room */
+.logo-tile img.is-square { max-height: 88px; }
+/* no usable logo file (site blocks automated visits): set the name as a wordmark */
+.logo-word { font-size: 1.6rem; font-weight: 700; letter-spacing: -.03em; color: var(--ink); }
 .case-body {
   display: flex;
   flex: 1;
   flex-direction: column;
   padding: 24px;
-}
-.case-flag {
-  align-self: flex-start;
-  margin-bottom: 14px;
-  padding: 4px 12px;
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--nav-ink);
-  background: var(--ink);
-  border-radius: 999px;
 }
 .case-meta {
   margin-bottom: 6px;
@@ -406,16 +401,9 @@ a:hover { text-decoration-thickness: 2px; }
 .case-meta .nowrap { white-space: nowrap; }
 .case h4 { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
 
-/* Featured: Didarhome + Saee lead the grid with a bolder frame and bigger type */
-.case-featured { border-color: var(--ink); box-shadow: var(--shadow); }
-.case-featured .case-body { padding: 28px; }
-.case-featured h4 { font-size: 1.55rem; }
-.case-featured .chart-value { font-size: 2.1rem; }
-.case-featured .chart-plot { height: 108px; }
-
 @media (hover: hover) {
   .case:hover { border-color: var(--ink); transform: translateY(-2px); box-shadow: var(--shadow); }
-  .case:hover .case-shot img { transform: scale(1.03); }
+  .case:hover .logo-tile img { transform: scale(1.04); }
 }
 
 /* Growth chart: static head, plot drawn by script.js from data-* values */
@@ -478,6 +466,10 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--ink-soft);
 }
 /* the note only describes the drawn charts, so hide it when script.js can't draw them */
+/* secondary metric (e.g. sales next to clicks): same chart, compact */
+.chart-sm { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.chart-sm .chart-value { font-size: 1.3rem; }
+.chart-sm .chart-plot { height: 52px; }
 .chart-note { display: none; margin: 16px 0 0; font-size: .82rem; color: var(--ink-soft); }
 .js .chart-note { display: block; }
 
@@ -502,56 +494,64 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .case-link svg { color: var(--spark); }
 
-/* In-progress work: a quiet one-line footnote under the portfolio */
-.wip-group {
+/* In-progress work: dashed, muted frame + badge so it reads as unfinished next to the case studies */
+.wips { display: grid; gap: 16px; }
+.wip {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 16px;
-  padding-top: 24px;
-  border-top: 1px dashed var(--line);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px dashed color-mix(in srgb, var(--ink) 22%, transparent);
+  border-radius: var(--radius);
 }
-.work-group.wip-group { margin-top: 48px; }
-.wip-title {
+.wip .logo-tile { height: 112px; background: transparent; border-bottom: 1px dashed var(--line); }
+.wip .logo-tile img { max-height: 44px; opacity: .8; }
+.wip-body { display: flex; flex-direction: column; gap: 10px; padding: 20px 24px 24px; }
+.wip-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.wip h4 { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
+.wip .case-link { margin-top: 0; }
+.badge, .market {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0;
+  padding: 4px 12px;
   font-size: .72rem;
   font-weight: 600;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--ink-soft);
-}
-.wips { display: flex; flex-wrap: wrap; gap: 8px; }
-.wips li {
-  padding: 3px 12px;
-  font-size: .88rem;
-  color: var(--ink-soft);
-  border: 1px dashed var(--line);
   border-radius: 999px;
 }
+.badge { color: var(--ink); background: color-mix(in srgb, var(--spark) 12%, transparent); }
+.market { color: var(--ink-soft); border: 1px solid var(--line); }
 .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--spark); }
 
 /* Web design projects */
-.sites { gap: 12px; }
 .sites a {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 20px;
-  font-weight: 500;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
   text-decoration: none;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   transition: border-color .18s;
 }
+.sites .logo-tile { height: 112px; padding: 16px 24px; }
+.sites .logo-tile img { max-height: 52px; }
+.sites .logo-tile img.is-square { max-height: 76px; }
+.site-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  font-weight: 500;
+}
 .sites svg { flex: none; color: var(--spark); }
 
 @media (hover: hover) {
   .sites a:hover { border-color: var(--ink); }
+  .sites a:hover .logo-tile img { transform: scale(1.04); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .badge-dot { animation: pulse 2s ease-in-out infinite; }
@@ -635,8 +635,11 @@ a:hover { text-decoration-thickness: 2px; }
   :root { --gutter: 32px; }
   .nav-list li:not(:last-child) { display: block; }
   .cards { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .cases, .sites { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .sites { gap: 12px 20px; }
+  .cases, .sites, .wips { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  /* wide enough to sit the logo beside the details */
+  .wip { flex-direction: row; }
+  .wip .logo-tile { flex: 0 0 42%; height: auto; min-height: 150px; border-bottom: 0; border-right: 1px dashed var(--line); }
+  .wip-body { justify-content: center; }
   .contact-form { padding: 32px; }
 }
 
@@ -650,17 +653,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 @media (min-width: 1024px) {
-  .sites { grid-template-columns: repeat(3, 1fr); }
-  /* 12-col track: the two featured cases share the top row, the other four sit below them */
-  .cases { grid-template-columns: repeat(12, 1fr); }
-  .case { grid-column: span 3; }
-  .case-featured { grid-column: span 6; }
-  .case:not(.case-featured) .case-body { padding: 20px; }
-  /* narrow cards: figure drops under its label instead of squeezing it */
-  .case:not(.case-featured) .chart-head { flex-direction: column-reverse; align-items: flex-start; gap: 6px; }
-  .case:not(.case-featured) .chart-value { font-size: 1.6rem; }
-  .case:not(.case-featured) .case-meta .nowrap { display: block; }
-  .case:not(.case-featured) .case-meta .sep { display: none; }
+  .cases, .sites { grid-template-columns: repeat(3, 1fr); }
   /* copy on the left, proof panel on the right */
   .hero-body {
     display: grid;
