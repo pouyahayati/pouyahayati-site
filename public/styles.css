@@ -483,7 +483,31 @@ a:hover { text-decoration-thickness: 2px; }
 .case-totals div { display: flex; flex-direction: column-reverse; }
 .case-totals dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
 .case-totals dt { font-size: .8rem; color: var(--ink-soft); }
-.case-result { margin: 18px 0 20px; color: var(--ink-soft); font-size: .95rem; }
+.case-result { margin: 18px 0 16px; color: var(--ink-soft); font-size: .95rem; }
+/* what I did: short scope line under the numbers */
+.case-work { margin: 0 0 20px; font-size: .92rem; line-height: 1.55; color: var(--ink); }
+.case-work-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.wip .case-work { margin: 0; }
+/* own venture, set apart from client work */
+.case-tags { display: flex; margin-bottom: 12px; }
+.founder-tag {
+  padding: 4px 12px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--nav-ink);
+  background: var(--ink);
+  border-radius: 999px;
+}
 .case-link {
   display: inline-flex;
   align-items: center;
