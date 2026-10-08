@@ -842,7 +842,7 @@ a:hover { text-decoration-thickness: 2px; }
   .stat-how, .stat-wide { display: none; }
   .hero-title { font-size: clamp(2rem, 9vw, 2.4rem); }
   .hero-sub { font-size: 1rem; line-height: 1.55; }
-  .hero { padding-top: 24px; padding-bottom: 36px; min-height: 0; align-items: flex-start; }
+  .hero { padding-top: 24px; padding-bottom: 36px; min-height: calc(100svh - var(--header-h)); align-items: flex-start; }
   .hero .profile-card { margin-bottom: 18px; padding: 10px 14px; gap: 12px; }
   .hero .profile-photo, .hero .profile-photo img { width: 56px; height: 56px; }
   .hero .profile-links a { width: 36px; height: 36px; }
