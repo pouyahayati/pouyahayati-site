@@ -28,7 +28,7 @@
     "Recruiter / hiring manager",
     "Other"
   ];
-  var PRIVACY = "No spam. I'll only email you about this download and new guides.";
+  var PRIVACY = 'No spam. I\'ll only email you about this download and related guides. See the <a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.';
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
