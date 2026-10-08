@@ -690,3 +690,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* headline: 3 lines that always fit beside the stats box */
 @media (min-width: 1024px) { .hero-title { font-size: min(3.6rem, calc((92vw - 440px) / 14)); } }
 @media (max-width: 1023px) { .hero-title .line { display: inline; } }
+/* availability line above the headline */
+.hero-open { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; padding: 7px 14px 7px 12px; font-size: .85rem; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+.hero-open-dot { width: 8px; height: 8px; border-radius: 50%; background: #2E8B57; box-shadow: 0 0 0 4px rgba(46, 139, 87, .15); }
+@media (min-width: 1024px) { .hero-title { font-size: min(4.6rem, calc((92vw - 440px) / 9)); } }
