@@ -503,7 +503,6 @@ img { max-width: 100%; }
 
 .toc .mono { color: var(--ink-soft); }
 .toc-list { position: relative; margin-top: 18px; border-left: 1px solid var(--line); }
-.toc-list::before { content: ""; position: absolute; left: -1px; top: 0; width: 1px; height: 100%; background: var(--spark); opacity: .45; transform-origin: top; transform: scaleY(var(--p, 0)); }
 .toc-list a { position: relative; display: flex; gap: 14px; align-items: baseline; padding: 8px 0 8px 18px; font-size: .95rem; line-height: 1.35; color: var(--ink-soft); text-decoration: none; transition: color .2s; }
 .toc-list a .n { flex: none; font: 600 .78rem/1 var(--font-mono); color: var(--ink-faint); transition: color .2s; }
 .toc-list a:hover { color: var(--ink); }
@@ -632,13 +631,13 @@ img { max-width: 100%; }
     <div class="toc-inner">
       <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="toc-panel">
         <span class="mono">On this page</span>
-        <span class="toc-current"><b class="toc-cn">00</b><span class="toc-ct">TL;DR</span></span>
+        <span class="toc-current"><b class="toc-cn">00</b><span class="toc-ct">Quick summary</span></span>
         <span class="toc-caret" aria-hidden="true">▾</span>
       </button>
       <nav class="toc-panel" id="toc-panel" aria-label="On this page">
         <span class="mono">On this page</span>
         <ol class="toc-list">
-          <li><a href="#summary"><span class="n">00</span>TL;DR</a></li>
+          <li><a href="#summary"><span class="n">00</span>Quick summary</a></li>
           <li><a href="#problem"><span class="n">01</span>The flat line</a></li>
           <li><a href="#method"><span class="n">02</span>What experts measure</a></li>
           <li><a href="#chain"><span class="n">03</span>The chain</a></li>
@@ -656,10 +655,10 @@ img { max-width: 100%; }
   <div class="article-body">
 
   <!-- TL;DR -->
-  <div class="wide tldr" id="summary" data-ch="00" data-title="TL;DR">
+  <div class="wide tldr" id="summary" data-ch="00" data-title="Quick summary">
     <div class="tldr-card">
       <div class="tldr-top">
-        <span class="mono">TL;DR · 30 seconds</span>
+        <span class="mono">Quick summary · 30-second read</span>
         <h2>Stop judging SEO by a deadline. Judge it by evidence.</h2>
         <ul class="tldr-grid">
           <li><span class="n">0</span><p><strong>Fixed timelines in SEO.</strong> Google says some changes land in hours, others take months.</p></li>
