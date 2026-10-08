@@ -26,8 +26,8 @@
   var first = new Date(today), count = 0;
   while (count < notice) { first.setDate(first.getDate() + 1); if (isWeekday(first)) count++; }
 
-  // grid starts on the Monday of this week
-  var start = new Date(today);
+  // grid starts on the Monday of the first bookable week (no wasted past row)
+  var start = new Date(first);
   start.setDate(start.getDate() - ((start.getDay() + 6) % 7));
 
   DAYS.forEach(function (d) {
