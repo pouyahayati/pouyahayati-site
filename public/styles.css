@@ -728,3 +728,33 @@ a:hover { text-decoration-thickness: 2px; }
 #about .prose .lead { margin-bottom: 12px; }
 /* same text width for every intro paragraph */
 .hero-sub, #about .prose, .blog-intro { max-width: 64ch; }
+
+/* ===== Brand pass: white sections, dark hero like the blog ===== */
+.section-alt { background: transparent; }
+/* in-progress cards: one compact line of services */
+.case-list.case-inline { display: flex; flex-wrap: wrap; gap: 4px 0; }
+.case-inline li { padding-left: 0; }
+.case-inline li::before { display: none; }
+.case-inline li + li::before { display: inline-block; position: static; content: "·"; width: auto; height: auto; background: none; color: var(--spark); font-weight: 800; margin: 0 8px; }
+.wip-body { gap: 8px; padding: 20px; }
+
+/* dark hero */
+.hero { background: #0A0A0A; color: #FAFAFA; border-bottom: 0; }
+.hero-title, .hero .profile-name { color: #FAFAFA; }
+.hero-sub { color: #A9A9A9; }
+.hero .profile-card { background: #161616; border-color: #2C2C2C; box-shadow: none; }
+.hero .profile-photo { border-color: #2C2C2C; }
+.hero .profile-links a { color: #FAFAFA; border-color: #2C2C2C; }
+.hero .profile-links .is-email:hover { background: #FAFAFA; border-color: #FAFAFA; color: #0A0A0A; }
+.hero-open { background: #161616; border-color: #2C2C2C; color: #FAFAFA; }
+.hero .btn-primary { background: var(--spark); color: var(--spark-ink); }
+.hero .btn-primary svg { color: var(--spark-ink); }
+.hero .btn-primary:hover { background: #FAFAFA; }
+.hero-stats { border-color: #2C2C2C; }
+.hero-stats dd { color: #FAFAFA; }
+.hero-stats dt { color: #A9A9A9; }
+.hero-stats { background: transparent; }
+@media (min-width: 1024px) {
+  .hero-stats { background: #161616; border: 1px solid #2C2C2C; box-shadow: none; align-self: center; }
+}
+#about.section { border-top: 0; }
