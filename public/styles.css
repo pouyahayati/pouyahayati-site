@@ -627,3 +627,8 @@ a:hover { text-decoration-thickness: 2px; }
   }
   .stat-wide dd { font-size: .95rem; }
 }
+
+/* "What I did" as a short bullet list */
+.case-list { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.case-list li { position: relative; padding-left: 16px; font-size: .92rem; line-height: 1.45; color: var(--ink); }
+.case-list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--spark); }
