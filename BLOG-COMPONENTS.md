@@ -18,8 +18,8 @@ Add to a new post:
      data-button="Download"></div>
 ```
 
-- Compact layout: 4 fields in a 2x2 grid with placeholders (first name, last name, work email, role), one Download button, "No spam. Privacy" line. Keep the surrounding card to a title and one sentence.
-- Fields: first name, last name, work email, role. Edit the role list or the endpoint once in `lead-gate.js`.
+- Compact layout: 3 fields with placeholders (full name and work email side by side, role below), one Download button, "No spam. Privacy" line. Keep the surrounding card to a title and one sentence.
+- Fields: full name, work email, role. Edit the role list or the endpoint once in `lead-gate.js`.
 - Every submission goes to contact@pouyahayati.com via FormSubmit (endpoint uses the private alias, not the email), tagged with the resource name and page URL.
 - A visitor fills the form once. On any other post they see "Welcome back" and a download button; the download is still emailed as "Download (returning): ...".
 - To send leads to a Google Sheet, CRM or Cloudflare D1 instead, change `ENDPOINT` in `lead-gate.js` only.

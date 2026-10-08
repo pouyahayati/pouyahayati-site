@@ -44,8 +44,7 @@
 
   function send(profile, resource, isReturning) {
     var data = {
-      first_name: profile.first_name,
-      last_name: profile.last_name,
+      name: profile.name || ((profile.first_name || "") + " " + (profile.last_name || "")).trim(),
       email: profile.email,
       role: profile.role,
       resource: resource,
@@ -89,8 +88,7 @@
     return (
       '<form class="lead-form" novalidate>' +
         '<div class="lf-grid">' +
-          '<label for="' + uid + '-fn"><span class="lf-sr">First name</span><input id="' + uid + '-fn" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required></label>' +
-          '<label for="' + uid + '-ln"><span class="lf-sr">Last name</span><input id="' + uid + '-ln" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required></label>' +
+          '<label for="' + uid + '-nm"><span class="lf-sr">Full name</span><input id="' + uid + '-nm" name="full_name" type="text" placeholder="Full name" autocomplete="name" required></label>' +
           '<label for="' + uid + '-em"><span class="lf-sr">Work email</span><input id="' + uid + '-em" name="email" type="email" placeholder="Work email" autocomplete="email" required></label>' +
           '<label for="' + uid + '-ro"><span class="lf-sr">Your role</span><select id="' + uid + '-ro" name="role" required><option value="" selected disabled>Your role</option>' + opts + '</select></label>' +
         '</div>' +
@@ -150,16 +148,16 @@
         if (form.elements._honey.value || Date.now() - shownAt < 3000) { fakeSuccess(); return; }
         if (tooMany()) { msg.textContent = "Too many attempts. Please try again in an hour."; return; }
         var ok = true, first = null;
-        ["first_name", "last_name", "email", "role"].forEach(function (k) {
+        ["full_name", "email", "role"].forEach(function (k) {
           var f = form.elements[k], v = f.value.trim();
           var bad = !v || (k === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
           f.setAttribute("aria-invalid", bad ? "true" : "false");
           if (bad) { ok = false; if (!first) first = f; }
         });
-        if (!ok) { msg.textContent = "Please fill in all four fields with a valid email."; first.focus(); return; }
+        if (!ok) { msg.textContent = "Please fill in all three fields with a valid email."; first.focus(); return; }
         var profile = {
-          first_name: form.elements.first_name.value.trim(),
-          last_name: form.elements.last_name.value.trim(),
+          name: form.elements.full_name.value.trim(),
+          first_name: form.elements.full_name.value.trim().split(/\s+/)[0],
           email: form.elements.email.value.trim(),
           role: form.elements.role.value
         };

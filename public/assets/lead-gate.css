@@ -20,3 +20,5 @@
 .lf-fine { margin: 0; font-size: .8rem; line-height: 1.4; }
 .lf-fine a { color: inherit; }
 .lf-ready { gap: 10px; }
+/* 3 fields: name + email side by side, role full width */
+@media (min-width: 560px) { .lf-grid label:last-child { grid-column: 1 / -1; } }
