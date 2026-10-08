@@ -658,3 +658,32 @@ a:hover { text-decoration-thickness: 2px; }
   .post-link { grid-template-columns: 1.3fr 1fr; }
   .post-body { padding: 36px 40px; justify-content: center; }
 }
+
+/* ==========================================================================
+   Layout aligned with the blog: 1320px centered container, one left edge,
+   header divider, tighter vertical rhythm
+   ========================================================================== */
+:root { --gutter: clamp(20px, 4vw, 64px); --container: calc(1320px + var(--gutter) * 2); }
+@media (min-width: 640px) { :root { --gutter: clamp(20px, 4vw, 64px); } }
+.site-header, .site-header.is-scrolled { border-bottom: 1px solid var(--nav-line); }
+
+.hero { padding: 40px 0 56px; }
+.profile-card { margin-bottom: 32px; }
+.section { padding: 56px 0; }
+.section-head { margin-bottom: 24px; }
+.blog-intro { margin: 10px 0 24px; }
+@media (min-width: 900px) {
+  .hero { padding: 56px 0 72px; }
+  .profile-card { margin-bottom: 40px; }
+  .section { padding: 80px 0; }
+  .split { grid-template-columns: 4fr 8fr; gap: 64px; }
+}
+@media (min-width: 1024px) {
+  .hero-body { grid-template-columns: minmax(0, 1fr) 360px; gap: 80px; }
+}
+@media (min-width: 1100px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1500px) {
+  .cases { grid-template-columns: repeat(4, 1fr); }
+}
