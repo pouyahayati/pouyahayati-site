@@ -49,6 +49,7 @@
   </script>
 
   <script>document.documentElement.classList.add('js');</script>
+  <script src="booking.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -62,7 +63,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#work">Portfolio</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Book a call</a></li>
         </ul>
       </nav>
     </div>
@@ -95,7 +96,7 @@
             <h1 id="hero-title" class="hero-title hero-title-one">SEO &amp; Growth Specialist</h1>
             <p class="hero-sub">I help small and mid-size businesses get more customers from Google, AI search and ads. I plan the work, do the work, and show you what it brought in.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Let’s talk
+              <a class="btn btn-primary" href="#contact">Book a free call
                 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </div>
@@ -321,30 +322,26 @@
         <div class="reveal">
           <div class="section-head">
             <span class="section-num">04</span>
-            <h2 id="contact-title">Let’s Talk</h2>
+            <h2 id="contact-title">Book a Free Call</h2>
           </div>
-          <p class="lead">Want more calls, leads or sales? Send me a message and I’ll tell you honestly if I can help.</p>
-          <p class="contact-alt">Prefer email? <a href="mailto:contact@pouyahayati.com">contact@pouyahayati.com</a><br>
-            Or find me on <a href="https://www.linkedin.com/in/pooya-hayati" target="_blank" rel="noopener">LinkedIn</a>.</p>
+          <p class="lead">30 minutes, free. Tell me about your business and I’ll come prepared.</p>
+          <ul class="offer-list">
+            <li>Pick a day and time that suits you</li>
+            <li>Share your website and what you need</li>
+            <li>I review your site before we talk</li>
+          </ul>
+          <p class="contact-alt">Prefer email? <a href="mailto:contact@pouyahayati.com">contact@pouyahayati.com</a></p>
         </div>
 
-        <form class="contact-form reveal" action="https://formspree.io/f/mdekzwdz" method="POST" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
+        <div class="booking reveal" data-cal-link="pouyahayati/30min" data-notice-days="2" data-weeks="3">
+          <div class="booking-head">
+            <h3>Free 30-min SEO call</h3>
+            <a class="booking-open" href="https://cal.com/pouyahayati/30min" target="_blank" rel="noopener" aria-label="Open booking page">→</a>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn btn-primary" type="submit">Send message</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+          <p class="booking-month" aria-live="polite"></p>
+          <div class="booking-days" role="list"></div>
+          <p class="booking-note">Times are shown in your time zone.</p>
+        </div>
       </div>
     </section>
   </main>
