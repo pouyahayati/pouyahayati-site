@@ -758,3 +758,28 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-stats { background: #161616; border: 1px solid #2C2C2C; box-shadow: none; align-self: center; }
 }
 #about.section { border-top: 0; }
+
+/* ===== Hero fills the first screen (no white strip under it) ===== */
+.hero { min-height: calc(100vh - var(--header-h)); min-height: calc(100svh - var(--header-h)); display: flex; align-items: center; }
+.hero > .container { width: 100%; }
+
+/* ===== About + How I work in one section ===== */
+.about-cards { margin-top: 32px; }
+
+/* ===== Results: minimal cards ===== */
+.cases .case-body { padding: 20px; }
+.cases .case-meta { margin-bottom: 4px; }
+.cases .chart { margin-top: 16px; }
+.cases .chart-head { flex-direction: column-reverse; align-items: flex-start; justify-content: flex-start; gap: 4px; }
+.cases .chart-value { font-size: 1.9rem; }
+.cases .chart-metric { font-size: .7rem; }
+.cases .chart-plot { height: 48px; margin-top: 12px; }
+.cases .chart-start, .cases .chart-axis, .cases .case-totals { display: none; }
+.cases .case-work { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.cases .case-work-label { display: none; }
+.cases .case-list li { font-size: .9rem; }
+.cases .case-link { margin-top: 16px; }
+.js .chart-note { display: none; }
+
+/* ===== Softer text selection ===== */
+::selection { background: rgba(255, 107, 53, .22); color: inherit; }
