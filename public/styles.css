@@ -718,3 +718,13 @@ a:hover { text-decoration-thickness: 2px; }
 @media (min-width: 1024px) {
   .hero-stats { margin: 0; }
 }
+
+/* ===== One layout for every section: title on top, content below, same left edge ===== */
+@media (min-width: 900px) {
+  #about .split { grid-template-columns: 1fr; gap: 0; }
+  #about .split > .section-head { margin-bottom: 24px; }
+}
+#about .prose { max-width: 72ch; }
+#about .prose .lead { margin-bottom: 12px; }
+/* same text width for every intro paragraph */
+.hero-sub, #about .prose, .blog-intro { max-width: 64ch; }
