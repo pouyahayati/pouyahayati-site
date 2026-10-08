@@ -783,3 +783,18 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* ===== Softer text selection ===== */
 ::selection { background: rgba(255, 107, 53, .22); color: inherit; }
+
+/* results: only one divider (the chart baseline) */
+.cases .case-work { border-top: 0; padding-top: 0; }
+
+/* hero boxes: white cards on the dark hero */
+.hero .profile-card { background: #FFFFFF; border-color: #FFFFFF; }
+.hero .profile-name { color: var(--ink); }
+.hero .profile-photo { border-color: var(--line); }
+.hero .profile-links a { color: var(--ink); border-color: var(--line); }
+.hero .profile-links .is-email:hover { background: #1A1A1A; border-color: #1A1A1A; color: #FFFFFF; }
+@media (min-width: 1024px) {
+  .hero-stats { background: #FFFFFF; border-color: #FFFFFF; }
+  .hero-stats dd { color: var(--ink); }
+  .hero-stats dt { color: var(--ink-soft); }
+}
