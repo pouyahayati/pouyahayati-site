@@ -611,7 +611,7 @@ a:hover { text-decoration-thickness: 2px; }
     gap: 48px;
     align-items: center;
   }
-  /* sized so "Digital Growth Strategist." stays on one line from 1024px up */
+  /* hero lines stay on one line from 1024px up */
   .hero-title { font-size: min(3.6rem, 4.8vw); }
   .hero-title .line { white-space: nowrap; }
   .hero-stats {
@@ -624,5 +624,5 @@ a:hover { text-decoration-thickness: 2px; }
     background: var(--surface);
     box-shadow: var(--shadow);
   }
-  .stat-wide dd { font-size: .95rem; white-space: nowrap; }
+  .stat-wide dd { font-size: .95rem; }
 }
