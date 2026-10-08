@@ -637,6 +637,38 @@ img { max-width: 100%; }
 @media (min-width: 760px) { .download { padding: 32px; } }
 .download h3 { margin: 0 0 6px; font-size: clamp(1.4rem, 3vw, 1.75rem); }
 .download > p { margin: 0; font-size: .98rem; line-height: 1.5; }
+
+/* ===== Less scrolling, no decorative dark band ===== */
+.section { padding-block: 72px 0; }
+.section h2 { margin-bottom: 14px; }
+.kicker { margin-bottom: 10px; }
+.kicker .big-n { font-size: clamp(2.2rem, 5vw, 3rem); }
+.bridge { margin-top: 32px; }
+.fig { margin-block: 28px; padding: 22px; }
+.pull { margin: 24px 0; }
+.tldr { margin-top: 40px; }
+@media (min-width: 1100px) { .toc-inner { margin-top: 40px; } }
+.lessons { margin-top: 28px; }
+.author { margin-top: 48px; }
+.site-footer { margin-top: 56px; }
+/* 05: same light background as the rest of the page */
+.article-body .band { margin-top: 0; padding-block: 0; background: transparent; color: inherit; box-shadow: none; clip-path: none; }
+.band h2, .band h3, .band h4, .band .lead, .band .bridge { color: var(--ink); }
+.band p { color: var(--ink-body); }
+.band .kicker .big-n { -webkit-text-stroke-color: var(--ink); }
+.band .note { margin-top: 20px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink-body); background: var(--surface); }
+.band .note strong { color: var(--ink); }
+.band .section { padding-top: 72px; }
+.flips { margin-top: 20px; gap: 10px; }
+.flip, .flip-inner { min-height: 160px; }
+.face { padding: 16px 18px; gap: 6px; border-radius: 14px; }
+.front { background: var(--surface); border: 1px solid var(--line); }
+.front .mono { color: var(--ink-soft); }
+.front .metric-name { color: var(--ink); font-size: 1rem; }
+.front .fake { font-size: 1.8rem; }
+.back { border: 1px solid var(--ink); }
+.back p { font-size: .88rem; }
+.back .instead { padding-top: 8px; font-size: .86rem; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -1550,7 +1582,7 @@ img { max-width: 100%; }
   var links = Array.prototype.slice.call(toc.querySelectorAll(".toc-list a"));
   var targets = links.map(function (a) { return document.getElementById(a.hash.slice(1)); });
   var cn = toc.querySelector(".toc-cn"), ct = toc.querySelector(".toc-ct");
-  var band = document.getElementById("liars");
+  var band = null; // section 05 is no longer a dark band
   var desktop = window.matchMedia("(min-width: 1100px)");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
   var current = -1, ticking = false;
