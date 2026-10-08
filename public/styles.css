@@ -816,3 +816,10 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-stats dd { color: #FAFAFA; }
   .hero-stats dt { color: #B5B5B5; }
 }
+
+/* Contact offer */
+.offer-intro { margin: 4px 0 10px; color: var(--ink-soft); }
+.offer-list { display: grid; gap: 8px; margin: 0 0 18px; }
+.offer-list li { position: relative; padding-left: 18px; line-height: 1.5; }
+.offer-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--spark); }
+.field .optional { font-weight: 400; color: var(--ink-soft); }

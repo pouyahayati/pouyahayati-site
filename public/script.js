@@ -107,10 +107,10 @@
 
   function validate() {
     var firstInvalid = null;
-    ['name', 'email', 'message'].forEach(function (id) {
+    ['name', 'email', 'website'].forEach(function (id) {
       var field = form.elements[id];
       var value = field.value.trim();
-      var ok = id === 'email' ? emailRe.test(value) : value.length > 0;
+      var ok = id === 'email' ? emailRe.test(value) : id === 'website' ? /\.[a-z]{2,}/i.test(value) : value.length > 0;
       field.setAttribute('aria-invalid', ok ? 'false' : 'true');
       if (!ok && !firstInvalid) firstInvalid = field;
     });
@@ -122,7 +122,7 @@
 
     var invalid = validate();
     if (invalid) {
-      setStatus('Please fill in your name, a valid email, and a message.', 'error');
+      setStatus('Please add your name, a valid email and your website.', 'error');
       invalid.focus();
       return;
     }
@@ -139,7 +139,7 @@
         if (res.ok) {
           form.reset();
           form.querySelectorAll('[aria-invalid]').forEach(function (el) { el.removeAttribute('aria-invalid'); });
-          setStatus('Thanks — your message is on its way. I’ll get back to you soon.', 'success');
+          setStatus('Thanks! I’ll review your site and email you your plan.', 'success');
           return;
         }
         // Formspree returns { errors: [{ message }] } on validation failures
