@@ -29,7 +29,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap">
-  <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,31 +39,29 @@
   "dateModified": "2026-10-07",
   "mainEntityOfPage": "https://pouyahayati.com/blog/seo-kpis-for-business-owners/",
   "image": "https://pouyahayati.com/og-image.png",
-  "author": { "@type": "Person", "name": "Pooya Hayati", "url": "https://pouyahayati.com/", "jobTitle": "SEO & Digital Growth Strategist", "sameAs": ["https://www.linkedin.com/in/pooya-hayati"] },
+  "author": { "@type": "Person", "name": "Pooya Hayati", "url": "https://pouyahayati.com/", "image": "https://pouyahayati.com/images/profile.jpg" },
   "publisher": { "@type": "Person", "name": "Pooya Hayati", "url": "https://pouyahayati.com/" }
 }
   </script>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pouyahayati.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pouyahayati.com/blog/" },
-    { "@type": "ListItem", "position": 3, "name": "SEO KPIs for Business Owners", "item": "https://pouyahayati.com/blog/seo-kpis-for-business-owners/" }
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pouyahayati.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://pouyahayati.com/blog/"},{"@type":"ListItem","position":3,"name":"SEO KPIs for Business Owners","item":"https://pouyahayati.com/blog/seo-kpis-for-business-owners/"}]}
   </script>
-  <script>document.documentElement.classList.add('js');</script>
-  <script src="/script.js" defer></script>
   <style>
 /* Layout: pouyahayati.com identity, turned up. Black full-bleed hero and "traps" band, off-white reading
    column (720px) with wide figures (960px). Heavy Inter for attitude, JetBrains Mono for data labels,
    orange spark as a highlighter and the one line that matters in every chart. */
 :root {
+  --bg: #FAFAFA;
+  --bg-alt: #F1F1F1;
+  --surface: #FFFFFF;
+  --ink: #0F0F0F;
   --ink-body: #383838;
+  --ink-soft: #666666;
   --ink-faint: #9A9A9A;
+  --spark: #FF6B35;
   --spark-wash: #FFEFE6;
+  --spark-ink: #0A0A0A;
+  --line: #E4E4E4;
   --good: #2E8B57;
   --bad: #D93A2B;
   --mid: #7A7A7A;
@@ -74,98 +71,99 @@
   --dark-ink: #FAFAFA;
   --dark-soft: #A9A9A9;
   --dark-line: #2C2C2C;
+
+  --font-logo: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
   --read: 720px;
   --wide: 980px;
+  --gutter: 20px;
+  --header-h: 64px;
   color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px); -webkit-text-size-adjust: 100%; }
-.post { font-size: 1.0625rem; line-height: 1.75; padding-bottom: 96px; }
-:where(.post) :is(h1, h2, h3, h4) { margin: 0; color: var(--ink); line-height: 1.12; letter-spacing: -.03em; text-wrap: balance; }
-:where(.post) p { margin: 0 0 1.2em; color: var(--ink-body); }
-:where(.post) p:last-child { margin-bottom: 0; }
-:where(.post) strong { font-weight: 700; color: var(--ink); }
-:where(.post) button { font: inherit; color: inherit; }
-:where(.post) a { text-decoration-thickness: 2px; }
-:where(.post) figure { margin: 0; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { margin: 0; color: var(--ink); line-height: 1.12; letter-spacing: -.03em; text-wrap: balance; }
+p { margin: 0 0 1.2em; color: var(--ink-body); }
+p:last-child { margin-bottom: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+strong { font-weight: 700; color: var(--ink); }
+button { font: inherit; color: inherit; }
+a { color: var(--ink); text-decoration-color: var(--spark); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--spark); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--spark); color: var(--spark-ink); }
 .num { font-variant-numeric: tabular-nums; }
 .mono { font-family: var(--font-mono); font-size: .74rem; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); }
 .hl { background: linear-gradient(transparent 58%, var(--spark) 58%, var(--spark) 92%, transparent 92%); padding-inline: 2px; }
 .col { width: 100%; max-width: calc(var(--read) + var(--gutter) * 2); margin-inline: auto; padding-inline: var(--gutter); }
 .wide { width: 100%; max-width: calc(var(--wide) + var(--gutter) * 2); margin-inline: auto; padding-inline: var(--gutter); }
 
-/* ===== Site chrome: breadcrumb + hero (homepage pattern) ===== */
-.crumbs { padding-top: 20px; }
-.crumbs ol { display: flex; flex-wrap: wrap; align-items: center; font-size: .85rem; color: var(--ink-soft); }
-.crumbs li + li::before { content: "/"; margin: 0 10px; color: var(--spark); font-weight: 600; }
-.crumbs a { color: var(--ink-soft); text-decoration: none; }
-.crumbs a:hover { color: var(--ink); }
-.crumbs [aria-current] { color: var(--ink); font-weight: 500; }
-
-.post-hero { padding-top: 28px; }
-.post-hero .profile-card { margin-bottom: 40px; }
-.profile-kicker { display: block; margin-bottom: 2px; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--spark); }
-.post-hero .profile-name { margin-bottom: 4px; }
-.profile-role { margin: 0 0 12px; font-size: .9rem; line-height: 1.4; color: var(--ink-soft); }
-.post-hero .hero-title { font-size: clamp(2.2rem, 6.4vw, 4rem); }
-.post-hero .hero-sub strong { color: var(--ink); font-weight: 600; }
-.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
-.btn-ghost:hover { border-color: var(--ink); }
-@media (min-width: 900px) { .post-hero { padding: 40px 0 88px; } .post-hero .profile-card { margin-bottom: 56px; } }
-@media (min-width: 1024px) { .post-hero .hero-title { font-size: min(3.5rem, 4.6vw); } .post-hero .hero-title .line { white-space: normal; } }
-@media (max-width: 420px) { .post-hero .profile-card { gap: 14px; padding: 12px 16px 12px 12px; } .post-hero .profile-photo { width: 72px; height: 72px; } .post-hero .profile-links a { width: 44px; height: 44px; } }
-
-/* ===== Post layout: sticky TOC (desktop) + content column ===== */
-/* .post-layout is a .container, so the columns inside drop their own gutters */
-.post-main .col { max-width: var(--read); padding-inline: 0; }
-.post-main .wide { max-width: var(--wide); padding-inline: 0; }
-/* below 1200px: sticky horizontal chip bar under the header */
-.toc { position: sticky; top: var(--header-h); z-index: 20; display: flex; align-items: center; gap: 8px; margin-inline: calc(var(--gutter) * -1); padding: 10px var(--gutter); background: var(--bg); border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
-.toc::-webkit-scrollbar { display: none; }
-.toc-title { display: none; }
-.toc-list { display: flex; gap: 8px; flex: none; }
-.toc-list a { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .82rem; font-weight: 600; line-height: 1.2; white-space: nowrap; color: var(--ink-soft); text-decoration: none; transition: color .15s, background-color .15s, border-color .15s; }
-.toc-list a:hover { color: var(--ink); border-color: var(--ink); }
-.toc-list b { font: 700 .7rem/1 var(--font-mono); color: var(--ink-faint); }
-.toc-list a.is-active, .toc-list a[aria-current] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.toc-list a.is-active b, .toc-list a[aria-current] b { color: var(--spark); }
-@media (max-width: 1199px) { html { scroll-padding-top: calc(var(--header-h) + 76px); } .post-main { padding-top: 24px; } .toc-cta { flex: none; white-space: nowrap; margin-top: 0 !important; } }
-@media (min-width: 1200px) {
-.toc-title { display: block; margin: 0 0 12px; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
-.toc-list { display: block; border-left: 1px solid var(--line); }
-.toc-list a { gap: 10px; margin-left: -1px; padding: 6px 0 6px 14px; border: 0; border-left: 2px solid transparent; border-radius: 0; background: none; font-size: .88rem; font-weight: 400; line-height: 1.4; white-space: normal; }
-.toc-list b { flex: none; font: 700 .72rem/1.95 var(--font-mono); }
-.toc-list a.is-active, .toc-list a[aria-current] { background: none; color: var(--ink); font-weight: 600; border-left-color: var(--spark); }
-}
-.toc-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; padding: 7px 14px; border: 1.5px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 600; color: var(--ink); text-decoration: none; transition: border-color .15s, background-color .15s, color .15s; }
-.toc-cta:hover { border-color: var(--spark); background: var(--spark); color: var(--spark-ink); }
-@media (min-width: 1200px) {
-  .post-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; align-items: start; }
-  .toc { display: block; top: calc(var(--header-h) + 24px); z-index: 5; margin-inline: 0; max-height: calc(100vh - var(--header-h) - 48px); overflow: auto; padding: 4px 0 8px; border-bottom: 0; }
-  .post-main .col, .post-main .wide { max-width: none; margin-inline: 0; padding-inline: 0; }
-  /* running text stays at a readable measure; figures, tables and cards use the full column */
-  .post-main :is(.col, .psec) > :is(p, h2, ul, ol, .pull):not(.lessons) { max-width: 68ch; }
-}
+/* Header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--dark); color: var(--dark-ink); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: var(--header-h); max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
+@media (min-width: 640px) { .header-inner { padding-inline: 32px; } }
+.logo { font-family: var(--font-logo); font-weight: 600; font-size: 1.7rem; line-height: 1; letter-spacing: .02em; color: var(--dark-ink); text-decoration: none; }
+.logo-dot { color: var(--spark); }
+.nav-cta { flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; font-size: .88rem; font-weight: 600; color: var(--spark-ink); background: var(--spark); text-decoration: none; border-radius: 999px; transition: background-color .2s; }
+.nav-cta:hover { background: var(--dark-ink); }
 
 /* Buttons */
-.pbtn { display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 13px 24px; font: 700 .95rem/1 var(--font-body); border-radius: 999px; border: 2px solid transparent; text-decoration: none; cursor: pointer; transition: transform .15s, background-color .2s, color .2s, border-color .2s; }
-.pbtn:hover { transform: translateY(-2px); }
-.pbtn-spark { background: var(--spark); color: var(--spark-ink); }
-.pbtn-spark:hover { background: var(--dark-ink); }
-.pbtn-ghost-d { background: transparent; color: var(--dark-ink); border-color: var(--dark-line); }
-.pbtn-ghost-d:hover { border-color: var(--dark-ink); }
-.pbtn-ink { background: var(--ink); color: var(--bg); }
-.pbtn-ink:hover { background: var(--spark); color: var(--spark-ink); }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 13px 24px; font: 700 .95rem/1 var(--font-body); border-radius: 999px; border: 2px solid transparent; text-decoration: none; cursor: pointer; transition: transform .15s, background-color .2s, color .2s, border-color .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-spark { background: var(--spark); color: var(--spark-ink); }
+.btn-spark:hover { background: var(--dark-ink); }
+.btn-ghost-d { background: transparent; color: var(--dark-ink); border-color: var(--dark-line); }
+.btn-ghost-d:hover { border-color: var(--dark-ink); }
+.btn-ink { background: var(--ink); color: var(--bg); }
+.btn-ink:hover { background: var(--spark); color: var(--spark-ink); }
 
+/* ===== HERO (dark) ===== */
+.hero { background: var(--dark); color: var(--dark-ink); padding-block: 28px 88px; overflow: hidden; }
+.hero .mono { color: var(--spark); }
+.hero h1 { margin-top: 22px; color: var(--dark-ink); font-size: clamp(2.5rem, 6.2vw, 4.1rem); font-weight: 900; letter-spacing: -.05em; line-height: .98; }
+.hero h1 .soft { color: var(--dark-soft); }
+.hero h1 .hl { color: var(--dark-ink); background: linear-gradient(transparent 62%, var(--spark) 62%, var(--spark) 90%, transparent 90%); }
+.hero .dek { margin-top: 28px; max-width: 34em; font-size: clamp(1.1rem, 2.4vw, 1.3rem); line-height: 1.55; color: var(--dark-soft); }
+.hero .dek strong { color: var(--dark-ink); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; margin-top: 40px; font-size: .86rem; color: var(--dark-soft); }
+.hero-meta .who { display: flex; align-items: center; gap: 10px; color: var(--dark-ink); font-weight: 600; }
+.avatar { white-space: nowrap; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--dark-ink); color: var(--dark); font: 600 .9rem/1 var(--font-logo); }
+.avatar span { color: var(--spark); }
+.hero-chart { margin-top: 56px; border: 1px solid var(--dark-line); border-radius: 20px; padding: 20px 20px 14px; background: var(--dark-2); position: relative; }
+.hero-chart svg { display: block; width: 100%; height: auto; }
+.sticker { position: absolute; top: -14px; right: 18px; transform: rotate(3deg); background: var(--spark); color: var(--spark-ink); font: 800 .82rem/1 var(--font-body); padding: 9px 14px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
 .draw { stroke-dasharray: 900; stroke-dashoffset: 0; }
 @media (prefers-reduced-motion: no-preference) { .draw.go { animation: draw 1.6s ease-out both; } }
 @keyframes draw { from { stroke-dashoffset: 900; } to { stroke-dashoffset: 0; } }
 
+
+/* Author presence in hero */
+.hero-grid { display: grid; gap: 40px; }
+
+.hero-author { position: relative; display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; padding: 16px; border: 1px solid var(--dark-line); border-radius: 20px; background: var(--dark-2); }
+.hero-author img { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; display: block; }
+.hero-author .who-name { font-size: 1.1rem; font-weight: 800; color: var(--dark-ink); letter-spacing: -.02em; }
+.hero-author .who-role { font-size: .85rem; line-height: 1.45; color: var(--dark-soft); }
+.hero-author .mono { color: var(--spark); display: block; margin-bottom: 4px; }
+@media (min-width: 980px) {
+  .hero-author { grid-template-columns: 1fr; padding: 14px 14px 22px; gap: 18px; }
+  .hero-author img { width: 100%; height: auto; aspect-ratio: 1 / 1.08; border-radius: 14px; object-position: 50% 30%; }
+  .hero-author .txt { padding-inline: 8px; }
+}
+.hero-author .badge { position: absolute; top: -14px; left: 18px; transform: rotate(-3deg); background: var(--spark); color: var(--spark-ink); font: 800 .78rem/1 var(--font-body); padding: 8px 12px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.hero-author .links { display: flex; gap: 8px; margin-top: 12px; }
+.hero-author .links a { font: 700 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; color: var(--dark-ink); text-decoration: none; padding: 8px 10px; border: 1px solid var(--dark-line); border-radius: 8px; }
+.hero-author .links a:hover { border-color: var(--spark); color: var(--spark); }
+.avatar.photo, .author .big.photo { padding: 0; overflow: hidden; background: var(--dark-2); }
+.avatar.photo img, .author .big.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 /* ===== TL;DR ===== */
-.tldr { margin-top: 0; position: relative; z-index: 2; }
+.tldr { margin-top: -40px; position: relative; z-index: 2; }
 .tldr-card { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 12px 40px rgba(0,0,0,.08); overflow: hidden; }
 .tldr-top { padding: 32px 26px; }
 @media (min-width: 640px) { .tldr-top { padding: 40px 44px; } }
@@ -184,12 +182,12 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px)
 .tldr-bot li::before { counter-increment: q; content: counter(q); position: absolute; left: 0; top: -1px; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--ink); color: var(--bg); font: 700 .78rem/1 var(--font-mono); }
 
 /* ===== Sections ===== */
-.psec { padding-block: 120px 0; }
+.section { padding-block: 120px 0; }
 .kicker { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
 .kicker .big-n { font-size: clamp(3rem, 8vw, 4.5rem); font-weight: 900; letter-spacing: -.06em; line-height: .8; color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
 .kicker .mono { color: var(--spark); }
-.psec h2 { font-size: clamp(1.9rem, 4.8vw, 2.9rem); font-weight: 800; margin-bottom: 24px; }
-.plead { font-size: clamp(1.12rem, 2.3vw, 1.28rem); line-height: 1.6; color: var(--ink); }
+.section h2 { font-size: clamp(1.9rem, 4.8vw, 2.9rem); font-weight: 800; margin-bottom: 24px; }
+.lead { font-size: clamp(1.12rem, 2.3vw, 1.28rem); line-height: 1.6; color: var(--ink); }
 .bridge { display: flex; gap: 12px; align-items: baseline; margin-top: 56px; font-size: 1.02rem; font-weight: 600; color: var(--ink); }
 .bridge::before { content: "↓"; display: inline-grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--spark); color: var(--spark-ink); font-weight: 800; font-size: .9rem; }
 
@@ -328,12 +326,12 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px)
 
 /* tables */
 .table-wrap { overflow-x: auto; }
-:where(.post) table { width: 100%; border-collapse: collapse; font-size: .9rem; line-height: 1.5; }
-:where(.post) :is(th, td) { padding: 12px 16px 12px 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
-:where(.post) thead th { font: 700 .68rem/1.4 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
-:where(.post) tbody tr:last-child :is(td, th) { border-bottom: 0; }
-:where(.post) tbody th { font-weight: 700; color: var(--ink); }
-:where(.post) td { color: var(--ink-body); }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; line-height: 1.5; }
+th, td { padding: 12px 16px 12px 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+thead th { font: 700 .68rem/1.4 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
+tbody th { font-weight: 700; color: var(--ink); }
+td { color: var(--ink-body); }
 .t-example { min-width: 440px; font-size: .86rem; }
 .status { font-size: .82rem; font-weight: 700; white-space: nowrap; }
 .status::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
@@ -348,12 +346,11 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px)
 .key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 
 /* ===== 05 traps (dark band) ===== */
-.band { margin-top: 120px; padding: 56px 40px; border-radius: 20px; background: var(--dark); color: var(--dark-ink); }
-@media (max-width: 639px) { .band { padding: 32px 20px; } }
-.band .psec { padding-top: 0; }
+.band { margin-top: 120px; padding-block: 104px; background: var(--dark); color: var(--dark-ink); }
+.band .section { padding-top: 0; }
 .band h2, .band h3, .band h4 { color: var(--dark-ink); }
 .band p { color: var(--dark-soft); }
-.band .plead { color: var(--dark-ink); }
+.band .lead { color: var(--dark-ink); }
 .band .kicker .big-n { -webkit-text-stroke-color: var(--dark-ink); }
 .band .bridge { color: var(--dark-ink); }
 .flips { display: grid; gap: 14px; margin-top: 44px; }
@@ -412,7 +409,7 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px)
 .links3 .d { display: inline-flex; align-items: center; gap: 6px; }
 .links3 i { width: 14px; height: 14px; border-radius: 50%; background: var(--dark-line); }
 .links3 i.ok { background: var(--good); } .links3 i.bad { background: var(--bad); } .links3 i.unk { background: transparent; border: 2px dashed var(--dark-soft); }
-.links3 .psep { width: 16px; height: 2px; background: var(--dark-line); }
+.links3 .sep { width: 16px; height: 2px; background: var(--dark-line); }
 .result h4 { color: var(--dark-ink); font-size: clamp(1.35rem, 3vw, 1.7rem); font-weight: 800; }
 .result p { margin: 0; color: var(--dark-soft); }
 .result .next { padding: 14px 16px; border-radius: 12px; background: var(--spark); color: var(--spark-ink); font-weight: 600; }
@@ -427,8 +424,8 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px)
 .download p { color: var(--spark-ink); }
 .download ul { display: grid; gap: 8px; }
 .download li { padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,.35); font-weight: 600; font-size: .92rem; line-height: 1.4; }
-.download .pbtn { margin-top: 24px; background: var(--ink); color: var(--bg); }
-.download .pbtn:hover { background: var(--surface); color: var(--ink); }
+.download .btn { margin-top: 24px; background: var(--ink); color: var(--bg); }
+.download .btn:hover { background: var(--surface); color: var(--ink); }
 .download .fine { margin: 12px 0 0; font-size: .82rem; }
 
 details.sources { margin-top: 48px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -450,107 +447,87 @@ details.sources[open] summary::after { content: "–"; }
 .author .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 22px; }
 .mail { font: 500 .85rem/1 var(--font-mono); color: var(--dark-soft); user-select: all; }
 
+.site-footer { margin-top: 80px; border-top: 1px solid var(--line); padding-block: 28px; font-size: .85rem; color: var(--ink-soft); }
+.site-footer .wide { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+.site-footer p { margin: 0; color: var(--ink-soft); }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
 
-:root { padding-top: env(safe-area-inset-top, 0px); }
-body { margin: 0; }
+/* Breadcrumb (inside the dark hero) */
+.crumbs { margin-bottom: 48px; }
+.crumbs ol { display: flex; flex-wrap: wrap; align-items: center; font-size: .85rem; line-height: 1.4; color: var(--dark-soft); }
+.crumbs li + li::before { content: "/"; margin: 0 10px; color: var(--spark); font-weight: 600; }
+.crumbs a { color: var(--dark-soft); text-decoration: none; }
+.crumbs a:hover { color: var(--dark-ink); }
+.crumbs [aria-current] { color: var(--dark-ink); font-weight: 500; }
+
+/* Hero: aligned with the header (same 1120px container as the homepage), byline first */
+.hero .wide, .wide.tldr { max-width: 1120px; }
+@media (min-width: 640px) { .hero .wide, .wide.tldr { padding-inline: 32px; } }
+.hero .hero-meta { margin: 0 0 26px; }
+.hero h1 { margin-top: 0; }
+.br-d { display: none; }
+.hero .dek { text-wrap: pretty; max-width: 36em; }
+@media (max-width: 480px) { .hero .hero-meta { gap: 6px 14px; font-size: .8rem; } .hero .hero-meta .avatar { width: 30px; height: 30px; } }
+@media (min-width: 900px) { .br-d { display: inline; } }
+
 img { max-width: 100%; }
   </style>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="/" aria-label="Pooya Hayati — home">PH<span class="logo-dot" aria-hidden="true">.</span></a>
-    <nav aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#focus">Focus</a></li>
-        <li><a href="/#work">Portfolio</a></li>
-        <li><a href="/#contact" class="nav-cta">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="header-inner">
+    <a class="logo" href="/" aria-label="Pooya Hayati, home">PH<span class="logo-dot">.</span></a>
+    <a class="nav-cta" href="/#about">About me</a>
   </div>
 </header>
 
-<main id="main">
-
-  <nav class="crumbs container" aria-label="Breadcrumb"><ol>
-    <li><a href="/">Home</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><span aria-current="page">SEO KPIs for Business Owners</span></li>
-  </ol></nav>
+<main id="top">
 
   <!-- HERO -->
-  <section class="hero post-hero" id="top" aria-labelledby="hero-title">
-    <div class="container">
-      <aside class="profile-card" aria-label="About the author">
-        <span class="profile-photo"><img src="/images/profile.jpg" alt="Pooya Hayati" width="88" height="88"></span>
-        <div class="profile-body">
-          <span class="profile-kicker">Researched &amp; written by</span>
-          <p class="profile-name">Pooya Hayati</p>
-          <p class="profile-role">SEO &amp; Digital Growth Strategist</p>
-          <ul class="profile-links">
-            <li><a class="is-email" href="mailto:contact@pouyahayati.com" aria-label="Email">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </a></li>
-            <li><a class="is-linkedin" href="https://www.linkedin.com/in/pooya-hayati" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a></li>
-            <li><a class="is-whatsapp" href="https://wa.me/639681884599" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            </a></li>
-          </ul>
-        </div>
-      </aside>
-
-      <div class="hero-body">
-        <div class="hero-copy">
-          <h1 id="hero-title" class="hero-title"><span class="line">SEO KPIs:</span> <span class="line">7 metrics that show your SEO is working.</span></h1>
-          <p class="hero-sub">Your SEO missed its targets. That alone doesn't prove the work was bad. These 7 numbers, all free in Google's own tools, show whether you got <strong>bad work</strong>, a <strong>bad strategy</strong> or just <strong>a bad deadline</strong>.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#diagnose">Diagnose my SEO
-              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="#metrics">See the 7 metrics</a>
-          </div>
-        </div>
-
-        <dl class="hero-stats" aria-label="This guide at a glance">
-          <div class="stat"><dt>Metrics</dt><dd>7 + 1</dd></div>
-          <div class="stat"><dt>Case studies</dt><dd>12</dd></div>
-          <div class="stat stat-wide"><dt>Sources</dt><dd>Google <span class="sep" aria-hidden="true">·</span> Ahrefs <span class="sep" aria-hidden="true">·</span> Semrush +5</dd></div>
-          <div class="stat stat-wide"><dt>Published</dt><dd><time datetime="2026-10-07">Oct 7, 2026</time> <span class="sep" aria-hidden="true">·</span> 9 min read</dd></div>
-        </dl>
+  <section class="hero" data-ch="00" data-title="SEO KPIs for business owners">
+    <div class="wide">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><span aria-current="page">SEO KPIs for Business Owners</span></li>
+        </ol>
+      </nav>
+      <div class="hero-grid">
+      <div>
+      <div class="hero-meta">
+        <span class="who"><span class="avatar photo"><img src="/images/profile.jpg" alt="" width="36" height="36"></span>By Pooya Hayati</span>
+        <span class="num">9 min read</span>
+        <span><time datetime="2026-10-07">October 2026</time></span>
+      </div>
+      <h1>Your SEO missed the target.<br><span class="soft">Here are 7 metrics that show<br class="br-d"> if it's</span> <span class="hl">actually working.</span></h1>
+      <p class="dek">No fluff, no paid tools, no ranking screenshots. Just the numbers that tell you whether you got <strong>bad work</strong>, a <strong>bad strategy</strong>, or simply <strong>a bad deadline</strong>.</p>
+      <div class="hero-actions">
+        <a class="btn btn-spark" href="#diagnose">Diagnose my SEO →</a>
+        <a class="btn btn-ghost-d" href="#metrics">Show me the 7 metrics</a>
+      </div>
+      </div>
+      </div>
+      <div class="hero-chart">
+        <span class="sticker">Flat ≠ failed</span>
+        <svg viewBox="0 0 900 220" role="img" aria-label="Illustration: traffic stays flat below a target line until the deadline">
+          <line x1="20" y1="44" x2="880" y2="44" style="stroke:var(--dark-soft)" stroke-width="1.5" stroke-dasharray="6 7"/>
+          <text x="24" y="32" font-size="13" font-weight="700" style="fill:var(--dark-soft)" font-family="Inter, sans-serif">TARGET</text>
+          <line x1="700" y1="20" x2="700" y2="200" style="stroke:var(--spark)" stroke-width="2"/>
+          <text x="708" y="196" font-size="13" font-weight="800" style="fill:var(--spark)" font-family="Inter, sans-serif">DEADLINE</text>
+          <polyline class="draw" id="hero-line" points="20,170 120,162 220,166 320,158 420,163 520,156 620,160 700,155" fill="none" style="stroke:var(--dark-ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="700" cy="155" r="7" style="fill:var(--spark)"/>
+          <text x="560" y="138" font-size="14" font-weight="700" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Your traffic</text>
+          <text x="720" y="110" font-size="15" font-weight="800" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Now what?</text>
+        </svg>
       </div>
     </div>
   </section>
 
-  <div class="post">
-  <div class="post-layout container">
-    <aside class="toc" aria-label="On this page">
-      <p class="toc-title">On this page</p>
-      <ol class="toc-list">
-        <li><a href="#summary"><b>00</b>TL;DR</a></li>
-        <li><a href="#problem"><b>01</b>The flat line</a></li>
-        <li><a href="#method"><b>02</b>What experts measure</a></li>
-        <li><a href="#chain"><b>03</b>The chain</a></li>
-        <li><a href="#metrics"><b>04</b>The 7 metrics</a></li>
-        <li><a href="#liars"><b>05</b>Numbers that fool you</a></li>
-        <li><a href="#cases"><b>06</b>Real businesses</a></li>
-        <li><a href="#diagnose"><b>07</b>Your diagnosis</a></li>
-        <li><a href="#download"><b>08</b>Free scorecard</a></li>
-      </ol>
-      <a class="toc-cta" href="/downloads/SEO-KPI-Scorecard.xlsx" download>Download the scorecard ↓</a>
-    </aside>
-
-  <div class="post-main">
-
   <!-- TL;DR -->
-  <div class="wide tldr" id="summary">
+  <div class="wide tldr" id="summary" data-ch="00" data-title="TL;DR">
     <div class="tldr-card">
       <div class="tldr-top">
         <span class="mono">TL;DR · 30 seconds</span>
@@ -570,16 +547,16 @@ img { max-width: 100%; }
             <li>How many real leads came from organic search?</li>
           </ol>
         </div>
-        <a class="pbtn pbtn-ink" href="#download">Get the free scorecard ↓</a>
+        <a class="btn btn-ink" href="#download">Get the free scorecard ↓</a>
       </div>
     </div>
   </div>
 
   <!-- 01 -->
-  <section class="psec col" id="problem" aria-labelledby="problem-title">
+  <section class="section col" id="problem" data-ch="01" data-title="The flat line" aria-labelledby="problem-title">
     <div class="kicker"><span class="big-n">01</span><span class="mono">The problem</span></div>
     <h2 id="problem-title">Flat line. Three very different stories.</h2>
-    <p class="plead">You hired an SEO person or agency. There were targets. The date came, and the numbers didn't.</p>
+    <p class="lead">You hired an SEO person or agency. There were targets. The date came, and the numbers didn't.</p>
     <figure class="pull">
       <blockquote>We've paid every month and missed the targets. Is our SEO bad, or were the goals wrong?</blockquote>
       <figcaption>The question I hear most from business owners</figcaption>
@@ -634,10 +611,10 @@ img { max-width: 100%; }
   </div>
 
   <!-- 02 -->
-  <section class="psec col" id="method" aria-labelledby="method-title">
+  <section class="section col" id="method" data-ch="02" data-title="What the experts measure" aria-labelledby="method-title">
     <div class="kicker"><span class="big-n">02</span><span class="mono">The research</span></div>
     <h2 id="method-title">8 trusted sources. One unanimous answer.</h2>
-    <p class="plead">I didn't want another list of 30 metrics. I wanted to know which ones the people who define SEO actually agree on.</p>
+    <p class="lead">I didn't want another list of 30 metrics. I wanted to know which ones the people who define SEO actually agree on.</p>
     <p>So I put Google's documentation for site owners side by side with the KPI guides from Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer Interactive, Shopify and HubSpot. Then I counted. Click any bar to see who's in.</p>
   </section>
 
@@ -673,10 +650,10 @@ img { max-width: 100%; }
   </div>
 
   <!-- 03 -->
-  <section class="psec col" id="chain" aria-labelledby="chain-title">
+  <section class="section col" id="chain" data-ch="03" data-title="The chain" aria-labelledby="chain-title">
     <div class="kicker"><span class="big-n">03</span><span class="mono">The framework</span></div>
     <h2 id="chain-title">SEO is a chain. Break one link and everything after it dies.</h2>
-    <p class="plead">Work has to go live before Google can see it. Google has to show it before people click. People have to click before they buy.</p>
+    <p class="lead">Work has to go live before Google can see it. Google has to show it before people click. People have to click before they buy.</p>
     <p>Try it: click any link below to break it, and watch what happens downstream.</p>
   </section>
 
@@ -713,10 +690,10 @@ img { max-width: 100%; }
   </div>
 
   <!-- 04 -->
-  <section class="psec col" id="metrics" aria-labelledby="metrics-title">
+  <section class="section col" id="metrics" data-ch="04" data-title="The 7 metrics" aria-labelledby="metrics-title">
     <div class="kicker"><span class="big-n">04</span><span class="mono">The metrics</span></div>
     <h2 id="metrics-title">7 metrics (+1 if you're local). Grade your SEO report as you go.</h2>
-    <p class="plead">Step through each metric. For each one, tell me if your current SEO report actually shows it. You'll get a coverage score at the end.</p>
+    <p class="lead">Step through each metric. For each one, tell me if your current SEO report actually shows it. You'll get a coverage score at the end.</p>
   </section>
 
   <div class="wide">
@@ -905,11 +882,11 @@ img { max-width: 100%; }
   </div>
 
   <!-- 05 dark band -->
-  <div class="band" id="liars">
-    <section class="psec col" aria-labelledby="liars-title">
+  <div class="band" id="liars" data-ch="05" data-title="Numbers that fool you">
+    <section class="section col" aria-labelledby="liars-title">
       <div class="kicker"><span class="big-n">05</span><span class="mono">The traps</span></div>
       <h2 id="liars-title">Vanity metrics: they look great and prove almost nothing.</h2>
-      <p class="plead">These lines show up in a lot of SEO reports. Flip each card to see the catch.</p>
+      <p class="lead">These lines show up in a lot of SEO reports. Flip each card to see the catch.</p>
     </section>
     <div class="wide">
       <div class="flips">
@@ -928,10 +905,10 @@ img { max-width: 100%; }
   </div>
 
   <!-- 06 -->
-  <section class="psec col" id="cases" aria-labelledby="cases-title">
+  <section class="section col" id="cases" data-ch="06" data-title="Real businesses" aria-labelledby="cases-title">
     <div class="kicker"><span class="big-n">06</span><span class="mono">The proof</span></div>
     <h2 id="cases-title">12 real businesses. Here's what they measured.</h2>
-    <p class="plead">Telecom, marketplaces, local trades, B2B software. The question wasn't how big the wins were. It was which metrics they trusted.</p>
+    <p class="lead">Telecom, marketplaces, local trades, B2B software. The question wasn't how big the wins were. It was which metrics they trusted.</p>
     <p>Quick honesty check: not all evidence is equal. Only three of these were proper controlled tests. Filter the table to see who's who.</p>
   </section>
 
@@ -983,10 +960,10 @@ img { max-width: 100%; }
   </div>
 
   <!-- 07 -->
-  <section class="psec col" id="diagnose" aria-labelledby="diagnose-title">
+  <section class="section col" id="diagnose" data-ch="07" data-title="Your diagnosis" aria-labelledby="diagnose-title">
     <div class="kicker"><span class="big-n">07</span><span class="mono">Your turn</span></div>
     <h2 id="diagnose-title">Remember the flat line? Find out which story is yours.</h2>
-    <p class="plead">Three questions, one per link. You'll get a straight answer and your next move.</p>
+    <p class="lead">Three questions, one per link. You'll get a straight answer and your next move.</p>
   </section>
 
   <div class="wide">
@@ -1019,7 +996,7 @@ img { max-width: 100%; }
       </form>
       <div class="result" aria-live="polite">
         <span class="mono">Your diagnosis</span>
-        <div class="links3" aria-hidden="true"><span class="d"><i id="d1"></i>Work</span><span class="psep"></span><span class="d"><i id="d2"></i>Visibility</span><span class="psep"></span><span class="d"><i id="d3"></i>Business</span></div>
+        <div class="links3" aria-hidden="true"><span class="d"><i id="d1"></i>Work</span><span class="sep"></span><span class="d"><i id="d2"></i>Visibility</span><span class="sep"></span><span class="d"><i id="d3"></i>Business</span></div>
         <h4 id="d-title">Visibility is up, but it isn't turning into money.</h4>
         <p id="d-body">The SEO work is reaching people. Something between the click and the sale is breaking, or the target was set on the wrong thing.</p>
         <p class="next" id="d-next">Next: check your pages that sell, your offer and your lead tracking. Reset targets on Link 2 metrics while you fix it.</p>
@@ -1030,7 +1007,7 @@ img { max-width: 100%; }
   <div class="col"><p class="source">My own framework, not an industry standard. "Long enough" depends on your site, your market and how much changed.</p></div>
 
   <!-- 08 -->
-  <section class="psec col" id="download" aria-labelledby="download-title">
+  <section class="section col" id="download" data-ch="08" data-title="Free scorecard" aria-labelledby="download-title">
     <div class="kicker"><span class="big-n">08</span><span class="mono">Keep it</span></div>
     <h2 id="download-title">Run this check every month. In 10 minutes.</h2>
   </section>
@@ -1041,7 +1018,7 @@ img { max-width: 100%; }
         <span class="mono">Free · Excel or Google Sheets · no email</span>
         <h3>The SEO KPI Scorecard</h3>
         <p>Every metric from this guide in one file. Drop in this year's number and last year's, and the change calculates itself.</p>
-        <a class="pbtn" href="/downloads/SEO-KPI-Scorecard.xlsx" download id="dl-btn">Download the scorecard ↓</a>
+        <a class="btn" href="/downloads/SEO-KPI-Scorecard.xlsx" download id="dl-btn">Download the scorecard ↓</a>
         <p class="fine" id="dl-note">.xlsx · works in Google Sheets</p>
       </div>
       <ul>
@@ -1097,26 +1074,23 @@ img { max-width: 100%; }
     </details>
 
     <div class="author">
-      <div class="big" aria-hidden="true">PH<span>.</span></div>
+      <div class="big photo"><img src="/images/profile.jpg" alt="Pooya Hayati" width="80" height="80"></div>
       <div>
         <span class="mono">Written by</span>
         <h4>Pooya Hayati</h4>
         <p>Growth marketer. I go wherever buyer intent lives: Google, AI search, marketplaces and paid search, and I turn it into revenue for small and medium businesses. I'd rather show you a change log than a ranking screenshot.</p>
         <div class="row">
-          <a class="pbtn pbtn-spark" href="/#contact">Let's talk growth →</a>
+          <a class="btn btn-spark" href="/#contact">Let's talk growth →</a>
           <span class="mail">contact@pouyahayati.com</span>
         </div>
       </div>
     </div>
   </div>
-  </div><!-- /.post-main -->
-  </div><!-- /.post-layout -->
-  </div><!-- /.post -->
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year">2026</span> Pooya Hayati · <a href="mailto:contact@pouyahayati.com">contact@pouyahayati.com</a></p>
+  <div class="wide">
+    <p>© 2026 Pooya Hayati · pouyahayati.com</p>
     <p><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
@@ -1126,6 +1100,9 @@ img { max-width: 100%; }
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   function replay(el) { if (!el) return; el.classList.remove("go"); void el.getBoundingClientRect(); el.classList.add("go"); }
+
+  // Hero line draws once on load
+  replay($("#hero-line"));
 
   // 01 Story chart
   var stories = {
@@ -1270,26 +1247,7 @@ img { max-width: 100%; }
   form.addEventListener("submit", function (e) { e.preventDefault(); });
   render();
 
-
-  // TOC scrollspy: the section crossing the band 30-40% down the viewport is active
-  var toc = $(".toc"), tocLinks = $$(".toc-list a"), tocById = {};
-  tocLinks.forEach(function (a) { tocById[a.getAttribute("href").slice(1)] = a; });
-  function setActive(id) {
-    tocLinks.forEach(function (a) {
-      var on = a === tocById[id];
-      a.classList.toggle("is-active", on);
-      if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
-    });
-    // centre the active chip by scrolling the bar itself: scrollIntoView() here would cancel the page's own smooth scroll
-    var chip = tocById[id];
-    if (chip && toc.scrollWidth > toc.clientWidth) toc.scrollTo({ left: chip.offsetLeft - (toc.clientWidth - chip.offsetWidth) / 2, behavior: "smooth" });
-  }
-  if ("IntersectionObserver" in window) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.id); });
-    }, { rootMargin: "-30% 0px -60% 0px" });
-    Object.keys(tocById).forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
-  }
+  
 })();
 </script>
 
