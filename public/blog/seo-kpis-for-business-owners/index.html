@@ -611,6 +611,14 @@ img { max-width: 100%; }
 .more-rows { margin-top: 14px; padding: 10px 18px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .88rem; font-weight: 700; color: var(--ink); cursor: pointer; }
 .more-rows:hover { border-color: var(--ink); }
   .author .author-more { color: var(--dark-ink); font-weight: 600; font-size: .92rem; }
+
+/* Company and source logos */
+.co { display: inline-flex; align-items: center; gap: 10px; }
+.co-logo { flex: none; width: 22px; height: 22px; border-radius: 6px; object-fit: contain; background: var(--surface); }
+.co-mono { display: inline-grid; place-items: center; font: 700 .62rem/1 var(--font-mono); color: var(--bg); background: var(--ink); }
+.chip { display: inline-flex; align-items: center; gap: 7px; }
+.chip img { width: 14px; height: 14px; border-radius: 3px; filter: grayscale(1); opacity: .45; transition: filter .2s, opacity .2s; }
+.chip.on img { filter: none; opacity: 1; background: #fff; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -746,8 +754,8 @@ img { max-width: 100%; }
       <blockquote>We've paid every month and missed the targets. Is our SEO bad, or were the goals wrong?</blockquote>
       <figcaption>The question I hear most from business owners</figcaption>
     </figure>
-    <p>A deadline can't answer that. Google doesn't even promise one. Its own starter guide says some changes take effect in a few hours and others could take several months.</p>
-    <p>A flat line can hide very different situations. Click through the three stories below. Same traffic, completely different reality underneath.</p>
+    <p>A deadline can't answer that. Even Google says some changes take effect in hours and others take months.</p>
+    <p>The same flat line can hide three very different stories. Click through them below.</p>
   </section>
 
   <div class="wide">
@@ -799,8 +807,8 @@ img { max-width: 100%; }
   <section class="section col" id="method" data-ch="02" data-title="What the experts measure" aria-labelledby="method-title">
     <div class="kicker"><span class="big-n">02</span><span class="mono">The research</span></div>
     <h2 id="method-title">8 trusted sources. One clear answer.</h2>
-    <p class="lead">I didn't want another list of 30 metrics. I wanted to know which ones the people who define SEO actually agree on.</p>
-    <p>So I put Google's documentation for site owners side by side with the KPI guides from Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer Interactive, Shopify and HubSpot. Then I counted. Click any bar to see which sources recommend it.</p>
+    <p class="lead">Instead of another list of 30 metrics, I checked which ones the experts actually agree on.</p>
+    <p>I compared Google's guidance for site owners with the KPI guides from Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer Interactive, Shopify and HubSpot. Click a bar to see who recommends it.</p>
   </section>
 
   <div class="wide">
@@ -820,7 +828,7 @@ img { max-width: 100%; }
         <span class="mono">Who recommends it</span>
         <h4 class="who-pick" id="bar-pick">Leads and sales from organic search</h4>
         <div class="chips" id="chips">
-          <span class="chip" data-k="G">Google</span><span class="chip" data-k="AH">Ahrefs</span><span class="chip" data-k="SR">Semrush</span><span class="chip" data-k="SEL">SE Land</span><span class="chip" data-k="SEJ">SE Journal</span><span class="chip" data-k="SER">Seer</span><span class="chip" data-k="SH">Shopify</span><span class="chip" data-k="HS">HubSpot</span>
+          <span class="chip" data-k="G"><img src="https://www.google.com/s2/favicons?domain=google.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">Google</span><span class="chip" data-k="AH"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">Ahrefs</span><span class="chip" data-k="SR"><img src="https://www.google.com/s2/favicons?domain=semrush.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">Semrush</span><span class="chip" data-k="SEL"><img src="https://www.google.com/s2/favicons?domain=searchengineland.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">SE Land</span><span class="chip" data-k="SEJ"><img src="https://www.google.com/s2/favicons?domain=searchenginejournal.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">SE Journal</span><span class="chip" data-k="SER"><img src="https://www.google.com/s2/favicons?domain=seerinteractive.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">Seer</span><span class="chip" data-k="SH"><img src="https://www.google.com/s2/favicons?domain=shopify.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">Shopify</span><span class="chip" data-k="HS"><img src="https://www.google.com/s2/favicons?domain=hubspot.com&amp;sz=32" alt="" width="14" height="14" loading="lazy">HubSpot</span>
         </div>
         <p id="bar-note">The only metric every single source recommends.</p>
       </div>
@@ -842,7 +850,7 @@ img { max-width: 100%; }
     <div class="kicker"><span class="big-n">03</span><span class="mono">The framework</span></div>
     <h2 id="chain-title">SEO is a chain. Break one link and everything after it stops.</h2>
     <p class="lead">Work has to go live before Google can see it. Google has to show it before people click. People have to click before they buy.</p>
-    <p>Try it: click any link below to break it, and watch what happens downstream.</p>
+    <p>Click a link to break it and see what happens next.</p>
   </section>
 
   <div class="wide">
@@ -881,7 +889,7 @@ img { max-width: 100%; }
   <section class="section col" id="metrics" data-ch="04" data-title="The 7 metrics" aria-labelledby="metrics-title">
     <div class="kicker"><span class="big-n">04</span><span class="mono">The metrics</span></div>
     <h2 id="metrics-title">7 metrics (+1 if you're local). Grade your SEO report as you go.</h2>
-    <p class="lead">Step through each metric. For each one, tell me if your current SEO report actually shows it. You'll get a coverage score at the end.</p>
+    <p class="lead">For each metric, mark whether your SEO report shows it. You'll get a score at the end.</p>
   </section>
 
   <div class="wide">
@@ -1148,8 +1156,8 @@ img { max-width: 100%; }
   <section class="section col" id="cases" data-ch="06" data-title="Real businesses" aria-labelledby="cases-title">
     <div class="kicker"><span class="big-n">06</span><span class="mono">The proof</span></div>
     <h2 id="cases-title">12 real businesses. Here's what they measured.</h2>
-    <p class="lead">Telecom, marketplaces, local trades, B2B software. The question wasn't how big the wins were. It was which metrics they trusted.</p>
-    <p>One honest note: not all evidence is equal. Only three of these were proper controlled tests. Filter the table to see who's who.</p>
+    <p class="lead">From telecom giants to local trades. The question isn't how big their wins were, but which metrics they trusted.</p>
+    <p>Not all evidence is equal: only three were proper controlled tests. Use the filter to compare.</p>
   </section>
 
   <div class="wide">
@@ -1170,18 +1178,18 @@ img { max-width: 100%; }
         <table class="case-table">
           <thead><tr><th scope="col">Company</th><th scope="col">Business</th><th scope="col">What they measured</th><th scope="col">Evidence</th></tr></thead>
           <tbody>
-            <tr data-ev="c"><th scope="row">Vodafone</th><td>Telecom</td><td>Leads per visit, sales</td><td><span class="ev ev-c">A/B test</span></td></tr>
-            <tr data-ev="c"><th scope="row">Pinterest</th><td>Visual discovery</td><td>Search visits per page group</td><td><span class="ev ev-c">Controlled</span></td></tr>
-            <tr data-ev="c"><th scope="row">Etsy</th><td>Marketplace</td><td>Search visits per page group</td><td><span class="ev ev-c">Controlled</span></td></tr>
-            <tr data-ev="p"><th scope="row">ZipRecruiter</th><td>Jobs</td><td>Non-branded traffic, conversions</td><td><span class="ev ev-p">Google</span></td></tr>
-            <tr data-ev="p"><th scope="row">Eventbrite</th><td>Events</td><td>Traffic to listing pages, YoY</td><td><span class="ev ev-p">Google</span></td></tr>
-            <tr data-ev="p"><th scope="row">Rakuten Recipe</th><td>Recipes</td><td>Search traffic, time on site</td><td><span class="ev ev-p">Google</span></td></tr>
-            <tr data-ev="p"><th scope="row">HubSpot</th><td>B2B software</td><td>Blog traffic vs share of leads</td><td><span class="ev ev-p">Company</span></td></tr>
-            <tr data-ev="a"><th scope="row">Steel framing supplier</th><td>Local B2B</td><td>Leads, Maps views</td><td><span class="ev ev-a">Agency</span></td></tr>
-            <tr data-ev="a"><th scope="row">Elite Tune</th><td>Local trade</td><td>ROI, organic traffic</td><td><span class="ev ev-a">Agency</span></td></tr>
-            <tr data-ev="a"><th scope="row">TurnPoint Services</th><td>Home services</td><td>Organic revenue</td><td><span class="ev ev-a">Self</span></td></tr>
-            <tr data-ev="a"><th scope="row">Sosemo clients</th><td>Agency portfolio</td><td>Non-brand traffic, YoY</td><td><span class="ev ev-a">Agency</span></td></tr>
-            <tr data-ev="a"><th scope="row">HouseFresh</th><td>Publisher</td><td>Visitors after a Google update</td><td><span class="ev ev-a">Owner</span></td></tr>
+            <tr data-ev="c"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=vodafone.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">Vodafone</span></th><td>Telecom</td><td>Leads per visit, sales</td><td><span class="ev ev-c">A/B test</span></td></tr>
+            <tr data-ev="c"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=pinterest.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">Pinterest</span></th><td>Visual discovery</td><td>Search visits per page group</td><td><span class="ev ev-c">Controlled</span></td></tr>
+            <tr data-ev="c"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=etsy.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">Etsy</span></th><td>Marketplace</td><td>Search visits per page group</td><td><span class="ev ev-c">Controlled</span></td></tr>
+            <tr data-ev="p"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=ziprecruiter.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">ZipRecruiter</span></th><td>Jobs</td><td>Non-branded traffic, conversions</td><td><span class="ev ev-p">Google</span></td></tr>
+            <tr data-ev="p"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=eventbrite.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">Eventbrite</span></th><td>Events</td><td>Traffic to listing pages, YoY</td><td><span class="ev ev-p">Google</span></td></tr>
+            <tr data-ev="p"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=rakuten.co.jp&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">Rakuten Recipe</span></th><td>Recipes</td><td>Search traffic, time on site</td><td><span class="ev ev-p">Google</span></td></tr>
+            <tr data-ev="p"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=hubspot.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">HubSpot</span></th><td>B2B software</td><td>Blog traffic vs share of leads</td><td><span class="ev ev-p">Company</span></td></tr>
+            <tr data-ev="a"><th scope="row"><span class="co"><span class="co-logo co-mono" aria-hidden="true">SF</span>Steel framing supplier</span></th><td>Local B2B</td><td>Leads, Maps views</td><td><span class="ev ev-a">Agency</span></td></tr>
+            <tr data-ev="a"><th scope="row"><span class="co"><span class="co-logo co-mono" aria-hidden="true">ET</span>Elite Tune</span></th><td>Local trade</td><td>ROI, organic traffic</td><td><span class="ev ev-a">Agency</span></td></tr>
+            <tr data-ev="a"><th scope="row"><span class="co"><span class="co-logo co-mono" aria-hidden="true">TP</span>TurnPoint Services</span></th><td>Home services</td><td>Organic revenue</td><td><span class="ev ev-a">Self</span></td></tr>
+            <tr data-ev="a"><th scope="row"><span class="co"><span class="co-logo co-mono" aria-hidden="true">SO</span>Sosemo clients</span></th><td>Agency portfolio</td><td>Non-brand traffic, YoY</td><td><span class="ev ev-a">Agency</span></td></tr>
+            <tr data-ev="a"><th scope="row"><span class="co"><img class="co-logo" src="https://www.google.com/s2/favicons?domain=housefresh.com&amp;sz=64" alt="" width="22" height="22" loading="lazy" decoding="async">HouseFresh</span></th><td>Publisher</td><td>Visitors after a Google update</td><td><span class="ev ev-a">Owner</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1593,5 +1601,17 @@ img { max-width: 100%; }
 })();
 </script>
 
+
+<script>
+document.querySelectorAll("img.co-logo").forEach(function (img) {
+  function fallback() {
+    var t = img.parentNode.textContent.trim().replace(/[^A-Za-z ]/g, "").split(" ").map(function (w) { return w[0]; }).join("").slice(0, 2).toUpperCase();
+    var m = document.createElement("span"); m.className = "co-logo co-mono"; m.setAttribute("aria-hidden", "true"); m.textContent = t;
+    img.replaceWith(m);
+  }
+  if (img.complete && img.naturalWidth === 0) fallback();
+  else img.addEventListener("error", fallback);
+});
+</script>
 </body>
 </html>
