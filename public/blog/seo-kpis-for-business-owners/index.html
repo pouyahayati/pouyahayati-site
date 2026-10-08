@@ -631,6 +631,12 @@ img { max-width: 100%; }
 .author p { margin: 0; font-size: .98rem; line-height: 1.55; }
 .author .row { margin-top: 18px; }
 .author .btn { min-height: 44px; padding: 10px 20px; }
+
+/* Download card: compact */
+.download { display: block; max-width: 720px; padding: 28px; border-radius: 20px; }
+@media (min-width: 760px) { .download { padding: 32px; } }
+.download h3 { margin: 0 0 6px; font-size: clamp(1.4rem, 3vw, 1.75rem); }
+.download > p { margin: 0; font-size: .98rem; line-height: 1.5; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -1273,18 +1279,9 @@ img { max-width: 100%; }
 
   <div class="wide">
     <div class="download">
-      <div>
-        <span class="mono">Free · Excel or Google Sheets</span>
-        <h3>The SEO KPI Scorecard</h3>
-        <p>Every metric from this guide in one file. Drop in this year's number and last year's, and the change calculates itself.</p>
-        <div data-lead-gate data-file="/downloads/SEO-KPI-Scorecard.xlsx" data-resource="SEO KPI Scorecard" data-button="Get the scorecard" data-note=".xlsx · works in Google Sheets"></div>
-      </div>
-      <ul>
-        <li>Where to find each metric + what to ask</li>
-        <li>Monthly tracker, automatic year-over-year</li>
-        <li>How to read results when targets are missed</li>
-        <li>Every source, linked</li>
-      </ul>
+      <h3>Free SEO KPI Scorecard</h3>
+      <p>All 8 metrics in one sheet. Add your numbers and it compares them with last year. Excel or Google Sheets.</p>
+      <div data-lead-gate data-file="/downloads/SEO-KPI-Scorecard.xlsx" data-resource="SEO KPI Scorecard" data-button="Download"></div>
     </div>
   </div>
 

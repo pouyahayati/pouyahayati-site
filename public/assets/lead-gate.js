@@ -28,7 +28,7 @@
     "Recruiter / hiring manager",
     "Other"
   ];
-  var PRIVACY = 'No spam. I\'ll only email you about this download and related guides. See the <a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.';
+  var PRIVACY = 'No spam. <a href="/privacy/" target="_blank" rel="noopener">Privacy</a>';
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -88,16 +88,16 @@
     var opts = ROLES.map(function (r) { return "<option>" + esc(r) + "</option>"; }).join("");
     return (
       '<form class="lead-form" novalidate>' +
-        '<div class="lf-row">' +
-          '<label for="' + uid + '-fn"><span>First name</span><input id="' + uid + '-fn" name="first_name" type="text" autocomplete="given-name" required></label>' +
-          '<label for="' + uid + '-ln"><span>Last name</span><input id="' + uid + '-ln" name="last_name" type="text" autocomplete="family-name" required></label>' +
+        '<div class="lf-grid">' +
+          '<label for="' + uid + '-fn"><span class="lf-sr">First name</span><input id="' + uid + '-fn" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required></label>' +
+          '<label for="' + uid + '-ln"><span class="lf-sr">Last name</span><input id="' + uid + '-ln" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required></label>' +
+          '<label for="' + uid + '-em"><span class="lf-sr">Work email</span><input id="' + uid + '-em" name="email" type="email" placeholder="Work email" autocomplete="email" required></label>' +
+          '<label for="' + uid + '-ro"><span class="lf-sr">Your role</span><select id="' + uid + '-ro" name="role" required><option value="" selected disabled>Your role</option>' + opts + '</select></label>' +
         '</div>' +
-        '<label for="' + uid + '-em"><span>Work email</span><input id="' + uid + '-em" name="email" type="email" autocomplete="email" required></label>' +
-        '<label for="' + uid + '-ro"><span>Your role</span><select id="' + uid + '-ro" name="role" required><option value="" selected disabled>Choose one</option>' + opts + '</select></label>' +
         '<input type="text" name="_honey" class="lf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-        '<button class="btn lf-btn" type="submit">' + esc(cfg.button) + ' ↓</button>' +
+        '<div class="lf-foot"><button class="btn lf-btn" type="submit">' + esc(cfg.button) + ' \u2193</button>' +
+        '<p class="fine lf-fine">' + PRIVACY + '</p></div>' +
         '<p class="lf-msg" role="status" aria-live="polite"></p>' +
-        '<p class="fine lf-fine">' + (cfg.note ? esc(cfg.note) + " · " : "") + PRIVACY + '</p>' +
       '</form>'
     );
   }
@@ -107,8 +107,7 @@
       '<div class="lead-form lf-ready">' +
         '<p class="lf-msg" role="status" aria-live="polite">' + message + '</p>' +
         '<button class="btn lf-btn" type="button">' + esc(cfg.button) + ' ↓</button>' +
-        '<p class="fine lf-fine">' + (cfg.note ? esc(cfg.note) + " · " : "") +
-          'Not ' + esc(profile.first_name) + '? <a href="#" class="lf-reset">Use different details</a></p>' +
+        '<p class="fine lf-fine">Not ' + esc(profile.first_name) + '? <a href="#" class="lf-reset">Change details</a></p>' +
       '</div>'
     );
   }

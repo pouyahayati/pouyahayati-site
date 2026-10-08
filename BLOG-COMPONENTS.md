@@ -15,10 +15,10 @@ Add to a new post:
 <div data-lead-gate
      data-file="/downloads/YOUR-FILE.xlsx"
      data-resource="Name of the download"
-     data-button="Get the checklist"
-     data-note=".xlsx · works in Google Sheets"></div>
+     data-button="Download"></div>
 ```
 
+- Compact layout: 4 fields in a 2x2 grid with placeholders (first name, last name, work email, role), one Download button, "No spam. Privacy" line. Keep the surrounding card to a title and one sentence.
 - Fields: first name, last name, work email, role. Edit the role list or the endpoint once in `lead-gate.js`.
 - Every submission goes to contact@pouyahayati.com via FormSubmit (endpoint uses the private alias, not the email), tagged with the resource name and page URL.
 - A visitor fills the form once. On any other post they see "Welcome back" and a download button; the download is still emailed as "Download (returning): ...".
