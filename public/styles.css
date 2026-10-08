@@ -694,3 +694,27 @@ a:hover { text-decoration-thickness: 2px; }
 .hero-open { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; padding: 7px 14px 7px 12px; font-size: .85rem; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
 .hero-open-dot { width: 8px; height: 8px; border-radius: 50%; background: #2E8B57; box-shadow: 0 0 0 4px rgba(46, 139, 87, .15); }
 @media (min-width: 1024px) { .hero-title { font-size: min(4.6rem, calc((92vw - 440px) / 9)); } }
+
+/* ===== Hero v2: compact, one-line title, stats box beside the profile card ===== */
+.hero { padding: 32px 0 48px; }
+.profile-card { margin-bottom: 24px; }
+.hero-open { margin-bottom: 12px; }
+.hero-title { margin-bottom: 18px; }
+.hero-title::after { margin-top: 16px; }
+.hero-sub { margin-bottom: 24px; }
+.stat { flex-direction: column; }          /* label above value */
+.hero-stats dt { margin: 0 0 4px; }
+.hero-stats dd { font-size: 1.2rem; }
+.stat-wide dd { font-size: .95rem; }
+@media (min-width: 1024px) {
+  .hero { padding: 40px 0 56px; }
+  .hero .container { display: grid; grid-template-columns: minmax(0, 1fr) 340px; column-gap: 64px; align-items: start; }
+  .hero .profile-card { grid-column: 1; grid-row: 1; }
+  .hero-body { display: contents; }
+  .hero-copy { grid-column: 1; grid-row: 2; }
+  .hero-stats { grid-column: 2; grid-row: 1 / span 2; align-self: start; gap: 16px; padding: 20px 22px; }
+  .hero-title-one { white-space: nowrap; font-size: min(4rem, calc((92vw - 404px) / 12)); }
+}
+@media (min-width: 1024px) {
+  .hero-stats { margin: 0; }
+}
