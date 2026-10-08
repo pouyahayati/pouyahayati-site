@@ -197,7 +197,7 @@ a { color: var(--ink); text-decoration-color: var(--spark); text-decoration-thic
 .pull figcaption { margin-top: 14px; font-size: .85rem; color: var(--ink-soft); }
 
 /* Figure frame */
-.fig { margin-block: 48px; padding: 28px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; }
+.fig { margin-inline: 0; margin-block: 48px; padding: 28px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; }
 @media (min-width: 640px) { .fig { padding: 36px; } }
 .fig-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: baseline; margin-bottom: 22px; }
 .fig-head h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.02em; }
@@ -556,6 +556,23 @@ img { max-width: 100%; }
   .article-body { grid-column: 1; grid-row: 1; }
   .toc { grid-column: 2; grid-row: 1; }
 }
+
+/* Lead form (scorecard download) */
+.lead-form { display: grid; gap: 12px; margin-top: 22px; max-width: 520px; }
+.lf-row { display: grid; gap: 12px; }
+@media (min-width: 480px) { .lf-row { grid-template-columns: 1fr 1fr; } }
+.lead-form label { display: grid; gap: 6px; }
+.lead-form label > span { font: 600 .72rem/1 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--spark-ink); }
+.lead-form input, .lead-form select { width: 100%; min-height: 48px; padding: 12px 14px; font: 500 1rem/1.2 var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid transparent; border-radius: 12px; outline: none; appearance: none; -webkit-appearance: none; }
+.lead-form select { background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
+.lead-form input:focus, .lead-form select:focus { border-color: var(--ink); }
+.lead-form [aria-invalid="true"] { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(10,10,10,.18); }
+.lead-form .btn { margin-top: 8px; justify-self: start; }
+.lead-form .btn[disabled] { opacity: .6; cursor: progress; transform: none; }
+.lf-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.lf-msg { margin: 0; font-size: .9rem; font-weight: 600; min-height: 0; }
+.lf-msg:empty { display: none; }
+.lf-msg a { color: var(--spark-ink); }
   </style>
 </head>
 <body>
@@ -631,7 +648,7 @@ img { max-width: 100%; }
           <li><a href="#diagnose"><span class="n">07</span>Your diagnosis</a></li>
           <li><a href="#download"><span class="n">08</span>Free scorecard</a></li>
         </ol>
-        <a class="toc-dl" href="/downloads/SEO-KPI-Scorecard.xlsx" download>Download the scorecard ↓</a>
+        <a class="toc-dl" href="#download">Download the scorecard ↓</a>
       </nav>
       <span class="toc-bar-progress" aria-hidden="true"></span>
     </div>
@@ -695,7 +712,7 @@ img { max-width: 100%; }
 
   <div class="wide">
     <figure class="fig" aria-labelledby="story-title">
-      <div class="fig-head"><h3>What's hiding under your flat line?</h3><span class="mono">Interactive · tap a story</span></div>
+      <div class="fig-head"><h3>What's hiding under your flat line?</h3></div>
       <div class="pills" role="tablist" aria-label="Stories behind a flat chart">
         <button class="pill" role="tab" aria-selected="true" data-story="a">① Work never shipped</button>
         <button class="pill" role="tab" aria-selected="false" data-story="b">② Shipped, needs time</button>
@@ -748,7 +765,7 @@ img { max-width: 100%; }
 
   <div class="wide">
     <figure class="fig">
-      <div class="fig-head"><h3>How many of 8 sources recommend each metric</h3><span class="mono">Interactive · click a bar</span></div>
+      <div class="fig-head"><h3>How many of 8 sources recommend each metric</h3></div>
       <div class="bars" id="bars">
         <button class="bar-btn top" type="button" aria-pressed="true" data-src="G,AH,SR,SEL,SEJ,SER,SH,HS" data-note="The only metric every single source recommends."><span class="name">Leads and sales from organic search</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="count">8/8</span></button>
         <button class="bar-btn" type="button" aria-pressed="false" data-src="G,AH,SR,SEL,SH" data-note="Google even added a branded-queries filter to Search Console for this."><span class="name">Non-branded traffic</span><span class="track"><span class="fill" style="width:62.5%;display:block"></span></span><span class="count">5/8</span></button>
@@ -787,7 +804,7 @@ img { max-width: 100%; }
 
   <div class="wide">
     <figure class="fig">
-      <div class="fig-head"><h3>Break a link</h3><span class="mono">Interactive · click to break / fix</span></div>
+      <div class="fig-head"><h3>Break a link</h3></div>
       <div class="chain" id="chain-ui">
         <button class="link" type="button" data-i="0" aria-pressed="false">
           <span class="mono">Link 1</span><h4>Was the work done?</h4>
@@ -1042,7 +1059,7 @@ img { max-width: 100%; }
 
   <div class="wide">
     <figure class="fig">
-      <div class="fig-head"><h3>How strong is the evidence?</h3><span class="mono">Interactive · filter</span></div>
+      <div class="fig-head"><h3>How strong is the evidence?</h3></div>
       <div class="evbar" role="img" aria-label="3 controlled tests, 4 published by Google or the company, 5 agency or self-reported">
         <div class="s1" style="width:25%">3 controlled</div>
         <div class="s2" style="width:33.3%">4 published</div>
@@ -1143,11 +1160,31 @@ img { max-width: 100%; }
   <div class="wide">
     <div class="download">
       <div>
-        <span class="mono">Free · Excel or Google Sheets · no email</span>
+        <span class="mono">Free · Excel or Google Sheets</span>
         <h3>The SEO KPI Scorecard</h3>
         <p>Every metric from this guide in one file. Drop in this year's number and last year's, and the change calculates itself.</p>
-        <a class="btn" href="/downloads/SEO-KPI-Scorecard.xlsx" download id="dl-btn">Download the scorecard ↓</a>
-        <p class="fine" id="dl-note">.xlsx · works in Google Sheets</p>
+        <form class="lead-form" id="lead-form" novalidate>
+          <div class="lf-row">
+            <label><span>First name</span><input name="first_name" type="text" autocomplete="given-name" required></label>
+            <label><span>Last name</span><input name="last_name" type="text" autocomplete="family-name" required></label>
+          </div>
+          <label><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label><span>Your role</span>
+            <select name="role" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Business owner / founder</option>
+              <option>Marketing manager</option>
+              <option>In-house SEO</option>
+              <option>Agency or freelancer</option>
+              <option>Recruiter / hiring manager</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <input type="text" name="_honey" class="lf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit" id="dl-btn">Get the scorecard ↓</button>
+          <p class="lf-msg" id="lf-msg" role="status" aria-live="polite"></p>
+          <p class="fine" id="dl-note">.xlsx · works in Google Sheets · No spam. I'll only email you about this scorecard and new guides.</p>
+        </form>
       </div>
       <ul>
         <li>Where to find each metric + what to ask</li>
@@ -1449,6 +1486,66 @@ img { max-width: 100%; }
   });
 
   update();
+})();
+</script>
+
+<script>
+/* Scorecard download: collect name, email and role, then download */
+(function () {
+  var form = document.getElementById("lead-form");
+  if (!form) return;
+  var FILE = "/downloads/SEO-KPI-Scorecard.xlsx";
+  var ENDPOINT = "https://formsubmit.co/ajax/contact@pouyahayati.com";
+  var msg = document.getElementById("lf-msg");
+  var btn = document.getElementById("dl-btn");
+  function startDownload() {
+    var a = document.createElement("a");
+    a.href = FILE; a.download = "SEO-KPI-Scorecard.xlsx";
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  function done() {
+    msg.innerHTML = 'Done. Your download has started. Didn’t start? <a href="' + FILE + '" download>Download again</a>.';
+    btn.textContent = "Download again ↓";
+    btn.disabled = false;
+    btn.onclick = function (e) { e.preventDefault(); startDownload(); };
+  }
+  var unlocked = false;
+  try { unlocked = localStorage.getItem("ph_scorecard") === "1"; } catch (e) {}
+  if (unlocked) {
+    form.querySelectorAll("label, .lf-row").forEach(function (el) { el.hidden = true; });
+    done(); msg.innerHTML = "Welcome back. Your scorecard is ready.";
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (unlocked) { startDownload(); return; }
+    var ok = true, first = null;
+    ["first_name", "last_name", "email", "role"].forEach(function (n) {
+      var f = form.elements[n];
+      var bad = !f.value.trim() || (n === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
+      f.setAttribute("aria-invalid", bad ? "true" : "false");
+      if (bad) { ok = false; if (!first) first = f; }
+    });
+    if (!ok) { msg.textContent = "Please fill in all four fields with a valid email."; first.focus(); return; }
+    if (form.elements._honey.value) return;
+    btn.disabled = true; btn.textContent = "Sending…"; msg.textContent = "";
+    var data = {
+      first_name: form.elements.first_name.value.trim(),
+      last_name: form.elements.last_name.value.trim(),
+      email: form.elements.email.value.trim(),
+      role: form.elements.role.value,
+      page: location.href,
+      _subject: "New scorecard download: SEO KPIs post",
+      _template: "table",
+      _captcha: "false"
+    };
+    var finish = function () {
+      unlocked = true;
+      try { localStorage.setItem("ph_scorecard", "1"); } catch (e) {}
+      startDownload(); done();
+    };
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) })
+      .then(finish, finish);
+  });
 })();
 </script>
 </body>
