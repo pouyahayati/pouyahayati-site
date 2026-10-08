@@ -49,7 +49,7 @@
       months[MONTHS[d.getMonth()] + " " + d.getFullYear()] = true;
       el.href = "https://cal.com/" + link + "?date=" + iso(d) + "&month=" + iso(d).slice(0, 7);
       el.target = "_blank"; el.rel = "noopener";
-      el.setAttribute("aria-label", "Book a call on " + d.toDateString());
+      el.setAttribute("aria-label", "Book a consultation on " + d.toDateString());
     } else {
       el.setAttribute("aria-hidden", "true");
     }

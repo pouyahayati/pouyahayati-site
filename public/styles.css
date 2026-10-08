@@ -836,3 +836,16 @@ a:hover { text-decoration-thickness: 2px; }
 .booking-day.is-first:hover { background: var(--spark); color: var(--spark-ink); }
 .booking-note { margin: 12px 0 0; font-size: .8rem; color: var(--ink-soft); }
 @media (min-width: 900px) { .section-contact .split { grid-template-columns: minmax(0, 1fr) 460px; } }
+
+/* Mobile hero: fit the first screen, no cut-off boxes */
+@media (max-width: 767px) {
+  .stat-how { display: none; }
+  .hero { padding-top: 24px; padding-bottom: 36px; min-height: 0; align-items: flex-start; }
+  .hero .profile-card { margin-bottom: 18px; padding: 10px 14px; gap: 12px; }
+  .hero .profile-photo, .hero .profile-photo img { width: 56px; height: 56px; }
+  .hero .profile-links a { width: 36px; height: 36px; }
+  .hero .profile-links svg { width: 17px; height: 17px; }
+  .hero-stats { gap: 12px 20px; }
+  .hero-stats dd { font-size: 1.05rem; }
+  .stat-wide dd { font-size: .9rem; }
+}
