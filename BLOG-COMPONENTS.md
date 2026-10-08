@@ -20,7 +20,7 @@ Add to a new post:
 ```
 
 - Fields: first name, last name, work email, role. Edit the role list or the endpoint once in `lead-gate.js`.
-- Every submission goes to contact@pouyahayati.com (FormSubmit), tagged with the resource name and page URL.
+- Every submission goes to contact@pouyahayati.com via FormSubmit (endpoint uses the private alias, not the email), tagged with the resource name and page URL.
 - A visitor fills the form once. On any other post they see "Welcome back" and a download button; the download is still emailed as "Download (returning): ...".
 - To send leads to a Google Sheet, CRM or Cloudflare D1 instead, change `ENDPOINT` in `lead-gate.js` only.
 - The file itself is still reachable by direct URL; the form is a soft gate.

@@ -18,7 +18,7 @@
 (function () {
   "use strict";
 
-  var ENDPOINT = "https://formsubmit.co/ajax/contact@pouyahayati.com";
+  var ENDPOINT = "https://formsubmit.co/ajax/34b5094d6b7499fca0896f5241bab8aa";
   var STORE_KEY = "ph_lead_v1";
   var ROLES = [
     "Business owner / founder",
