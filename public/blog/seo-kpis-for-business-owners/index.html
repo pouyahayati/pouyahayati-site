@@ -556,23 +556,6 @@ img { max-width: 100%; }
   .toc { grid-column: 2; grid-row: 1; }
 }
 
-/* Lead form (scorecard download) */
-.lead-form { display: grid; gap: 12px; margin-top: 22px; max-width: 520px; }
-.lf-row { display: grid; gap: 12px; }
-@media (min-width: 480px) { .lf-row { grid-template-columns: 1fr 1fr; } }
-.lead-form label { display: grid; gap: 6px; }
-.lead-form label > span { font: 600 .72rem/1 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--spark-ink); }
-.lead-form input, .lead-form select { width: 100%; min-height: 48px; padding: 12px 14px; font: 500 1rem/1.2 var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid transparent; border-radius: 12px; outline: none; appearance: none; -webkit-appearance: none; }
-.lead-form select { background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
-.lead-form input:focus, .lead-form select:focus { border-color: var(--ink); }
-.lead-form [aria-invalid="true"] { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(10,10,10,.18); }
-.lead-form .btn { margin-top: 8px; justify-self: start; }
-.lead-form .btn[disabled] { opacity: .6; cursor: progress; transform: none; }
-.lf-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
-.lf-msg { margin: 0; font-size: .9rem; font-weight: 600; min-height: 0; }
-.lf-msg:empty { display: none; }
-.lf-msg a { color: var(--spark-ink); }
-
 /* ===== Fit interactive blocks in one screen ===== */
 /* 02 consensus: compact rows, detail panel beside the bars */
 .consensus { display: grid; gap: 18px; }
@@ -628,6 +611,8 @@ img { max-width: 100%; }
 .more-rows { margin-top: 14px; padding: 10px 18px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .88rem; font-weight: 700; color: var(--ink); cursor: pointer; }
 .more-rows:hover { border-color: var(--ink); }
   </style>
+  <link rel="stylesheet" href="/assets/lead-gate.css">
+  <script src="/assets/lead-gate.js" defer></script>
 </head>
 <body>
 
@@ -1273,28 +1258,7 @@ img { max-width: 100%; }
         <span class="mono">Free · Excel or Google Sheets</span>
         <h3>The SEO KPI Scorecard</h3>
         <p>Every metric from this guide in one file. Drop in this year's number and last year's, and the change calculates itself.</p>
-        <form class="lead-form" id="lead-form" novalidate>
-          <div class="lf-row">
-            <label><span>First name</span><input name="first_name" type="text" autocomplete="given-name" required></label>
-            <label><span>Last name</span><input name="last_name" type="text" autocomplete="family-name" required></label>
-          </div>
-          <label><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
-          <label><span>Your role</span>
-            <select name="role" required>
-              <option value="" selected disabled>Choose one</option>
-              <option>Business owner / founder</option>
-              <option>Marketing manager</option>
-              <option>In-house SEO</option>
-              <option>Agency or freelancer</option>
-              <option>Recruiter / hiring manager</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <input type="text" name="_honey" class="lf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn" type="submit" id="dl-btn">Get the scorecard ↓</button>
-          <p class="lf-msg" id="lf-msg" role="status" aria-live="polite"></p>
-          <p class="fine" id="dl-note">.xlsx · works in Google Sheets · No spam. I'll only email you about this scorecard and new guides.</p>
-        </form>
+        <div data-lead-gate data-file="/downloads/SEO-KPI-Scorecard.xlsx" data-resource="SEO KPI Scorecard" data-button="Get the scorecard" data-note=".xlsx · works in Google Sheets"></div>
       </div>
       <ul>
         <li>Where to find each metric + what to ask</li>
@@ -1628,64 +1592,5 @@ img { max-width: 100%; }
 })();
 </script>
 
-<script>
-/* Scorecard download: collect name, email and role, then download */
-(function () {
-  var form = document.getElementById("lead-form");
-  if (!form) return;
-  var FILE = "/downloads/SEO-KPI-Scorecard.xlsx";
-  var ENDPOINT = "https://formsubmit.co/ajax/contact@pouyahayati.com";
-  var msg = document.getElementById("lf-msg");
-  var btn = document.getElementById("dl-btn");
-  function startDownload() {
-    var a = document.createElement("a");
-    a.href = FILE; a.download = "SEO-KPI-Scorecard.xlsx";
-    document.body.appendChild(a); a.click(); a.remove();
-  }
-  function done() {
-    msg.innerHTML = 'Done. Your download has started. Didn’t start? <a href="' + FILE + '" download>Download again</a>.';
-    btn.textContent = "Download again ↓";
-    btn.disabled = false;
-    btn.onclick = function (e) { e.preventDefault(); startDownload(); };
-  }
-  var unlocked = false;
-  try { unlocked = localStorage.getItem("ph_scorecard") === "1"; } catch (e) {}
-  if (unlocked) {
-    form.querySelectorAll("label, .lf-row").forEach(function (el) { el.hidden = true; });
-    done(); msg.innerHTML = "Welcome back. Your scorecard is ready.";
-  }
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (unlocked) { startDownload(); return; }
-    var ok = true, first = null;
-    ["first_name", "last_name", "email", "role"].forEach(function (n) {
-      var f = form.elements[n];
-      var bad = !f.value.trim() || (n === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
-      f.setAttribute("aria-invalid", bad ? "true" : "false");
-      if (bad) { ok = false; if (!first) first = f; }
-    });
-    if (!ok) { msg.textContent = "Please fill in all four fields with a valid email."; first.focus(); return; }
-    if (form.elements._honey.value) return;
-    btn.disabled = true; btn.textContent = "Sending…"; msg.textContent = "";
-    var data = {
-      first_name: form.elements.first_name.value.trim(),
-      last_name: form.elements.last_name.value.trim(),
-      email: form.elements.email.value.trim(),
-      role: form.elements.role.value,
-      page: location.href,
-      _subject: "New scorecard download: SEO KPIs post",
-      _template: "table",
-      _captcha: "false"
-    };
-    var finish = function () {
-      unlocked = true;
-      try { localStorage.setItem("ph_scorecard", "1"); } catch (e) {}
-      startDownload(); done();
-    };
-    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) })
-      .then(finish, finish);
-  });
-})();
-</script>
 </body>
 </html>

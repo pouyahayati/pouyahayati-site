@@ -1,0 +1,21 @@
+/* Shared download form for blog posts. Colors come from the page tokens (--ink, --surface, --spark-ink...). */
+.lead-form { display: grid; gap: 12px; margin-top: 22px; max-width: 520px; }
+.lf-row { display: grid; gap: 12px; }
+@media (min-width: 480px) { .lf-row { grid-template-columns: 1fr 1fr; } }
+.lead-form label { display: grid; gap: 6px; }
+.lead-form label > span { font: 600 .72rem/1 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--spark-ink); }
+.lead-form input, .lead-form select { width: 100%; min-height: 48px; padding: 12px 14px; font: 500 1rem/1.2 var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid transparent; border-radius: 12px; outline: none; appearance: none; -webkit-appearance: none; }
+.lead-form select { background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
+.lead-form input:focus, .lead-form select:focus { border-color: var(--ink); }
+.lead-form [aria-invalid="true"] { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(10,10,10,.18); }
+.lead-form .lf-btn { margin-top: 8px; justify-self: start; }
+.lead-form .lf-btn[disabled] { opacity: .6; cursor: progress; transform: none; }
+.lf-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.lf-msg { margin: 0; font-size: .9rem; font-weight: 600; min-height: 0; }
+.lf-msg:empty { display: none; }
+.lf-msg a { color: var(--spark-ink); }
+
+.lf-ready { gap: 10px; }
+.lf-ready .lf-btn { margin-top: 4px; }
+.lf-fine { margin: 4px 0 0; font-size: .82rem; line-height: 1.5; }
+.lf-fine a { color: inherit; }
