@@ -620,6 +620,17 @@ img { max-width: 100%; }
 .chip img { width: 14px; height: 14px; border-radius: 3px; filter: grayscale(1); opacity: .45; transition: filter .2s, opacity .2s; }
 .chip.on img { filter: none; opacity: 1; background: #fff; }
 .insight-line { margin-top: 8px; padding-left: 16px; border-left: 3px solid var(--spark); }
+
+/* Author box: compact, bigger photo, short text */
+.author { max-width: 720px; margin-top: 64px; padding: 24px; gap: 18px; align-items: center; }
+.author .big { width: 96px; height: 96px; border-radius: 18px; }
+.author .big img { object-position: 50% 30%; }
+@media (min-width: 640px) { .author { grid-template-columns: 120px 1fr; gap: 28px; padding: 28px; } .author .big { width: 120px; height: 120px; } }
+.author h4 { margin: 4px 0 2px; }
+.author .author-role { margin: 0 0 8px; color: var(--dark-ink); font-weight: 600; font-size: .95rem; }
+.author p { margin: 0; font-size: .98rem; line-height: 1.55; }
+.author .row { margin-top: 18px; }
+.author .btn { min-height: 44px; padding: 10px 20px; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -1321,14 +1332,15 @@ img { max-width: 100%; }
     </details>
 
     <div class="author">
-      <div class="big photo"><img src="/images/profile.jpg" alt="Pooya Hayati" width="80" height="80"></div>
+      <div class="big photo"><img src="/images/profile.jpg" alt="Pooya Hayati" width="120" height="120" loading="lazy"></div>
       <div>
         <span class="mono">Written by</span>
         <h4>Pooya Hayati</h4>
-        <p>SEO &amp; Growth Specialist. I help small and mid-size businesses get more customers from Google, AI search and ads. I'd rather show you a change log than a ranking screenshot. Open to freelance projects and remote roles.</p>
+        <p class="author-role">SEO &amp; Growth Specialist</p>
+        <p>I help small businesses get more customers from Google, AI search and ads.</p>
         <div class="row">
-          <a class="btn btn-spark" href="/#contact">Let's talk →</a> <a class="author-more" href="/#work">See my results</a>
-          <span class="mail">contact@pouyahayati.com</span>
+          <a class="btn btn-spark" href="/#contact">Let's talk →</a>
+          <a class="author-more" href="/#work">See my results</a>
         </div>
       </div>
     </div>
