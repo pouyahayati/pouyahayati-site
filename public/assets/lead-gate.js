@@ -53,7 +53,8 @@
       visitor: isReturning ? "returning" : "new",
       _subject: (isReturning ? "Download (returning): " : "New lead: ") + resource,
       _template: "table",
-      _captcha: "false"
+      _captcha: "false",
+      _honey: ""
     };
     return fetch(ENDPOINT, {
       method: "POST",
@@ -61,6 +62,17 @@
       body: JSON.stringify(data),
       keepalive: true
     }).catch(function () {});
+  }
+
+  // Max 3 new submissions per browser per hour
+  function tooMany() {
+    try {
+      var now = Date.now(), k = "ph_lead_tries";
+      var t = JSON.parse(localStorage.getItem(k) || "[]").filter(function (x) { return now - x < 3600000; });
+      if (t.length >= 3) return true;
+      t.push(now); localStorage.setItem(k, JSON.stringify(t));
+    } catch (e) {}
+    return false;
   }
 
   function download(file) {
@@ -109,6 +121,7 @@
       note: el.getAttribute("data-note") || ""
     };
     var uid = "lg" + n;
+    var shownAt = 0;
     var logged = false;
 
     function showReady(profile, message) {
@@ -122,14 +135,21 @@
       });
     }
 
+    function fakeSuccess() {
+      el.innerHTML = '<div class="lead-form lf-ready"><p class="lf-msg" role="status">Thanks! Check your downloads.</p></div>';
+    }
+
     function showForm() {
       el.innerHTML = formHTML(cfg, uid);
+      shownAt = Date.now();
       var form = el.querySelector("form");
       var msg = el.querySelector(".lf-msg");
       var btn = el.querySelector(".lf-btn");
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (form.elements._honey.value) return;
+        // Bots: hidden field filled, or the form submitted faster than a human can type
+        if (form.elements._honey.value || Date.now() - shownAt < 3000) { fakeSuccess(); return; }
+        if (tooMany()) { msg.textContent = "Too many attempts. Please try again in an hour."; return; }
         var ok = true, first = null;
         ["first_name", "last_name", "email", "role"].forEach(function (k) {
           var f = form.elements[k], v = f.value.trim();
