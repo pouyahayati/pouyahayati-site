@@ -457,6 +457,7 @@ a:hover { text-decoration-thickness: 2px; }
 .case-totals dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
 .case-totals dt { font-size: .8rem; color: var(--ink-soft); }
 .case-result { margin: 18px 0 16px; color: var(--ink-soft); font-size: .95rem; }
+.case .case-work { margin-top: 20px; }
 /* what I did: short scope line under the numbers */
 .case-work { margin: 0 0 20px; font-size: .92rem; line-height: 1.55; color: var(--ink); }
 .case-work-label {
