@@ -471,6 +471,18 @@ details.sources[open] summary::after { content: "–"; }
 @media (max-width: 480px) { .hero .hero-meta { gap: 6px 14px; font-size: .8rem; } .hero .hero-meta .avatar { width: 30px; height: 30px; } }
 @media (min-width: 900px) { .br-d { display: inline; } }
 
+/* Hero fits the first screen: copy left, chart right on desktop; chart moves below TL;DR on mobile */
+.only-d { display: none; }
+.chart-m { margin-top: 40px; }
+.chart-m .hero-chart { margin-top: 0; }
+@media (min-width: 980px) {
+  .hero .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 56px; align-items: center; }
+  .hero h1 { font-size: clamp(2.6rem, 3.9vw, 3.5rem); }
+  .only-d { display: block; }
+  .hero .hero-chart.only-d { margin-top: 0; }
+  .only-m { display: none; }
+}
+
 img { max-width: 100%; }
   </style>
 </head>
@@ -502,26 +514,26 @@ img { max-width: 100%; }
         <span class="num">9 min read</span>
         <span><time datetime="2026-10-07">October 2026</time></span>
       </div>
-      <h1>Your SEO missed the target.<br><span class="soft">Here are 7 metrics that show<br class="br-d"> if it's</span> <span class="hl">actually working.</span></h1>
+      <h1>Your SEO missed the target.<br><span class="soft">Here are 7 metrics that show if it's</span> <span class="hl">actually working.</span></h1>
       <p class="dek">No fluff, no paid tools, no ranking screenshots. Just the numbers that tell you whether you got <strong>bad work</strong>, a <strong>bad strategy</strong>, or simply <strong>a bad deadline</strong>.</p>
       <div class="hero-actions">
         <a class="btn btn-spark" href="#diagnose">Diagnose my SEO →</a>
         <a class="btn btn-ghost-d" href="#metrics">Show me the 7 metrics</a>
       </div>
       </div>
-      </div>
-      <div class="hero-chart">
+      <div class="hero-chart only-d">
         <span class="sticker">Flat ≠ failed</span>
-        <svg viewBox="0 0 900 220" role="img" aria-label="Illustration: traffic stays flat below a target line until the deadline">
-          <line x1="20" y1="44" x2="880" y2="44" style="stroke:var(--dark-soft)" stroke-width="1.5" stroke-dasharray="6 7"/>
-          <text x="24" y="32" font-size="13" font-weight="700" style="fill:var(--dark-soft)" font-family="Inter, sans-serif">TARGET</text>
-          <line x1="700" y1="20" x2="700" y2="200" style="stroke:var(--spark)" stroke-width="2"/>
-          <text x="708" y="196" font-size="13" font-weight="800" style="fill:var(--spark)" font-family="Inter, sans-serif">DEADLINE</text>
-          <polyline class="draw" id="hero-line" points="20,170 120,162 220,166 320,158 420,163 520,156 620,160 700,155" fill="none" style="stroke:var(--dark-ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="700" cy="155" r="7" style="fill:var(--spark)"/>
-          <text x="560" y="138" font-size="14" font-weight="700" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Your traffic</text>
-          <text x="720" y="110" font-size="15" font-weight="800" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Now what?</text>
+        <svg viewBox="0 0 480 300" role="img" aria-label="Illustration: traffic stays flat below a target line until the deadline">
+          <line x1="16" y1="64" x2="464" y2="64" style="stroke:var(--dark-soft)" stroke-width="1.5" stroke-dasharray="6 7"/>
+          <text x="16" y="48" font-size="15" font-weight="700" style="fill:var(--dark-soft)" font-family="Inter, sans-serif">TARGET</text>
+          <line x1="352" y1="34" x2="352" y2="276" style="stroke:var(--spark)" stroke-width="2"/>
+          <text x="362" y="272" font-size="15" font-weight="800" style="fill:var(--spark)" font-family="Inter, sans-serif">DEADLINE</text>
+          <polyline class="draw" id="hero-line" points="16,236 64,229 112,233 160,225 208,230 256,223 304,227 352,221" fill="none" style="stroke:var(--dark-ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="352" cy="221" r="7" style="fill:var(--spark)"/>
+          <text x="196" y="204" font-size="16" font-weight="700" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Your traffic</text>
+          <text x="364" y="150" font-size="18" font-weight="800" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Now what?</text>
         </svg>
+      </div>
       </div>
     </div>
   </section>
@@ -550,6 +562,22 @@ img { max-width: 100%; }
         <a class="btn btn-ink" href="#download">Get the free scorecard ↓</a>
       </div>
     </div>
+  </div>
+
+  <div class="wide only-m chart-m">
+      <div class="hero-chart ">
+        <span class="sticker">Flat ≠ failed</span>
+        <svg viewBox="0 0 480 300" role="img" aria-label="Illustration: traffic stays flat below a target line until the deadline">
+          <line x1="16" y1="64" x2="464" y2="64" style="stroke:var(--dark-soft)" stroke-width="1.5" stroke-dasharray="6 7"/>
+          <text x="16" y="48" font-size="15" font-weight="700" style="fill:var(--dark-soft)" font-family="Inter, sans-serif">TARGET</text>
+          <line x1="352" y1="34" x2="352" y2="276" style="stroke:var(--spark)" stroke-width="2"/>
+          <text x="362" y="272" font-size="15" font-weight="800" style="fill:var(--spark)" font-family="Inter, sans-serif">DEADLINE</text>
+          <polyline class="draw" id="hero-line-m" points="16,236 64,229 112,233 160,225 208,230 256,223 304,227 352,221" fill="none" style="stroke:var(--dark-ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="352" cy="221" r="7" style="fill:var(--spark)"/>
+          <text x="196" y="204" font-size="16" font-weight="700" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Your traffic</text>
+          <text x="364" y="150" font-size="18" font-weight="800" style="fill:var(--dark-ink)" font-family="Inter, sans-serif">Now what?</text>
+        </svg>
+      </div>
   </div>
 
   <!-- 01 -->
@@ -1102,7 +1130,7 @@ img { max-width: 100%; }
   function replay(el) { if (!el) return; el.classList.remove("go"); void el.getBoundingClientRect(); el.classList.add("go"); }
 
   // Hero line draws once on load
-  replay($("#hero-line"));
+  replay($("#hero-line")); replay($("#hero-line-m"));
 
   // 01 Story chart
   var stories = {
