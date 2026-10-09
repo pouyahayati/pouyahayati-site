@@ -857,3 +857,37 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-stats dd { font-size: 1.05rem; }
   .stat-wide dd { font-size: .9rem; }
 }
+
+/* ===== Layout fixes: hero title no longer runs under the stats box; aligned About cards ===== */
+@media (min-width: 1024px) {
+  .hero .container { grid-template-columns: minmax(0, 1fr) 340px; }
+  .hero-title-one {
+    white-space: normal;
+    font-size: clamp(3rem, 4.6vw, 4.5rem);
+    line-height: 1.04;
+    max-width: 19ch;
+    text-wrap: balance;
+  }
+  .hero-sub { max-width: 52ch; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-title-one { white-space: normal; font-size: clamp(2.6rem, 6.4vw, 3.4rem); max-width: 16ch; text-wrap: balance; }
+}
+@media (max-width: 767px) {
+  .hero-title-one { white-space: normal; font-size: clamp(2rem, 9vw, 2.4rem); line-height: 1.08; text-wrap: balance; }
+}
+
+/* About cards: icon, heading and paragraph sit on shared rows, so every card lines up */
+.cards > .card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0;
+  align-content: start;
+}
+.cards { grid-auto-rows: auto; }
+.cards .card-icon { margin-bottom: 20px; align-self: start; }
+.cards .card h3 { margin: 0 0 8px; align-self: start; line-height: 1.25; }
+.cards .card p { margin: 0; align-self: start; }
+@media (min-width: 1100px) { .cards .card { padding: 28px 24px; } }
+#about .prose { max-width: 72ch; }
