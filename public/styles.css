@@ -891,3 +891,19 @@ a:hover { text-decoration-thickness: 2px; }
 .cards .card p { margin: 0; align-self: start; }
 @media (min-width: 1100px) { .cards .card { padding: 28px 24px; } }
 #about .prose { max-width: 72ch; }
+
+/* ===== Hero: natural height (no stretched gaps), all four stats visible on mobile ===== */
+.hero { min-height: 0; align-items: flex-start; padding: 48px 0 56px; }
+@media (min-width: 1024px) { .hero { padding: 56px 0 64px; } .hero-stats { align-self: center; } }
+@media (max-width: 767px) {
+  .hero { min-height: 0; padding: 20px 0 28px; align-items: flex-start; }
+  .hero > .container { display: block; }
+  .hero .profile-card { margin: 0 0 16px; }
+  .hero .hero-body { display: block; }
+  .hero-sub { margin-bottom: 20px; }
+  .hero-actions { margin-top: 0; }
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; margin-top: 24px; padding-top: 18px; }
+  .stat-how, .stat-wide { display: flex; }
+  .stat-wide { grid-column: 1 / -1; }
+  .stat-wide dd { font-size: .95rem; }
+}
