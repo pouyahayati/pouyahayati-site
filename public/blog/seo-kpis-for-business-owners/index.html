@@ -679,6 +679,30 @@ img { max-width: 100%; }
 .arrow svg { width: 34px; height: 20px; }
 .arrow path { stroke: var(--ink); stroke-width: 2.5; fill: none; stroke-linecap: round; }
 @media (max-width: 759px) { .arrow svg { transform: rotate(90deg); } }
+
+/* Static sections 04-07 */
+.metric { padding-block: 36px; border-top: 2px solid var(--ink); }
+.metric:first-child { margin-top: 24px; }
+.metric .m-cols, .metric .m-main, .metric .mini, .metric .facts { min-width: 0; max-width: 100%; }
+.metric h3 { margin: 8px 0 16px; font-size: 1.5rem; font-weight: 800; }
+.metric .mnum { display: inline-block; min-width: 2.4em; color: var(--spark); font-family: var(--font-mono); font-size: 1rem; font-weight: 700; }
+.metric .mono { color: var(--ink-soft); }
+.metric p { text-wrap: pretty; }
+.metric .m-main > p:not(.source) { max-width: 68ch; }
+.catch-table th, .catch-table td { font-size: .95rem; line-height: 1.55; }
+.catch-table th { color: var(--ink); }
+.catch-table th .fake { display: block; margin-top: 4px; font: 500 .85rem/1.3 var(--font-mono); color: var(--ink-soft); }
+.diag-list { display: grid; gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; counter-reset: d; }
+.diag-list li { counter-increment: d; position: relative; padding: 20px 22px 20px 64px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.diag-list li::before { content: counter(d); position: absolute; left: 20px; top: 20px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--bg); font: 700 .85rem/1 var(--font-mono); }
+.diag-list h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+.diag-list p { margin: 0 0 8px; font-size: .96rem; line-height: 1.6; text-align: left; hyphens: none; }
+.diag-list .next { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--line); }
+.diag-list .next span { display: block; margin-bottom: 4px; font: 500 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; color: var(--spark); }
+.metric .m-main > p { margin: 0 0 1em; }
+.metric .m-main > p.source { margin: 1.2em 0 0; }
+.metric .m-main p, .article-body .col > p.intro { text-align: left; hyphens: none; }
+.article-body .col > p.intro { margin-top: 16px; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -934,45 +958,17 @@ img { max-width: 100%; }
   <section class="section col" id="metrics" data-ch="04" data-title="The 7 metrics" aria-labelledby="metrics-title">
     <div class="kicker"><span class="big-n">04</span></div>
     <h2 id="metrics-title">The 7 metrics.</h2>
-    <p class="lead">Plus one for local businesses. Mark whether your SEO report shows each one and get a score at the end.</p>
+    <p class="lead">Plus one for local businesses. Each one comes with where to find it, what good looks like, and what to ask your SEO.</p>
   </section>
 
-  <div class="wide">
-    <div class="explorer" id="explorer">
-      <div class="ex-top">
-        <span class="pos" id="ex-pos"><b>01</b> / 08</span>
-        <div class="meter" aria-live="polite">
-          <span class="segs" id="segs"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          <span class="score" id="score">Report covers 0/8</span>
-        </div>
-      </div>
-      <div class="ex-body">
-        <div class="m-nav">
-          <div class="m-list" role="tablist" aria-label="Metrics" aria-orientation="vertical">
-            <span class="mono group">Link 1 · Work</span>
-            <button class="m-btn" role="tab" id="t1" aria-controls="p1" aria-selected="true"><b>01</b>Work delivered<span class="ck"></span></button>
-            <button class="m-btn" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><b>02</b>Indexing<span class="ck"></span></button>
-            <span class="mono group">Link 2 · Visibility</span>
-            <button class="m-btn" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><b>03</b>Non-brand clicks<span class="ck"></span></button>
-            <button class="m-btn" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><b>04</b>Search breadth<span class="ck"></span></button>
-            <button class="m-btn" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1"><b>05</b>Where you rank<span class="ck"></span></button>
-            <button class="m-btn" role="tab" id="t6" aria-controls="p6" aria-selected="false" tabindex="-1"><b>06</b>Pages that sell<span class="ck"></span></button>
-            <span class="mono group">Link 3 · Business</span>
-            <button class="m-btn" role="tab" id="t7" aria-controls="p7" aria-selected="false" tabindex="-1"><b>07</b>Leads and sales<span class="ck"></span></button>
-            <button class="m-btn" role="tab" id="t8" aria-controls="p8" aria-selected="false" tabindex="-1"><b>+1</b>Business Profile<span class="ck"></span></button>
-          </div>
-        </div>
-        <div>
-          <div class="m-panel" role="tabpanel" id="p1" aria-labelledby="t1">
+  <div class="col metrics-list">
+    <article class="metric">
             <span class="mono">Link 1 · Was the work done?</span>
-            <h3>Work delivered and verified</h3>
+            <h3><span class="mnum">01</span>Work delivered and verified</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>The share of your SEO's recommendations that are actually live on your site. Sounds basic. It's also the metric almost nobody checks.</p>
-            <details class="more"><summary>Read more</summary>
             <p>Here's why it matters: a lot of SEO work never ships. In a 2024 survey of technical SEOs, the most common answer was that only <strong>40 to 60%</strong> of their recommendations got implemented. Often the blocker isn't the SEO. It's a developer with no time, or an approval stuck in someone's inbox, sometimes yours.</p>
-            </details>
-            <details class="more"><summary>See an example</summary>
             <div class="mini">
               <span class="mono">Example · a change log that actually helps</span>
               <div class="table-wrap">
@@ -986,7 +982,6 @@ img { max-width: 100%; }
                 </table>
               </div>
             </div>
-            </details>
             <p class="source">Sources: Google, Do you need an SEO?; SEOFOMO Technical SEO survey, 2024.</p>
             </div>
             <dl class="facts">
@@ -996,18 +991,14 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"What did you recommend, what's live, and what's blocking the rest?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 1 · Was the work done?</span>
-            <h3>Indexing of your key pages</h3>
+            <h3><span class="mnum">02</span>Indexing of your key pages</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>If Google hasn't indexed a page, it can't appear in search. So before you judge rankings or traffic, make sure your service, product and location pages are actually in.</p>
-            <details class="more"><summary>Read more</summary>
             <p>Google recommends checking Search Console about once a month, including the indexing report and Manual Actions. Skip the site-wide page count; Ahrefs says that mostly matters for big sites. What matters are the pages that sell.</p>
-            </details>
             <p class="source">Sources: Google, Get started with Search Console; Google, Debugging drops in Search traffic; Ahrefs, SEO KPIs.</p>
             </div>
             <dl class="facts">
@@ -1017,26 +1008,20 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"Are all our key pages indexed? What's the plan for the rest?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 2 · Did visibility grow?</span>
-            <h3>Non-brand clicks, versus last year</h3>
+            <h3><span class="mnum">03</span>Non-brand clicks, versus last year</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>Clicks from searches that don't include your business name. People who type your name already know you. Non-brand clicks are <strong>new customers who found you because of SEO</strong>. That's the whole point.</p>
-            <details class="more"><summary>Read more</summary>
             <p>Always compare with the same months last year, not last month, so seasons don't fool you. And use clicks, not impressions: Google confirmed impressions were misreported from May 2025 to April 2026. Clicks were fine.</p>
-            </details>
-            <details class="more"><summary>See an example</summary>
             <div class="mini">
               <span class="mono">Example · same total, different story</span>
               <div class="stackrow"><span>Last yr</span><div class="stack"><div class="s3" style="width:60%">Brand 600</div><div class="sx" style="width:40%">New 400</div></div></div>
               <div class="stackrow"><span>This yr</span><div class="stack"><div class="s3" style="width:75%">Brand 750</div><div class="sx" style="width:25%">250</div></div></div>
               <p class="mini-cap">Total clicks look flat at 1,000. Underneath, SEO is bringing fewer new people. That's what to ask about.</p>
             </div>
-            </details>
             <p class="source">Sources: Ahrefs, Semrush, Search Engine Land, Shopify KPI guides; Google, branded queries filter; Search Console data anomalies.</p>
             </div>
             <dl class="facts">
@@ -1047,18 +1032,14 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"How did non-brand clicks change versus last year?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 2 · Did visibility grow?</span>
-            <h3>Search breadth</h3>
+            <h3><span class="mnum">04</span>Search breadth</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>How many different non-brand searches send you at least one click. When it grows, Google is showing you for more of what your customers look for. It usually moves <strong>before</strong> traffic does, which makes it your best early signal.</p>
-            <details class="more"><summary>Read more</summary>
             <p>Ahrefs puts search visibility at the top of its KPI list. The catch: SEO tools measure it with keyword lists your SEO picks. Counting real searches in Search Console uses Google's own data. It's free, and nobody can pick the keywords to make it look good.</p>
-            </details>
             <p class="source">Sources: Ahrefs, Semrush, Search Engine Journal, Seer, Shopify KPI guides.</p>
             </div>
             <dl class="facts">
@@ -1068,19 +1049,14 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"Which new searches are we showing up for?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 2 · Did visibility grow?</span>
-            <h3>Where you rank</h3>
+            <h3><span class="mnum">05</span>Where you rank</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>Don't rely on the single "average position" number. Count how many non-brand searches sit in positions 1 to 3, 4 to 10 and 11 to 20. Now you can see searches climbing toward the top.</p>
-            <details class="more"><summary>Read more</summary>
             <p>Average position hides all this. It can even "improve" while you lose visibility: when low-ranking searches drop off, the average goes up. Google advises against focusing on absolute position, and Ahrefs calls single keyword rankings an inferior metric.</p>
-            </details>
-            <details class="more"><summary>See an example</summary>
             <div class="mini">
               <span class="mono">Example · same site, one year apart</span>
               <div class="stackrow"><span>Last yr</span><div class="stack"><div class="s1" style="width:10.7%">8</div><div class="s2" style="width:28%">21</div><div class="s3" style="width:61.3%">46</div></div></div>
@@ -1088,7 +1064,6 @@ img { max-width: 100%; }
               <div class="key"><span><i class="s1"></i>Top 3</span><span><i class="s2"></i>4–10</span><span><i class="s3"></i>11–20</span></div>
               <p class="mini-cap">Top-3 searches nearly doubled; the top 10 grew from 29 to 49. That's real progress, even before traffic catches up.</p>
             </div>
-            </details>
             <p class="source">Sources: Google, Debugging drops in Search traffic; Ahrefs, SEO KPIs; Search Engine Land, SEO KPIs.</p>
             </div>
             <dl class="facts">
@@ -1098,18 +1073,14 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"How many important searches moved into the top 3?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p6" aria-labelledby="t6" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 2 · Did visibility grow?</span>
-            <h3>Clicks to pages that sell</h3>
+            <h3><span class="mnum">06</span>Clicks to pages that sell</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>Traffic isn't revenue. This one only counts non-brand clicks landing on pages that can make money: services, products, categories, locations, pricing.</p>
-            <details class="more"><summary>Read more</summary>
             <p>Search Engine Land lists "pages generating traffic" as a real-world KPI. Eventbrite judged its own SEO by traffic to event listings, the pages that sell tickets. Busy blog posts don't always bring customers; pages that sell do.</p>
-            </details>
             <p class="source">Sources: Search Engine Land, SEO KPIs; HubSpot, blogging KPIs; Google case study, Eventbrite.</p>
             </div>
             <dl class="facts">
@@ -1119,18 +1090,14 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"How much search traffic lands on pages that sell?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p7" aria-labelledby="t7" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 3 · Did it hit the business?</span>
-            <h3>Verified leads and sales</h3>
+            <h3><span class="mnum">07</span>Verified leads and sales</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>Calls, forms, bookings and sales from organic search, confirmed in your own records, and compared with what you pay. That’s your SEO ROI. The one metric <strong>all eight sources</strong> agree on.</p>
-            <details class="more"><summary>Read more</summary>
             <p>The key word is "confirmed". Some "conversions" are just page views or button clicks, and Google notes that Search Console and Analytics count visits differently. Your CRM settles it. Because this link moves last, don't use it as your only test in the early months. But in the end, it's the one that counts.</p>
-            </details>
             <p class="source">Sources: Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer, Shopify, HubSpot; Google, Using Search Console and Analytics data; GA4 Help, key events.</p>
             </div>
             <dl class="facts">
@@ -1141,12 +1108,10 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"How many real leads came from organic, and how do you know?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No</button></div>
-          </div>
-
-          <div class="m-panel" role="tabpanel" id="p8" aria-labelledby="t8" hidden>
+    </article>
+    <article class="metric">
             <span class="mono">Link 3 · For local businesses</span>
-            <h3>Google Business Profile actions</h3>
+            <h3><span class="mnum">+1</span>Google Business Profile actions</h3>
             <div class="m-cols">
             <div class="m-main">
             <p>Serve a local area? Then plenty of your customers never touch your website. They call or tap "directions" straight from your Google Maps listing. Your profile tracks every one of those actions. Semrush and Shopify both list them as SEO KPIs.</p>
@@ -1159,15 +1124,7 @@ img { max-width: 100%; }
               <div class="ask"><dt>Ask</dt><dd>"How many calls and direction requests came from our profile?"</dd></div>
             </dl>
             </div>
-            <div class="check"><span>Does your SEO report show this?</span><button class="pill yes" type="button" aria-pressed="false" data-ans="1">Yes</button><button class="pill no" type="button" aria-pressed="false" data-ans="0">No / not local</button></div>
-          </div>
-          <div class="m-foot">
-            <button class="m-step" type="button" id="m-prev">← Back</button>
-            <button class="m-step next" type="button" id="m-next">Next metric →</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </article>
   </div>
 
   <div class="col">
@@ -1179,17 +1136,19 @@ img { max-width: 100%; }
     <section class="section col" aria-labelledby="liars-title">
       <div class="kicker"><span class="big-n">05</span></div>
       <h2 id="liars-title">Numbers that fool you.</h2>
-      <p class="lead">These lines show up in a lot of SEO reports. Flip each card to see the catch.</p>
+      <p class="lead">These lines show up in a lot of SEO reports. Each one looks like progress, and each one has a catch.</p>
     </section>
     <div class="wide">
-      <div class="flips">
-        <button class="flip" type="button" aria-pressed="false"><span class="flip-inner"><span class="face front"><span class="mono">Sample report line</span><span class="metric-name">Average position</span><span class="fake">4.2 → 3.1</span><span class="hint">Flip it ↻</span></span><span class="face back"><span class="mono">The catch</span><p>It can "improve" while you lose visibility. Drop your low-ranking searches and the average goes up.</p><span class="instead">Check instead: <b>Where you rank</b></span></span></span></button>
-        <button class="flip" type="button" aria-pressed="false"><span class="flip-inner"><span class="face front"><span class="mono">Sample report line</span><span class="metric-name">Impressions</span><span class="fake">+68%</span><span class="hint">Flip it ↻</span></span><span class="face back"><span class="mono">The catch</span><p>Google confirmed impressions were misreported from May 2025 to April 2026. A year of inflated numbers.</p><span class="instead">Check instead: <b>Non-brand clicks</b></span></span></span></button>
-        <button class="flip" type="button" aria-pressed="false"><span class="flip-inner"><span class="face front"><span class="mono">Sample report line</span><span class="metric-name">"We rank #1!"</span><span class="fake">12 keywords</span><span class="hint">Flip it ↻</span></span><span class="face back"><span class="mono">The catch</span><p>Your SEO picked those keywords. Ahrefs calls rankings an inferior metric anyway.</p><span class="instead">Check instead: <b>Search breadth</b></span></span></span></button>
-        <button class="flip" type="button" aria-pressed="false"><span class="flip-inner"><span class="face front"><span class="mono">Sample report line</span><span class="metric-name">Domain Rating</span><span class="fake">DR 24 → 31</span><span class="hint">Flip it ↻</span></span><span class="face back"><span class="mono">The catch</span><p>A score made by an SEO tool. Even Ahrefs calls its own DR a proxy. Google doesn't use it.</p><span class="instead">Check instead: <b>Verified leads</b></span></span></span></button>
-        <button class="flip" type="button" aria-pressed="false"><span class="flip-inner"><span class="face front"><span class="mono">Sample report line</span><span class="metric-name">Backlinks built</span><span class="fake">+240</span><span class="hint">Flip it ↻</span></span><span class="face back"><span class="mono">The catch</span><p>Easy to inflate with junk links. Google warns owners about SEOs who push link schemes.</p><span class="instead">Check instead: <b>A list of links with sources</b></span></span></span></button>
-        <button class="flip" type="button" aria-pressed="false"><span class="flip-inner"><span class="face front"><span class="mono">Sample report line</span><span class="metric-name">Time on page</span><span class="fake">2:41 avg</span><span class="hint">Flip it ↻</span></span><span class="face back"><span class="mono">The catch</span><p>Ahrefs and Shopify both say engagement metrics rarely reflect SEO growth.</p><span class="instead">Check instead: <b>Pages that sell</b></span></span></span></button>
-      </div>
+      <div class="table-wrap"><table class="catch-table">
+        <thead><tr><th scope="col">Report line</th><th scope="col">The catch</th><th scope="col">Check instead</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Average position<span class="fake">4.2 → 3.1</span></th><td>It can "improve" while you lose visibility. Drop your low-ranking searches and the average goes up.</td><td><strong>Where you rank</strong></td></tr>
+          <tr><th scope="row">Impressions<span class="fake">+68%</span></th><td>Google confirmed impressions were misreported from May 2025 to April 2026. A year of inflated numbers.</td><td><strong>Non-brand clicks</strong></td></tr>
+          <tr><th scope="row">"We rank #1!"<span class="fake">12 keywords</span></th><td>Your SEO picked those keywords. Ahrefs calls rankings an inferior metric anyway.</td><td><strong>Search breadth</strong></td></tr>
+          <tr><th scope="row">Domain Rating<span class="fake">DR 24 → 31</span></th><td>A score made by an SEO tool. Even Ahrefs calls its own DR a proxy. Google doesn't use it.</td><td><strong>Verified leads</strong></td></tr>
+          <tr><th scope="row">Backlinks built<span class="fake">+240</span></th><td>Easy to inflate with junk links. Google warns owners about SEOs who push link schemes.</td><td><strong>A list of links with sources</strong></td></tr>
+          <tr><th scope="row">Time on page<span class="fake">2:41 avg</span></th><td>Ahrefs and Shopify both say engagement metrics rarely reflect SEO growth.</td><td><strong>Pages that sell</strong></td></tr>
+        </tbody></table></div>
     </div>
     <div class="col">
       <div class="note"><strong>And AI search?</strong> Ahrefs and Semrush now track mentions in AI assistants. Worth watching, but the data is still limited. Don't judge your SEO on it yet.</div>
@@ -1202,7 +1161,7 @@ img { max-width: 100%; }
     <div class="kicker"><span class="big-n">06</span></div>
     <h2 id="cases-title">What real companies measure.</h2>
     <p class="lead">11 businesses, from telecom giants to local trades. What matters is which metrics they trusted.</p>
-    <p>Not all evidence is equal: only three were proper controlled tests. Use the filter to compare.</p>
+    <p>Not all evidence is equal: only three were proper controlled tests.</p>
   </section>
 
   <div class="wide">
@@ -1212,12 +1171,6 @@ img { max-width: 100%; }
         <div class="s1" style="width:27.3%"><span>3<span class="evw"> controlled</span></span></div>
         <div class="s2" style="width:27.3%"><span>3<span class="evw"> published</span></span></div>
         <div class="s3" style="width:45.4%"><span>5<span class="evw"> self-reported</span></span></div>
-      </div>
-      <div class="pills" role="tablist" aria-label="Filter cases">
-        <button class="pill" role="tab" aria-selected="true" data-filter="all">All 11</button>
-        <button class="pill" role="tab" aria-selected="false" data-filter="c">Controlled</button>
-        <button class="pill" role="tab" aria-selected="false" data-filter="p">Published</button>
-        <button class="pill" role="tab" aria-selected="false" data-filter="a">Self-reported</button>
       </div>
       <div class="table-wrap">
         <table class="case-table">
@@ -1237,7 +1190,6 @@ img { max-width: 100%; }
           </tbody>
         </table>
       </div>
-      <button class="more-rows" type="button" id="cases-more" aria-expanded="false">Show all 11 cases ↓</button>
     </figure>
   </div>
 
@@ -1255,46 +1207,18 @@ img { max-width: 100%; }
   <section class="section col" id="diagnose" data-ch="07" data-title="Your diagnosis" aria-labelledby="diagnose-title">
     <div class="kicker"><span class="big-n">07</span></div>
     <h2 id="diagnose-title">Find your story.</h2>
-    <p class="lead">Remember the flat line? Answer three questions and get a clear next step.</p>
+    <p class="lead">Remember the flat line? Here is how to tell which cause is yours.</p>
   </section>
 
-  <div class="wide">
-    <div class="diag">
-      <form id="diag-form">
-        <fieldset class="q">
-          <legend><span class="mono">Link 1 · Work</span>Is the recommended work live, and are your key pages indexed?</legend>
-          <div class="seg">
-            <input type="radio" name="l1" id="l1-yes" value="yes"><label for="l1-yes">Mostly yes</label>
-            <input type="radio" name="l1" id="l1-no" value="no"><label for="l1-no">No</label>
-            <input type="radio" name="l1" id="l1-unk" value="unk"><label for="l1-unk">No idea</label>
-          </div>
-        </fieldset>
-        <fieldset class="q">
-          <legend><span class="mono">Link 2 · Visibility</span>Are non-brand clicks, searches or top-10 positions up versus last year?</legend>
-          <div class="seg">
-            <input type="radio" name="l2" id="l2-yes" value="yes"><label for="l2-yes">Yes</label>
-            <input type="radio" name="l2" id="l2-no" value="no"><label for="l2-no">Flat or down</label>
-            <input type="radio" name="l2" id="l2-unk" value="unk"><label for="l2-unk">No idea</label>
-          </div>
-        </fieldset>
-        <fieldset class="q">
-          <legend><span class="mono">Link 3 · Business</span>Are verified leads or sales from organic search rising?</legend>
-          <div class="seg">
-            <input type="radio" name="l3" id="l3-yes" value="yes"><label for="l3-yes">Yes, slowly</label>
-            <input type="radio" name="l3" id="l3-no" value="no"><label for="l3-no">Flat</label>
-            <input type="radio" name="l3" id="l3-unk" value="unk"><label for="l3-unk">No idea</label>
-          </div>
-        </fieldset>
-      </form>
-      <div class="result" aria-live="polite">
-        <span class="mono">Your diagnosis</span>
-        <div class="links3" aria-hidden="true"><span class="d"><i id="d1"></i>Work</span><span class="sep"></span><span class="d"><i id="d2"></i>Visibility</span><span class="sep"></span><span class="d"><i id="d3"></i>Business</span></div>
-        <h4 id="d-title">Answer the three questions.</h4>
-        <p id="d-body">One per link in the chain. Your diagnosis shows up here.</p>
-        <p class="next" id="d-next">Start with Link 1.</p>
-        <p class="cov" id="d-cov">Grade your SEO report in section 04 to see your coverage score here.</p>
-      </div>
-    </div>
+  <div class="col">
+    <p class="intro">Answer three questions about your own SEO: Is the work live? Are non-brand clicks up versus last year? Are verified leads rising? Then read the list from the top and stop at the first line that sounds like you.</p>
+    <ol class="diag-list">
+      <li><h4>You can't answer one of the three questions.</h4><p>If your SEO hasn't been reporting what matters, that alone tells you something.</p><p class="next"><span>Next</span>Ask for a change log, a non-brand year-over-year view and a verified lead count before the next invoice.</p></li>
+      <li><h4>The work isn't live, or your key pages aren't indexed.</h4><p><strong>Cause 1: the work never shipped.</strong> Nothing downstream can move until it does.</p><p class="next"><span>Next</span>Find out who's blocking each item, your SEO or your own team, before you judge anyone's skill.</p></li>
+      <li><h4>The work is live, but non-brand clicks are flat or down.</h4><p><strong>Cause 3: it shipped, and nothing moved.</strong> If the changes have been live and indexed for a while and your market is stable, this is the clearest sign of a weak strategy.</p><p class="next"><span>Next</span>Ask what each change was supposed to do, and check Google Trends to rule out a market-wide drop.</p></li>
+      <li><h4>Visibility is up, but leads or sales are flat.</h4><p>The SEO work is reaching people. Something between the click and the sale is breaking, or the target was set on the wrong thing.</p><p class="next"><span>Next</span>Check your pages that sell, your offer and your lead tracking. Reset targets on Link 2 metrics while you fix it.</p></li>
+      <li><h4>Work is live, visibility is up and leads are rising.</h4><p><strong>Cause 2: good work, bad deadline.</strong> Every link is moving the right way, just slower than the contract assumed. That's normal in SEO, not a failure.</p><p class="next"><span>Next</span>Keep going, and rewrite targets around Link 2 metrics, with business results as the long-term check.</p></li>
+    </ol>
   </div>
   <div class="col"><p class="source">My own framework, not an industry standard. "Long enough" depends on your site, your market and how much changed.</p></div>
 
@@ -1410,115 +1334,6 @@ img { max-width: 100%; }
   barBtns.forEach(function (b) { b.addEventListener("click", function () { showBar(b); }); });
   showBar(barBtns[0]);
 
-  // 04 Explorer
-  var mTabs = $$(".m-btn"), mPanels = mTabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
-  var segs = $$("#segs i"), answers = [null, null, null, null, null, null, null, null], cur = 0;
-  var prev = $("#m-prev"), next = $("#m-next");
-  function score() {
-    var yes = answers.filter(function (a) { return a === 1; }).length;
-    var done = answers.filter(function (a) { return a !== null; }).length;
-    segs.forEach(function (s, i) { s.classList.toggle("yes", answers[i] === 1); s.classList.toggle("cur", i === cur); });
-    mTabs.forEach(function (t, i) { t.classList.toggle("has-yes", answers[i] === 1); });
-    $("#score").textContent = "Report covers " + yes + "/8";
-    var cov = $("#d-cov");
-    if (done === 0) cov.textContent = "Grade your SEO report in section 04 to see your coverage score here.";
-    else {
-      var verdict = yes >= 6 ? "Solid. Your SEO is measuring what matters." : yes >= 3 ? "Gaps. Ask for the missing metrics before the next invoice." : "Red flag. Your report mostly can't show if the work is good.";
-      cov.innerHTML = "Your SEO report covers <b>" + yes + " of 8</b> metrics. " + verdict;
-    }
-  }
-  function showMetric(i, focus) {
-    cur = Math.max(0, Math.min(7, i));
-    mTabs.forEach(function (t, j) { var on = j === cur; t.setAttribute("aria-selected", on ? "true" : "false"); t.tabIndex = on ? 0 : -1; mPanels[j].hidden = !on; });
-    prev.disabled = cur === 0;
-    next.textContent = cur === 7 ? "See my diagnosis →" : "Next metric →";
-    $("#ex-pos").innerHTML = "<b>" + (cur === 7 ? "+1" : "0" + (cur + 1)) + "</b> / 08";
-    if (focus) mTabs[cur].focus();
-    score();
-  }
-  mTabs.forEach(function (t, i) {
-    t.addEventListener("click", function () { showMetric(i); });
-    t.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); showMetric(cur + 1, true); }
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") { e.preventDefault(); showMetric(cur - 1, true); }
-    });
-  });
-  prev.addEventListener("click", function () { showMetric(cur - 1); $("#explorer").scrollIntoView({ block: "start" }); });
-  next.addEventListener("click", function () {
-    if (cur === 7) { $("#diagnose").scrollIntoView({ block: "start" }); return; }
-    showMetric(cur + 1); $("#explorer").scrollIntoView({ block: "start" });
-  });
-  mPanels.forEach(function (p, i) {
-    $$(".check .pill", p).forEach(function (b) {
-      b.addEventListener("click", function () {
-        var v = parseInt(b.getAttribute("data-ans"), 10);
-        answers[i] = answers[i] === v ? null : v;
-        $$(".check .pill", p).forEach(function (x) { x.setAttribute("aria-pressed", answers[i] !== null && parseInt(x.getAttribute("data-ans"), 10) === answers[i] ? "true" : "false"); });
-        score();
-      });
-    });
-  });
-  showMetric(0);
-
-  // 05 Flip cards
-  $$(".flip").forEach(function (f) { f.addEventListener("click", function () { f.setAttribute("aria-pressed", f.getAttribute("aria-pressed") === "true" ? "false" : "true"); }); });
-
-  // 06 Case filter
-  var fTabs = $$("[data-filter]"), rows = $$(".case-table tbody tr");
-  fTabs.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var f = btn.getAttribute("data-filter");
-      fTabs.forEach(function (b) { b.setAttribute("aria-selected", b === btn ? "true" : "false"); });
-      rows.forEach(function (r) { r.hidden = !(f === "all" || r.getAttribute("data-ev") === f); });
-      if (f !== "all") { caseTable.classList.remove("clamped"); moreRows.hidden = true; }
-      else if (moreRows.getAttribute("aria-expanded") !== "true") { caseTable.classList.add("clamped"); moreRows.hidden = false; }
-    });
-  });
-  var caseTable = $(".case-table"), moreRows = $("#cases-more");
-  rows.forEach(function (r, i) { if (i >= 6) r.classList.add("extra"); });
-  caseTable.classList.add("clamped");
-  moreRows.addEventListener("click", function () {
-    var open = moreRows.getAttribute("aria-expanded") === "true";
-    caseTable.classList.toggle("clamped", open);
-    moreRows.setAttribute("aria-expanded", open ? "false" : "true");
-    moreRows.textContent = open ? "Show all 11 cases \u2193" : "Show fewer \u2191";
-  });
-
-  // 07 Diagnose
-  var verdicts = {
-    unk: { t: "You can't judge the work yet. That's the finding.", b: "If you can't answer one of these, your SEO hasn't been reporting what matters. That alone tells you something.", n: "Next: ask for a change log, a non-brand year-over-year view and a verified lead count before the next invoice." },
-    l1no: { t: "Story ①: the work never shipped.", b: "Changes haven't reached the live site, or Google can't see your key pages. Nothing downstream can move until this does.", n: "Next: find out who's blocking each item, your SEO or your own team, before you judge anyone's skill." },
-    l2no: { t: "Story ③: it shipped, and nothing moved.", b: "If the changes have been live and indexed for a while and your market is stable, this is the clearest sign of a weak strategy.", n: "Next: ask what each change was supposed to do, and check Google Trends to rule out a market-wide drop." },
-    l3no: { t: "Visibility is up, but it isn't turning into money.", b: "The SEO work is reaching people. Something between the click and the sale is breaking, or the target was set on the wrong thing.", n: "Next: check your pages that sell, your offer and your lead tracking. Reset targets on Link 2 metrics while you fix it." },
-    ok: { t: "Story ②: good work, bad deadline.", b: "Every link is moving the right way, just slower than the contract assumed. That's normal in SEO, not a failure.", n: "Next: keep going, and rewrite targets around Link 2 metrics, with business results as the long-term check." }
-  };
-  var form = $("#diag-form");
-  function val(n) { var el = form.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : "unk"; }
-  function dot(id, v) { document.getElementById(id).className = v === "yes" ? "ok" : v === "no" ? "bad" : "unk"; }
-  function render() {
-    var a = val("l1"), b = val("l2"), c = val("l3"), v;
-    dot("d1", a); dot("d2", b); dot("d3", c);
-    var done = form.querySelectorAll("input:checked").length; if (done < 3) { $("#d-title").textContent = "Answer the three questions."; $("#d-body").textContent = "One per link in the chain. Your diagnosis shows up here."; $("#d-next").textContent = done ? done + " of 3 answered." : "Start with Link 1."; return; }
-    if (a === "unk" || b === "unk" || c === "unk") v = verdicts.unk;
-    else if (a === "no") v = verdicts.l1no;
-    else if (b === "no") v = verdicts.l2no;
-    else if (c === "no") v = verdicts.l3no;
-    else v = verdicts.ok;
-    $("#d-title").textContent = v.t; $("#d-body").textContent = v.b; $("#d-next").textContent = v.n;
-  }
-  form.addEventListener("change", function (e) {
-    render();
-    // On small screens the result sits below the form: bring it into view once all three are answered
-    var res = $(".diag .result");
-    if (window.matchMedia("(max-width: 899px)").matches && e.target.name === "l3") {
-      var r = res.getBoundingClientRect();
-      if (r.top > window.innerHeight - 120) res.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  });
-  form.addEventListener("submit", function (e) { e.preventDefault(); });
-  render();
-
-  
 })();
 </script>
 
