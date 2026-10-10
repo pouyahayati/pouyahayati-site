@@ -4,7 +4,7 @@
  * Usage in a post (no other code needed):
  *   <link rel="stylesheet" href="/assets/lead-gate.css">
  *   <div data-lead-gate
- *        data-file="/downloads/SEO-KPI-Scorecard.xlsx"
+ *        data-file="/downloads/seo-kpi-scorecard-q7m2x9.xlsx"
  *        data-resource="SEO KPI Scorecard"
  *        data-button="Get the scorecard"
  *        data-note=".xlsx · works in Google Sheets"></div>
@@ -89,7 +89,7 @@
       '<form class="lead-form" novalidate>' +
         '<div class="lf-grid">' +
           '<label for="' + uid + '-nm"><span class="lf-sr">Full name</span><input id="' + uid + '-nm" name="full_name" type="text" placeholder="Full name" autocomplete="name" required></label>' +
-          '<label for="' + uid + '-em"><span class="lf-sr">Work email</span><input id="' + uid + '-em" name="email" type="email" placeholder="Work email" autocomplete="email" required></label>' +
+          '<label for="' + uid + '-em"><span class="lf-sr">Email</span><input id="' + uid + '-em" name="email" type="email" placeholder="Email" autocomplete="email" required></label>' +
           '<label for="' + uid + '-ro"><span class="lf-sr">Your role</span><select id="' + uid + '-ro" name="role" required><option value="" selected disabled>Your role</option>' + opts + '</select></label>' +
         '</div>' +
         '<input type="text" name="_honey" class="lf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">' +
