@@ -683,6 +683,15 @@ img { max-width: 100%; }
   .case-table th, .case-table td { padding-right: 10px; }
   .case-table .ev::before { display: none; }
 }
+
+/* Readable, uniform text: one size, black, aligned */
+:root { --ink-body: #0F0F0F; --ink-soft: #3A3A3A; --ink-faint: #555555; }
+.tldr-top > p { margin: 0 0 24px; max-width: 68ch; }
+.lead, .insight-line, .m-panel > p, .m-main > p, .lessons p, .note, .facts dd, .back p, .tldr-grid p, .tldr-top > p { font-size: 1.0625rem; line-height: 1.75; color: var(--ink); }
+.lead { font-weight: 400; }
+.source, .fig-cap { font-size: .85rem; color: var(--ink-soft); }
+.article-body .section > p, .article-body .col > p, .article-body .m-main > p, .article-body .lessons p, .article-body .tldr-top > p { text-wrap: pretty; hyphens: auto; -webkit-hyphens: auto; }
+@media (min-width: 640px) { .article-body .section > p:not(.lead), .article-body .col > p:not(.source), .article-body .m-main > p, .article-body .tldr-top > p { text-align: justify; } }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -771,23 +780,9 @@ img { max-width: 100%; }
   <div class="wide tldr" id="summary" data-ch="00" data-title="Quick summary">
     <div class="tldr-card">
       <div class="tldr-top">
-        <span class="mono">Quick summary · 30-second read</span>
+        <span class="mono">Quick summary</span>
         <h2>Judge SEO by evidence, not deadlines.</h2>
-        <ul class="tldr-grid">
-          <li><span class="n">0</span><p><strong>Fixed timelines in SEO.</strong> Google says some changes land in hours, others take months.</p></li>
-          <li><span class="n">3</span><p><strong>Links to check, in order:</strong> was the work done, did visibility grow, did it hit the business.</p></li>
-          <li><span class="n spark">8/8</span><p><strong>Sources agree</strong> leads and sales from organic search are the final test. Free tools are enough.</p></li>
-        </ul>
-      </div>
-      <div class="tldr-bot">
-        <div>
-          <span class="mono">Ask your SEO this week</span>
-          <ol>
-            <li>What did you recommend, and what's actually live?</li>
-            <li>How did non-brand clicks change versus last year?</li>
-            <li>How many real leads came from organic search?</li>
-          </ol>
-        </div>
+        <p>Google says some SEO changes show up in hours and others take months, so a fixed deadline can't tell you if the work is good. Check three things in order: was the work done, did visibility grow, and did it bring real leads. This guide covers the 7 metrics to check, using free Google tools.</p>
         <a class="btn btn-ink" href="#download">Get the free scorecard ↓</a>
       </div>
     </div>
@@ -864,7 +859,6 @@ img { max-width: 100%; }
 
   <div class="col">
     <p>Each story needs a different decision: push for execution, give it more time, or change the strategy. Firing a good SEO in story two is as costly as renewing a weak one in story three.</p>
-    <p class="bridge">Next: what the experts measure.</p>
   </div>
 
   <!-- 02 -->
@@ -903,7 +897,6 @@ img { max-width: 100%; }
 
   <div class="col">
     <p class="insight-line"><strong>Most KPI guides are written for SEOs reporting to a boss.</strong> Google and Shopify write for site owners, but none of them show you how to judge the person you hired. That's the gap this guide fills.</p>
-    <p class="bridge">Put them in the order they happen, and you get a chain.</p>
   </div>
 
   <!-- 03 -->
@@ -943,7 +936,6 @@ img { max-width: 100%; }
   <div class="col">
     <p>Semrush splits KPIs the same way. Links 1 and 2 are <strong>early signals</strong>: they move first, so you can fix problems while there's still time. Link 3 is the <strong>final result</strong>: it confirms the work, but it always shows up last.</p>
     <p>That's also why a missed deadline is so misleading. It only looks at link 3, the slowest one.</p>
-    <p class="bridge">Next: each metric, one by one.</p>
   </div>
 
   <!-- 04 -->
@@ -1187,7 +1179,6 @@ img { max-width: 100%; }
   </div>
 
   <div class="col">
-    <p class="bridge">Next: the numbers that fool you.</p>
   </div>
 
   <!-- 05 dark band -->
@@ -1209,7 +1200,6 @@ img { max-width: 100%; }
     </div>
     <div class="col">
       <div class="note"><strong>And AI search?</strong> Ahrefs and Semrush now track mentions in AI assistants. Worth watching, but the data is still limited. Don't judge your SEO on it yet.</div>
-      <p class="bridge">Next: what real companies measured.</p>
     </div>
   </div>
 
@@ -1264,7 +1254,6 @@ img { max-width: 100%; }
       <li><h4>The pros measure money, not rankings.</h4><p>ZipRecruiter tracked non-branded traffic and conversions. Vodafone tracked leads and sales. Eventbrite tracked the pages that sell tickets.</p></li>
       <li><h4>Some drops aren't your SEO's fault.</h4><p>HouseFresh took about two years to recover from a Google update. Check whether your whole market dropped before you blame anyone.</p></li>
     </ol>
-    <p class="bridge">Next: diagnose your own SEO.</p>
   </div>
 
   <!-- 07 -->
