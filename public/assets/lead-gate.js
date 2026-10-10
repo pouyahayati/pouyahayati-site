@@ -4,7 +4,7 @@
  * Usage in a post (no other code needed):
  *   <link rel="stylesheet" href="/assets/lead-gate.css">
  *   <div data-lead-gate
- *        data-file="/downloads/seo-kpi-scorecard-q7m2x9.xlsx"
+ *        data-file="/downloads/seo-report-template-q7m2x9.xlsx"
  *        data-resource="SEO KPI Scorecard"
  *        data-button="Get the scorecard"
  *        data-note=".xlsx · works in Google Sheets"></div>
