@@ -624,8 +624,8 @@ img { max-width: 100%; }
 
 /* Author box: compact, bigger photo, short text */
 .author { max-width: 720px; margin-top: 64px; padding: 24px; gap: 18px; align-items: center; }
-.author .big { width: 96px; height: 96px; border-radius: 18px; }
-.author .big img { object-position: 50% 30%; }
+.author .big { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; }
+.author .big img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
 @media (min-width: 640px) { .author { grid-template-columns: 120px 1fr; gap: 28px; padding: 28px; } .author .big { width: 120px; height: 120px; } }
 .author h4 { margin: 4px 0 2px; }
 .author .author-role { margin: 0 0 8px; color: var(--dark-ink); font-weight: 600; font-size: .95rem; }
@@ -721,6 +721,7 @@ img { max-width: 100%; }
 .article-body .t-simple td, .article-body .t-simple th, .article-body .chain p, .article-body .mono { text-align: left; hyphens: manual; }
 .article-body .section > p, .article-body .section > .lead, .article-body .metric > p, .article-body .metric .facts, .article-body .source, .article-body .stories, .article-body .lessons { max-width: 720px; }
 .article-body .metric > p, .article-body .section > p:not(.lead):not(.source) { font-size: 1.0625rem; }
+.author .big img, .avatar.photo img { transform: scale(1.3); transform-origin: 50% 42%; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -858,7 +859,7 @@ img { max-width: 100%; }
         <table class="t-simple">
           <thead><tr><th scope="col">Metric</th><th scope="col">Sources that recommend it</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Leads and sales from organic search</th><td><span class="cnt top">8/8</span> All of them</td></tr>
+            <tr><th scope="row">Verified conversions from organic search</th><td><span class="cnt top">8/8</span> All of them</td></tr>
             <tr><th scope="row">Non-branded traffic</th><td><span class="cnt">5/8</span> Google, Ahrefs, Semrush, Search Engine Land, Shopify</td></tr>
             <tr><th scope="row">Search visibility</th><td><span class="cnt">5/8</span> Ahrefs, Semrush, Search Engine Journal, Seer, Shopify</td></tr>
             <tr><th scope="row">Google Business Profile (local)</th><td><span class="cnt">3/8</span> Google, Semrush, Shopify</td></tr>
@@ -870,7 +871,7 @@ img { max-width: 100%; }
       </div>
       <figcaption class="fig-cap">Left out: rankings, Domain Authority, bounce rate and backlink counts. The sources disagreed or advised against them.</figcaption>
     </figure>
-    <p>Only one metric gets 8 out of 8: <strong>leads and sales from organic search.</strong> Most guides are written for SEOs reporting to a boss. This one is for the person paying the invoice.</p>
+    <p>Only one metric gets 8 out of 8: <strong>verified conversions from organic search.</strong> That's the final test. The others move first and show why conversions are or aren't coming, which is why you still need them.</p>
   </section>
 
   <!-- 03 -->
@@ -884,7 +885,7 @@ img { max-width: 100%; }
         <div class="joint" aria-hidden="true"><svg viewBox="0 0 34 20"><path d="M2 10h28M22 3l8 7-8 7"/></svg></div>
         <div class="link"><span class="mono">Link 2</span><h4>Did visibility grow?</h4><p>Non-brand clicks · Search breadth · Where you rank · Pages that sell</p></div>
         <div class="joint" aria-hidden="true"><svg viewBox="0 0 34 20"><path d="M2 10h28M22 3l8 7-8 7"/></svg></div>
-        <div class="link"><span class="mono">Link 3</span><h4>Did it hit the business?</h4><p>Verified leads and sales · Business Profile</p></div>
+        <div class="link"><span class="mono">Link 3</span><h4>Did it hit the business?</h4><p>Verified conversions · Business Profile</p></div>
       </div>
     </figure>
     <p>Links 1 and 2 move first, so you can fix problems early. Link 3 moves last. A deadline only looks at Link 3, which is why it misleads.</p>
@@ -903,11 +904,11 @@ img { max-width: 100%; }
           <tbody>
             <tr><td>01</td><th scope="row"><a href="#m1">Work delivered</a></th><td>1 · Work</td><td>Your SEO's change log</td></tr>
             <tr><td>02</td><th scope="row"><a href="#m2">Indexing of key pages</a></th><td>1 · Work</td><td>Search Console → Pages</td></tr>
-            <tr><td>03</td><th scope="row"><a href="#m3">Non-brand clicks vs last year</a></th><td>2 · Visibility</td><td>Search Console → Performance</td></tr>
+            <tr><td>03</td><th scope="row"><a href="#m3">Non-brand clicks over time</a></th><td>2 · Visibility</td><td>Search Console → Performance</td></tr>
             <tr><td>04</td><th scope="row"><a href="#m4">Search breadth</a></th><td>2 · Visibility</td><td>Search Console → Queries</td></tr>
             <tr><td>05</td><th scope="row"><a href="#m5">Where you rank</a></th><td>2 · Visibility</td><td>Search Console → Queries + Position</td></tr>
             <tr><td>06</td><th scope="row"><a href="#m6">Clicks to pages that sell</a></th><td>2 · Visibility</td><td>Search Console → Pages</td></tr>
-            <tr><td>07</td><th scope="row"><a href="#m7">Verified leads and sales</a></th><td>3 · Business</td><td>GA4 + your CRM</td></tr>
+            <tr><td>07</td><th scope="row"><a href="#m7">Verified conversions</a></th><td>3 · Business</td><td>GA4 + your CRM</td></tr>
             <tr><td>+1</td><th scope="row"><a href="#m8">Business Profile actions</a></th><td>3 · Local</td><td>Business Profile → Performance</td></tr>
           </tbody>
         </table>
@@ -942,13 +943,13 @@ img { max-width: 100%; }
 
     <article class="metric" id="m3">
       <span class="mono">03 · Link 2</span>
-      <h3>Non-brand clicks vs last year</h3>
-      <p>Clicks from searches without your business name: new customers SEO brought in. Compare with the same month last year, and use clicks, not impressions (Google misreported impressions from May 2025 to April 2026).</p>
+      <h3>Non-brand clicks over time</h3>
+      <p>Clicks from searches without your business name: new customers SEO brought in. Compare with the same month last year if you have the data, so seasons don't fool you; otherwise watch the trend month by month. Use clicks, not impressions.</p>
       <dl class="facts">
         <div><dt>Where</dt><dd>Search Console → Performance → Branded filter: non-brand</dd></div>
-        <div><dt>Good sign</dt><dd>Up versus last year.</dd></div>
+        <div><dt>Good sign</dt><dd>A steady rise over time.</dd></div>
         <div><dt>Red flag</dt><dd>Only total traffic, and the growth is all brand.</dd></div>
-        <div class="ask"><dt>Ask</dt><dd>"How did non-brand clicks change versus last year?"</dd></div>
+        <div class="ask"><dt>Ask</dt><dd>"How have non-brand clicks changed over time?"</dd></div>
       </dl>
       <p class="source">Sources: Ahrefs, Semrush, Search Engine Land, Shopify; Google, branded queries filter and data anomalies.</p>
     </article>
@@ -994,8 +995,8 @@ img { max-width: 100%; }
 
     <article class="metric" id="m7">
       <span class="mono">07 · Link 3</span>
-      <h3>Verified leads and sales</h3>
-      <p>Calls, forms and sales from organic search, confirmed in your CRM and compared with what you pay. That's your SEO ROI, and the only metric all 8 sources agree on. It moves last, so don't judge on it alone in the first months.</p>
+      <h3>Verified conversions</h3>
+      <p>Calls, forms, bookings and sales from organic search, confirmed in your CRM and compared with what you pay. That's your SEO ROI, and the only metric all 8 sources agree on. It moves last, so don't judge on it alone in the first months.</p>
       <dl class="facts">
         <div><dt>Where</dt><dd>GA4 → Organic Search → Key events, checked against your CRM</dd></div>
         <div><dt>Good sign</dt><dd>Organic leads rising, and sales confirms they're real.</dd></div>
@@ -1011,7 +1012,7 @@ img { max-width: 100%; }
       <p>Local customers often call or get directions straight from Google Maps, without visiting your site. Your profile counts those actions.</p>
       <dl class="facts">
         <div><dt>Where</dt><dd>Business Profile → Performance</dd></div>
-        <div><dt>Good sign</dt><dd>Calls and directions up versus last year.</dd></div>
+        <div><dt>Good sign</dt><dd>Calls and directions rising over time.</dd></div>
         <div><dt>Red flag</dt><dd>Never reported, or only "views".</dd></div>
         <div class="ask"><dt>Ask</dt><dd>"How many calls came from our profile?"</dd></div>
       </dl>
@@ -1030,9 +1031,9 @@ img { max-width: 100%; }
           <thead><tr><th scope="col">Report line</th><th scope="col">The catch</th><th scope="col">Check instead</th></tr></thead>
           <tbody>
             <tr><th scope="row">Average position 4.2 → 3.1</th><td>Rises when weak rankings drop off.</td><td>Where you rank</td></tr>
-            <tr><th scope="row">Impressions +68%</th><td>Misreported by Google, May 2025 – April 2026.</td><td>Non-brand clicks</td></tr>
+            <tr><th scope="row">Impressions +68%</th><td>Counts appearances, not visits. Can rise while clicks fall.</td><td>Non-brand clicks</td></tr>
             <tr><th scope="row">"#1 for 12 keywords"</th><td>Your SEO picked the keywords.</td><td>Search breadth</td></tr>
-            <tr><th scope="row">Domain Rating 24 → 31</th><td>A tool's score. Google doesn't use it.</td><td>Verified leads</td></tr>
+            <tr><th scope="row">Domain Rating 24 → 31</th><td>A tool's score. Google doesn't use it.</td><td>Verified conversions</td></tr>
             <tr><th scope="row">Backlinks +240</th><td>Easy to inflate with junk links.</td><td>A list of links with sources</td></tr>
             <tr><th scope="row">Time on page 2:41</th><td>Rarely reflects SEO growth.</td><td>Pages that sell</td></tr>
           </tbody>
@@ -1095,7 +1096,7 @@ img { max-width: 100%; }
           </div>
         </fieldset>
         <fieldset class="q">
-          <legend><span class="mono">Link 2 · Visibility</span>Are non-brand clicks, searches or top-10 positions up versus last year?</legend>
+          <legend><span class="mono">Link 2 · Visibility</span>Are non-brand clicks, searches or top-10 positions growing over time?</legend>
           <div class="seg">
             <input type="radio" name="l2" id="l2-yes" value="yes"><label for="l2-yes">Yes</label>
             <input type="radio" name="l2" id="l2-no" value="no"><label for="l2-no">Flat or down</label>
