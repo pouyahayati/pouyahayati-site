@@ -715,6 +715,12 @@ img { max-width: 100%; }
 .metric .source, .section > .source { margin-top: 14px; }
 .case-table { min-width: 560px; }
 @media (max-width: 560px) { .t-simple th, .t-simple td { padding-right: 10px; font-size: .85rem; } }
+
+/* Justified body text */
+.article-body p, .article-body li, .article-body figcaption { text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; }
+.article-body .t-simple td, .article-body .t-simple th, .article-body .chain p, .article-body .mono { text-align: left; hyphens: manual; }
+.article-body .section > p, .article-body .section > .lead, .article-body .metric > p, .article-body .metric .facts, .article-body .source, .article-body .stories, .article-body .lessons { max-width: 720px; }
+.article-body .metric > p, .article-body .section > p:not(.lead):not(.source) { font-size: 1.0625rem; }
 </style>
   <link rel="stylesheet" href="/assets/lead-gate.css">
   <script src="/assets/lead-gate.js" defer></script>
@@ -744,7 +750,7 @@ img { max-width: 100%; }
       <div>
       <div class="hero-meta">
         <span class="who"><span class="avatar photo"><img src="/images/profile.jpg" alt="" width="36" height="36"></span>By Pooya Hayati</span>
-        <span class="num">12 min read</span>
+        <span class="num">8 min read</span>
         <span><time datetime="2026-10-07">October 2026</time></span>
       </div>
       <h1>Missed SEO targets? <br><span class="soft">Check these</span> <span class="hl">7 SEO KPIs.</span></h1>
@@ -831,15 +837,14 @@ img { max-width: 100%; }
   <section class="section col" id="problem" aria-labelledby="problem-title">
     <div class="kicker"><span class="big-n">01</span><span class="mono">The problem</span></div>
     <h2 id="problem-title">One flat line, three stories.</h2>
-    <p class="lead">You hired an SEO person or agency. There were targets. The date came, and the numbers didn't.</p>
-    <p>The question I hear most from business owners is simple: <strong>"We've paid every month and missed the targets. Is our SEO bad, or were the goals wrong?"</strong></p>
-    <p>A deadline can't answer that. Even Google says some changes take effect in a few hours and others take several months. The same flat traffic line can hide three very different stories:</p>
+    <p class="lead">You hired an SEO. The deadline came, and the numbers didn't.</p>
+    <p>A deadline can't tell you why. Google itself says some changes take hours and others take months. A flat traffic line usually means one of three things:</p>
     <ol class="stories">
-      <li><strong>The work never shipped.</strong> Recommendations are stuck with a busy developer or waiting on an approval. Traffic can't move if the changes aren't live.</li>
-      <li><strong>The work shipped and needs time.</strong> More searches are climbing into Google's top 10 every month. Traffic and sales follow these early signals, just later than the contract assumed.</li>
-      <li><strong>The work shipped, but it was wrong.</strong> Everything has been live for months, yet visibility hasn't moved. If your market is stable, the strategy is the problem.</li>
+      <li><strong>The work never shipped.</strong> It's stuck with a developer or waiting for approval.</li>
+      <li><strong>It shipped and needs time.</strong> Early signals are moving; sales will follow later.</li>
+      <li><strong>It shipped and was wrong.</strong> Live for months, nothing moved. The strategy failed.</li>
     </ol>
-    <p>Each story needs a different decision: push for execution, give it more time, or change the strategy. Firing a good SEO in story two is as costly as renewing a weak one in story three.</p>
+    <p>Each needs a different decision: push, wait or change. The metrics below tell you which one you're in.</p>
     <p class="source">Source: Google, SEO Starter Guide.</p>
   </section>
 
@@ -847,8 +852,7 @@ img { max-width: 100%; }
   <section class="section col" id="method" aria-labelledby="method-title">
     <div class="kicker"><span class="big-n">02</span><span class="mono">The research</span></div>
     <h2 id="method-title">What 8 sources agree on.</h2>
-    <p class="lead">Instead of another list of 30 SEO metrics, I checked which ones the sources actually agree on.</p>
-    <p>I compared Google's guidance for site owners with the KPI guides from Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer Interactive, Shopify and HubSpot, and counted how many recommend each metric.</p>
+    <p class="lead">I compared Google's guidance with the KPI guides from Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer, Shopify and HubSpot.</p>
     <figure class="fig">
       <div class="table-wrap">
         <table class="t-simple">
@@ -864,17 +868,16 @@ img { max-width: 100%; }
           </tbody>
         </table>
       </div>
-      <figcaption class="fig-cap">Didn't make the cut: rankings, Domain Authority, bounce rate and backlink counts. The sources disagreed, and some advised against them.</figcaption>
+      <figcaption class="fig-cap">Left out: rankings, Domain Authority, bounce rate and backlink counts. The sources disagreed or advised against them.</figcaption>
     </figure>
-    <p><strong>The only metric every source recommends is leads and sales from organic search.</strong> Ahrefs calls organic conversions "the only indisputable SEO KPI."</p>
-    <p>Notice the gap, though. Most KPI guides are written for SEOs reporting to a boss. Google and Shopify write for site owners, but none of them show you how to judge the person you hired. That's the gap this guide fills.</p>
+    <p>Only one metric gets 8 out of 8: <strong>leads and sales from organic search.</strong> Most guides are written for SEOs reporting to a boss. This one is for the person paying the invoice.</p>
   </section>
 
   <!-- 03 -->
   <section class="section col" id="chain" aria-labelledby="chain-title">
     <div class="kicker"><span class="big-n">03</span><span class="mono">The framework</span></div>
     <h2 id="chain-title">SEO is a chain.</h2>
-    <p class="lead">Work has to go live before Google can show it. People have to see it before they click, and click before they buy.</p>
+    <p class="lead">Work goes live, Google shows it, people click, people buy. Break one link and everything after it stops.</p>
     <figure class="fig">
       <div class="chain chain-static">
         <div class="link"><span class="mono">Link 1</span><h4>Was the work done?</h4><p>Work delivered · Indexing</p></div>
@@ -883,18 +886,16 @@ img { max-width: 100%; }
         <div class="joint" aria-hidden="true"><svg viewBox="0 0 34 20"><path d="M2 10h28M22 3l8 7-8 7"/></svg></div>
         <div class="link"><span class="mono">Link 3</span><h4>Did it hit the business?</h4><p>Verified leads and sales · Business Profile</p></div>
       </div>
-      <figcaption class="fig-cap">Break one link and everything after it stops.</figcaption>
     </figure>
-    <p>Semrush splits KPIs the same way. Links 1 and 2 are early signals: they move first, so you can fix problems while there's still time. Link 3 is the final result: it confirms the work, but it always shows up last.</p>
-    <p>That's why a missed deadline is so misleading. It only looks at link 3, the slowest one.</p>
+    <p>Links 1 and 2 move first, so you can fix problems early. Link 3 moves last. A deadline only looks at Link 3, which is why it misleads.</p>
+    <p class="source">Source: Semrush, SEO KPIs.</p>
   </section>
 
   <!-- 04 -->
   <section class="section col" id="metrics" aria-labelledby="metrics-title">
     <div class="kicker"><span class="big-n">04</span><span class="mono">The metrics</span></div>
     <h2 id="metrics-title">The 7 metrics (+1 for local).</h2>
-    <p class="lead">All of them come from free Google tools. Here's the overview, then each one in detail.</p>
-    <p>You don't have to pull these numbers yourself. That's your SEO's job. <a href="#download">Get the free report template</a>, send it to them, and ask for it with every monthly report.</p>
+    <p class="lead">All free, all in Google's own tools. You don't need to pull them yourself: <a href="#download">send your SEO the free report template</a> and ask for it every month.</p>
     <figure class="fig">
       <div class="table-wrap">
         <table class="t-simple t-metrics">
@@ -915,85 +916,78 @@ img { max-width: 100%; }
 
     <article class="metric" id="m1">
       <span class="mono">01 · Link 1</span>
-      <h3>Work delivered and verified</h3>
-      <p>The share of your SEO's recommendations that are actually live on your site. Sounds basic. It's also the metric almost nobody checks.</p>
-      <p>A lot of SEO work never ships. In a 2024 survey of technical SEOs, the most common answer was that only 40 to 60% of their recommendations got implemented. Often the blocker isn't the SEO. It's a developer with no time, or an approval stuck in someone's inbox, sometimes yours. A simple change log fixes this: each recommendation, who owns it, and whether it's live, blocked or waiting.</p>
+      <h3>Work delivered</h3>
+      <p>How many of your SEO's recommendations are actually live. In a 2024 survey, most technical SEOs said only 40–60% of their recommendations ever get implemented.</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>Ask for a dated change log. Spot-check a few items on the live site.</dd></div>
+        <div><dt>Where</dt><dd>A dated change log. Spot-check a few items on your site.</dd></div>
         <div><dt>Good sign</dt><dd>Key items live; blocked items say why.</dd></div>
-        <div><dt>Red flag</dt><dd>No log. Just "we did a lot of work."</dd></div>
-        <div class="ask"><dt>Ask</dt><dd>"What did you recommend, what's live, and what's blocking the rest?"</dd></div>
+        <div><dt>Red flag</dt><dd>No log, just "we did a lot of work."</dd></div>
+        <div class="ask"><dt>Ask</dt><dd>"What's live, and what's blocking the rest?"</dd></div>
       </dl>
       <p class="source">Sources: Google, Do you need an SEO?; SEOFOMO, State of Technical SEO 2024.</p>
     </article>
 
     <article class="metric" id="m2">
       <span class="mono">02 · Link 1</span>
-      <h3>Indexing of your key pages</h3>
-      <p>If Google hasn't indexed a page, it can't appear in search. So before you judge rankings or traffic, make sure your service, product and location pages are actually in.</p>
-      <p>Google recommends checking Search Console about once a month, including the indexing report and Manual Actions. Skip the site-wide page count; Ahrefs says that mostly matters for big sites. What matters are the pages that sell.</p>
+      <h3>Indexing of key pages</h3>
+      <p>A page Google hasn't indexed can't rank. Check your service, product and location pages first; the site-wide total matters less.</p>
       <dl class="facts">
         <div><dt>Where</dt><dd>Search Console → Indexing → Pages</dd></div>
-        <div><dt>Good sign</dt><dd>All key pages indexed. New ones in within weeks.</dd></div>
-        <div><dt>Red flag</dt><dd>Pages that sell "not indexed" for months, with no plan.</dd></div>
-        <div class="ask"><dt>Ask</dt><dd>"Are all our key pages indexed? What's the plan for the rest?"</dd></div>
+        <div><dt>Good sign</dt><dd>All key pages indexed; new ones within weeks.</dd></div>
+        <div><dt>Red flag</dt><dd>Pages that sell "not indexed" for months.</dd></div>
+        <div class="ask"><dt>Ask</dt><dd>"Are all our key pages indexed?"</dd></div>
       </dl>
-      <p class="source">Sources: Google, Get started with Search Console; Google, Debugging drops in Search traffic; Ahrefs, SEO KPIs.</p>
+      <p class="source">Sources: Google, Get started with Search Console; Ahrefs, SEO KPIs.</p>
     </article>
 
     <article class="metric" id="m3">
       <span class="mono">03 · Link 2</span>
-      <h3>Non-brand clicks, versus last year</h3>
-      <p>Clicks from searches that don't include your business name. People who type your name already know you. Non-brand clicks are new customers who found you because of SEO. That's the whole point.</p>
-      <p>Always compare with the same months last year, not last month, so seasons don't fool you. And use clicks, not impressions: Google confirmed impressions were over-reported for most of a year (May 2025 to April 2026). Clicks were fine.</p>
-      <p>Why it matters: total clicks can look flat at 1,000 while brand clicks rise from 600 to 750 and new-customer clicks fall from 400 to 250. Same total, worse story.</p>
+      <h3>Non-brand clicks vs last year</h3>
+      <p>Clicks from searches without your business name: new customers SEO brought in. Compare with the same month last year, and use clicks, not impressions (Google misreported impressions from May 2025 to April 2026).</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>Search Console → Performance → Branded filter: non-brand. No filter yet? Exclude your brand name and misspellings.</dd></div>
-        <div><dt>Good sign</dt><dd>Up versus last year, or steady while your market shrank.</dd></div>
+        <div><dt>Where</dt><dd>Search Console → Performance → Branded filter: non-brand</dd></div>
+        <div><dt>Good sign</dt><dd>Up versus last year.</dd></div>
         <div><dt>Red flag</dt><dd>Only total traffic, and the growth is all brand.</dd></div>
         <div class="ask"><dt>Ask</dt><dd>"How did non-brand clicks change versus last year?"</dd></div>
       </dl>
-      <p class="source">Sources: Ahrefs, Semrush, Search Engine Land and Shopify KPI guides; Google, branded queries filter; Google, Search Console data anomalies.</p>
+      <p class="source">Sources: Ahrefs, Semrush, Search Engine Land, Shopify; Google, branded queries filter and data anomalies.</p>
     </article>
 
     <article class="metric" id="m4">
       <span class="mono">04 · Link 2</span>
       <h3>Search breadth</h3>
-      <p>How many different non-brand searches send you at least one click. When it grows, Google is showing you for more of what your customers look for. It usually moves before traffic does, which makes it your best early signal.</p>
-      <p>Ahrefs puts search visibility at the top of its KPI list. The catch: SEO tools measure it with keyword lists your SEO picks. Counting real searches in Search Console uses Google's own data. It's free, and nobody can pick the keywords to make it look good.</p>
+      <p>How many different non-brand searches bring you clicks. It grows before traffic does, so it's your best early signal, and it uses Google's data, not keywords your SEO picked.</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>Search Console → Performance → Queries, non-brand → export and count.</dd></div>
-        <div><dt>Good sign</dt><dd>More searches over time, matching what you sell.</dd></div>
-        <div><dt>Red flag</dt><dd>Growth only in searches unrelated to your business.</dd></div>
+        <div><dt>Where</dt><dd>Search Console → Queries, non-brand → count</dd></div>
+        <div><dt>Good sign</dt><dd>More searches, matching what you sell.</dd></div>
+        <div><dt>Red flag</dt><dd>Growth only in irrelevant searches.</dd></div>
         <div class="ask"><dt>Ask</dt><dd>"Which new searches are we showing up for?"</dd></div>
       </dl>
-      <p class="source">Sources: Ahrefs, Semrush, Search Engine Journal, Seer and Shopify KPI guides.</p>
+      <p class="source">Sources: Ahrefs, Semrush, Search Engine Journal, Seer, Shopify.</p>
     </article>
 
     <article class="metric" id="m5">
       <span class="mono">05 · Link 2</span>
       <h3>Where you rank</h3>
-      <p>Don't rely on the single "average position" number. Count how many non-brand searches sit in positions 1 to 3, 4 to 10 and 11 to 20. Now you can see searches climbing toward the top.</p>
-      <p>Average position hides this. It can even "improve" while you lose visibility: when low-ranking searches drop off, the average goes up. Google advises against focusing on absolute position, and Ahrefs calls single keyword rankings an inferior metric. Example: top-3 searches going from 8 to 15, and the top 10 growing from 29 to 49, is real progress, even before traffic catches up.</p>
+      <p>Skip "average position"; it can rise while you lose visibility. Count your non-brand searches in positions 1–3, 4–10 and 11–20 instead, and watch them climb.</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>Search Console → Performance → Queries + Position → three buckets.</dd></div>
-        <div><dt>Good sign</dt><dd>Searches that bring buyers climbing into the top 10 and top 3.</dd></div>
-        <div><dt>Red flag</dt><dd>Only average position, or screenshots of hand-picked keywords.</dd></div>
-        <div class="ask"><dt>Ask</dt><dd>"How many important searches moved into the top 3?"</dd></div>
+        <div><dt>Where</dt><dd>Search Console → Queries + Position</dd></div>
+        <div><dt>Good sign</dt><dd>Buyer searches moving into the top 10 and top 3.</dd></div>
+        <div><dt>Red flag</dt><dd>Only average position or hand-picked screenshots.</dd></div>
+        <div class="ask"><dt>Ask</dt><dd>"How many important searches reached the top 3?"</dd></div>
       </dl>
-      <p class="source">Sources: Google, Debugging drops in Search traffic; Ahrefs, SEO KPIs; Search Engine Land, SEO KPIs.</p>
+      <p class="source">Sources: Google, Debugging drops in Search traffic; Ahrefs and Search Engine Land, SEO KPIs.</p>
     </article>
 
     <article class="metric" id="m6">
       <span class="mono">06 · Link 2</span>
       <h3>Clicks to pages that sell</h3>
-      <p>Traffic isn't revenue. This one only counts non-brand clicks landing on pages that can make money: services, products, categories, locations, pricing.</p>
-      <p>Search Engine Land lists "pages generating traffic" as a real-world KPI, and Eventbrite judged its own SEO by traffic to event listings, the pages that sell tickets. Busy blog posts don't always bring customers; pages that sell do.</p>
+      <p>Traffic isn't revenue. Count only non-brand clicks to pages that can make money: services, products, locations, pricing.</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>Search Console → Performance → Pages, non-brand → group by page type.</dd></div>
-        <div><dt>Good sign</dt><dd>Pages that sell gaining non-brand clicks.</dd></div>
+        <div><dt>Where</dt><dd>Search Console → Pages, non-brand</dd></div>
+        <div><dt>Good sign</dt><dd>Pages that sell gaining clicks.</dd></div>
         <div><dt>Red flag</dt><dd>All growth on blog posts nobody buys from.</dd></div>
-        <div class="ask"><dt>Ask</dt><dd>"How much search traffic lands on pages that sell?"</dd></div>
+        <div class="ask"><dt>Ask</dt><dd>"How much traffic lands on pages that sell?"</dd></div>
       </dl>
       <p class="source">Sources: Search Engine Land, SEO KPIs; HubSpot, blogging KPIs; Google case study, Eventbrite.</p>
     </article>
@@ -1001,28 +995,27 @@ img { max-width: 100%; }
     <article class="metric" id="m7">
       <span class="mono">07 · Link 3</span>
       <h3>Verified leads and sales</h3>
-      <p>Calls, forms, bookings and sales from organic search, confirmed in your own records, and compared with what you pay. That's your SEO ROI, and the one metric all eight sources agree on.</p>
-      <p>The key word is "confirmed". Some "conversions" are just page views or button clicks, and Google notes that Search Console and Analytics count visits differently. Your CRM settles it. Because this link moves last, don't use it as your only test in the early months. But in the end, it's the one that counts.</p>
+      <p>Calls, forms and sales from organic search, confirmed in your CRM and compared with what you pay. That's your SEO ROI, and the only metric all 8 sources agree on. It moves last, so don't judge on it alone in the first months.</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>GA4 → Traffic acquisition → Organic Search → Key events. Then match against your CRM, call log or sales records.</dd></div>
+        <div><dt>Where</dt><dd>GA4 → Organic Search → Key events, checked against your CRM</dd></div>
         <div><dt>Good sign</dt><dd>Organic leads rising, and sales confirms they're real.</dd></div>
-        <div><dt>Red flag</dt><dd>No key events, or leads your sales team calls junk.</dd></div>
+        <div><dt>Red flag</dt><dd>"Conversions" that are just page views or clicks.</dd></div>
         <div class="ask"><dt>Ask</dt><dd>"How many real leads came from organic, and how do you know?"</dd></div>
       </dl>
-      <p class="source">Sources: Ahrefs, Semrush, Search Engine Land, Search Engine Journal, Seer, Shopify and HubSpot KPI guides; Google, Using Search Console and Analytics data; GA4 Help, key events.</p>
+      <p class="source">Sources: all 8 KPI guides; Google, Search Console and Analytics data; GA4 Help, key events.</p>
     </article>
 
     <article class="metric" id="m8">
-      <span class="mono">+1 · For local businesses</span>
-      <h3>Google Business Profile actions</h3>
-      <p>Serve a local area? Then plenty of your customers never touch your website. They call or tap "directions" straight from your Google Maps listing. Your profile tracks every one of those actions, and Semrush and Shopify both list them as SEO KPIs.</p>
+      <span class="mono">+1 · Local businesses</span>
+      <h3>Business Profile actions</h3>
+      <p>Local customers often call or get directions straight from Google Maps, without visiting your site. Your profile counts those actions.</p>
       <dl class="facts">
-        <div><dt>Where</dt><dd>Your Business Profile → Performance</dd></div>
-        <div><dt>Good sign</dt><dd>Calls, directions and website clicks up versus last year.</dd></div>
+        <div><dt>Where</dt><dd>Business Profile → Performance</dd></div>
+        <div><dt>Good sign</dt><dd>Calls and directions up versus last year.</dd></div>
         <div><dt>Red flag</dt><dd>Never reported, or only "views".</dd></div>
-        <div class="ask"><dt>Ask</dt><dd>"How many calls and direction requests came from our profile?"</dd></div>
+        <div class="ask"><dt>Ask</dt><dd>"How many calls came from our profile?"</dd></div>
       </dl>
-      <p class="source">Sources: Google Business Profile Help, performance; Semrush and Shopify KPI guides.</p>
+      <p class="source">Sources: Google Business Profile Help; Semrush and Shopify KPI guides.</p>
     </article>
   </section>
 
@@ -1030,31 +1023,31 @@ img { max-width: 100%; }
   <section class="section col" id="liars" aria-labelledby="liars-title">
     <div class="kicker"><span class="big-n">05</span><span class="mono">The traps</span></div>
     <h2 id="liars-title">Numbers that fool you.</h2>
-    <p class="lead">These lines show up in a lot of SEO reports. Each one looks good and proves very little.</p>
+    <p class="lead">They look good in a report and prove very little.</p>
     <figure class="fig">
       <div class="table-wrap">
         <table class="t-simple">
           <thead><tr><th scope="col">Report line</th><th scope="col">The catch</th><th scope="col">Check instead</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Average position 4.2 → 3.1</th><td>It can "improve" while you lose visibility. Drop your low-ranking searches and the average goes up.</td><td>Where you rank</td></tr>
-            <tr><th scope="row">Impressions +68%</th><td>Google confirmed impressions were over-reported from May 2025 to April 2026.</td><td>Non-brand clicks</td></tr>
-            <tr><th scope="row">"We rank #1 for 12 keywords"</th><td>Your SEO picked those keywords. Ahrefs calls rankings an inferior metric anyway.</td><td>Search breadth</td></tr>
-            <tr><th scope="row">Domain Rating 24 → 31</th><td>A score made by an SEO tool. Even Ahrefs calls its own DR a proxy. Google doesn't use it.</td><td>Verified leads</td></tr>
-            <tr><th scope="row">Backlinks built +240</th><td>Easy to inflate with junk links. Google warns owners about SEOs who push link schemes.</td><td>A list of links with sources</td></tr>
-            <tr><th scope="row">Time on page 2:41</th><td>Ahrefs and Shopify both say engagement metrics rarely reflect SEO growth.</td><td>Pages that sell</td></tr>
+            <tr><th scope="row">Average position 4.2 → 3.1</th><td>Rises when weak rankings drop off.</td><td>Where you rank</td></tr>
+            <tr><th scope="row">Impressions +68%</th><td>Misreported by Google, May 2025 – April 2026.</td><td>Non-brand clicks</td></tr>
+            <tr><th scope="row">"#1 for 12 keywords"</th><td>Your SEO picked the keywords.</td><td>Search breadth</td></tr>
+            <tr><th scope="row">Domain Rating 24 → 31</th><td>A tool's score. Google doesn't use it.</td><td>Verified leads</td></tr>
+            <tr><th scope="row">Backlinks +240</th><td>Easy to inflate with junk links.</td><td>A list of links with sources</td></tr>
+            <tr><th scope="row">Time on page 2:41</th><td>Rarely reflects SEO growth.</td><td>Pages that sell</td></tr>
           </tbody>
         </table>
       </div>
     </figure>
-    <p><strong>And AI search?</strong> Ahrefs and Semrush now track mentions in AI assistants. Worth watching, but the data is still limited. Don't judge your SEO on it yet.</p>
+    <p><strong>AI search?</strong> Worth watching, but the data is still limited. Don't judge your SEO on it yet.</p>
+    <p class="source">Sources: Google, Ahrefs, Shopify, Semrush.</p>
   </section>
 
   <!-- 06 -->
   <section class="section col" id="cases" aria-labelledby="cases-title">
     <div class="kicker"><span class="big-n">06</span><span class="mono">The proof</span></div>
     <h2 id="cases-title">What real companies measure.</h2>
-    <p class="lead">11 businesses, from telecom giants to local trades. What matters is which metrics they trusted.</p>
-    <p>Not all evidence is equal: only three of these were proper controlled tests. Three were published by Google, and five are agency or self-reported.</p>
+    <p class="lead">11 businesses, from telecom giants to local trades. Three were controlled tests, three Google case studies, five agency or self-reported.</p>
     <figure class="fig">
       <div class="table-wrap">
         <table class="t-simple case-table">
@@ -1075,11 +1068,11 @@ img { max-width: 100%; }
         </table>
       </div>
     </figure>
-    <p>Put all eleven side by side and three lessons jump out:</p>
+    <p>Three lessons:</p>
     <ol class="lessons">
-      <li><h4>Many SEO changes do nothing. Some hurt.</h4><p>A Pinterest title test had zero measurable effect. Some Etsy title tests hurt traffic badly. A change log is how you catch the bad ones fast.</p></li>
-      <li><h4>The pros measure money, not rankings.</h4><p>ZipRecruiter tracked non-branded traffic and conversions. Vodafone tracked leads and sales. Eventbrite tracked the pages that sell tickets.</p></li>
-      <li><h4>Some drops aren't your SEO's fault.</h4><p>HouseFresh took about two years to recover from a Google update. Check whether your whole market dropped before you blame anyone.</p></li>
+      <li><h4>Many changes do nothing. Some hurt.</h4><p>Pinterest saw zero effect from a title test; some Etsy tests cut traffic. A change log catches this fast.</p></li>
+      <li><h4>The pros measure money, not rankings.</h4><p>ZipRecruiter, Vodafone and Eventbrite tracked conversions, leads and pages that sell.</p></li>
+      <li><h4>Some drops aren't your SEO's fault.</h4><p>HouseFresh took two years to recover from a Google update. Check your whole market first.</p></li>
     </ol>
   </section>
 
