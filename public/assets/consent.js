@@ -12,12 +12,12 @@
 
   var css = document.createElement("style");
   css.textContent =
-    ".cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin-inline:auto;padding:18px 20px;background:#0A0A0A;color:#FAFAFA;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,.35);font:500 .9rem/1.5 var(--font-body,system-ui,sans-serif)}" +
-    ".cc p{margin:0 0 14px}.cc a{color:inherit;text-decoration:underline}" +
-    ".cc-row{display:flex;gap:10px}" +
-    ".cc button{flex:1;min-height:44px;padding:10px 16px;font:700 .9rem/1 var(--font-body,system-ui,sans-serif);color:#FAFAFA;background:transparent;border:2px solid #FAFAFA;border-radius:10px;cursor:pointer}" +
-    ".cc button:hover,.cc button:focus-visible{background:#FAFAFA;color:#0A0A0A}" +
-    ".cc-link{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}";
+    ".cc{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding:10px var(--gutter,20px);background:rgba(250,250,250,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line,#E0E0E0);color:var(--ink,#111);font:500 .82rem/1.4 var(--font-body,system-ui,sans-serif)}" +
+    ".cc p{margin:0;color:var(--ink-soft,#555)}.cc a{color:var(--ink,#111);text-decoration:underline;text-underline-offset:2px}" +
+    ".cc-row{display:flex;gap:8px}" +
+    ".cc button{min-height:34px;padding:6px 16px;font:600 .8rem/1 var(--font-body,system-ui,sans-serif);color:var(--ink,#111);background:transparent;border:1.5px solid var(--ink,#111);border-radius:999px;cursor:pointer;transition:background .15s,color .15s}" +
+    ".cc button:hover,.cc button:focus-visible{background:var(--ink,#111);color:#FAFAFA}" +
+    "@media(max-width:560px){.cc{padding-block:12px}.cc-row{width:100%}.cc button{flex:1}}";
   document.head.appendChild(css);
 
   function apply(granted) {
@@ -31,7 +31,7 @@
     box.setAttribute("role", "dialog");
     box.setAttribute("aria-label", "Cookie consent");
     box.innerHTML =
-      "<p>I use Google Analytics cookies to see which pages are useful. They stay off unless you accept. " +
+      "<p>Analytics cookies stay off unless you accept. " +
       '<a href="/privacy/">Privacy policy</a></p>' +
       '<div class="cc-row"><button type="button" data-cc="denied">Reject</button><button type="button" data-cc="granted">Accept</button></div>';
     box.addEventListener("click", function (e) {
