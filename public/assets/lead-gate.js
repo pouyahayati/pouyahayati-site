@@ -110,6 +110,16 @@
     );
   }
 
+  // GTM: file_download event (no personal data)
+  function track(cfg) {
+    (window.dataLayer = window.dataLayer || []).push({
+      event: "file_download",
+      file_name: (cfg.file || "").split("/").pop(),
+      file_extension: (cfg.file || "").split(".").pop(),
+      resource_name: cfg.resource
+    });
+  }
+
   function mount(el, n) {
     var cfg = {
       file: el.getAttribute("data-file"),
@@ -125,6 +135,7 @@
       el.innerHTML = readyHTML(cfg, profile, message);
       el.querySelector(".lf-btn").addEventListener("click", function () {
         if (!logged) { send(profile, cfg.resource, true); logged = true; }
+        track(cfg);
         download(cfg.file);
       });
       el.querySelector(".lf-reset").addEventListener("click", function (e) {
@@ -164,6 +175,7 @@
         btn.disabled = true; btn.textContent = "Sending…"; msg.textContent = "";
         send(profile, cfg.resource, false).then(function () {
           save(profile); logged = true;
+          track(cfg);
           download(cfg.file);
           showReady(profile, "Done. Your download has started. Didn’t start? Click below.");
         });

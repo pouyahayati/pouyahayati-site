@@ -20,6 +20,18 @@
   function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
   function isWeekday(d) { var w = d.getDay(); return w !== 0 && w !== 6; }
 
+  // GTM: booking_click event when a day or the "open" arrow is clicked
+  box.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a") : null;
+    if (!a || !box.contains(a)) return;
+    var m = (a.href || "").match(/[?&]date=([\d-]+)/);
+    (window.dataLayer = window.dataLayer || []).push({
+      event: "booking_click",
+      booking_type: link,
+      booking_date: m ? m[1] : "none"
+    });
+  });
+
   var today = new Date(); today.setHours(0, 0, 0, 0);
 
   // first bookable day: N business days after today
