@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Consent Mode default (before GTM) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{if(localStorage.getItem('ph_consent')==='granted')gtag('consent','update',{analytics_storage:'granted'})}catch(e){}</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -140,8 +144,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Pooya Hayati · <a href="mailto:contact@pouyahayati.com">contact@pouyahayati.com</a></p>
-      <p><a href="/privacy/">Privacy</a> · <a href="#top">Back to top ↑</a></p>
+      <p><a href="/privacy/">Privacy</a> · <a href="#" data-cookie-settings>Cookie settings</a> · <a href="#top">Back to top ↑</a></p>
     </div>
   </footer>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>

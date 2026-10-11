@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Consent Mode default (before GTM) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{if(localStorage.getItem('ph_consent')==='granted')gtag('consent','update',{analytics_storage:'granted'})}catch(e){}</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -83,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </tbody>
       </table>
     </div>
-    <p>This site uses Google Tag Manager and Google Analytics 4 to measure anonymous traffic (pages viewed, referrals, device type). They may set analytics cookies (such as <code>_ga</code>). I do not use advertising trackers. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out add-on</a> or by blocking cookies in your browser.</p>
+    <p>This site uses Google Tag Manager and Google Analytics 4 to measure anonymous traffic (pages viewed, referrals, device type). They set analytics cookies (such as <code>_ga</code>) only after you click Accept in the cookie banner; until then analytics storage stays denied. You can change your choice any time with “Cookie settings” in the footer. I do not use advertising trackers. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out add-on</a> or by blocking cookies in your browser.</p>
 
     <h2>Your browser's local storage</h2>
     <p>After you fill in a download form, your name, email and role are saved in your own browser (local storage) so you don't have to type them again on other posts. This stays on your device; I can't read it. You can clear it with the "Use different details" link under any download button, or by clearing your browser's site data.</p>
@@ -117,8 +121,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="site-footer">
   <div class="footer-inner">
     <p>© 2026 Pooya Hayati · <a href="mailto:contact@pouyahayati.com">contact@pouyahayati.com</a></p>
-    <p><a href="/">Home</a></p>
+    <p><a href="#" data-cookie-settings>Cookie settings</a> · <a href="/">Home</a></p>
   </div>
 </footer>
+<script src="/assets/consent.js" defer></script>
 </body>
 </html>
