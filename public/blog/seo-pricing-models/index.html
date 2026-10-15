@@ -418,6 +418,14 @@ tbody th { font-weight: 700; color: var(--ink); }
 /* Justified body text, as on the KPIs post; cards, tables and graphics stay left-aligned */
 .article-body .section > p, .article-body .section > ul > li, .article-body .section > ol > li, .article-body .tldr-list li, .article-body .src-note { text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; }
 .article-body .check li, .article-body .qs li, .article-body .fig li, .article-body .sources-list li, .article-body .facts dd, .article-body .t-pick td { text-align: left; hyphens: manual; }
+.dep-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; max-width: none; }
+.dep-row li { display: inline-flex; align-items: center; gap: 8px; max-width: none; padding: 9px 14px; border-radius: 999px; font-weight: 700; font-size: .92rem; }
+.dep-row li svg { width: 15px; height: 15px; stroke-width: 3; }
+.dep-row .yes { background: var(--spark-wash); }
+.dep-row .no { border: 1.5px dashed var(--bad); color: var(--ink); }
+.dep-row .no svg { stroke: var(--bad); }
+.ai-lead small { display: none; }
+.hero-chart svg { max-height: 300px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
   @media (min-width: 1400px) { .hero .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 80px; } }
   </style>
@@ -461,20 +469,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="btn btn-ghost-d" href="#choose">How to choose</a>
           </div>
         </div>
-<div class="hero-chart only-d">
-          <span class="sticker">3 proposals, 3 prices</span>
-          <svg viewBox="0 0 480 300" role="img" aria-label="Illustration: three proposals, a monthly fee of $900, a $3,500 project and a pay-when-you-rank promise, are not the same thing">
-            <g font-family="Inter, sans-serif">
-              <text x="16" y="44" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS TIME</text>
-              <text x="464" y="44" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$900 a month</text>
-              <g style="fill:var(--dark-ink)"><rect x="16" y="56" width="68" height="22" rx="5"/><rect x="94" y="56" width="68" height="22" rx="5"/><rect x="172" y="56" width="68" height="22" rx="5"/><rect x="250" y="56" width="68" height="22" rx="5"/><rect x="328" y="56" width="68" height="22" rx="5"/><rect x="406" y="56" width="58" height="22" rx="5"/></g>
-              <text x="16" y="136" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A DEFINED PIECE OF WORK</text>
-              <text x="464" y="136" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$3,500</text>
-              <rect x="16" y="148" width="448" height="22" rx="5" style="fill:var(--spark)"/>
-              <text x="16" y="228" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A PROMISE ABOUT GOOGLE</text>
-              <text x="464" y="228" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">pay when you rank</text>
-              <rect x="16" y="240" width="448" height="22" rx="5" fill="none" stroke-width="2" stroke-dasharray="6 6" style="stroke:var(--dark-soft)"/>
-              <text x="240" y="288" font-size="13" font-weight="700" text-anchor="middle" style="fill:var(--spark)">NOT THE SAME THING</text>
+<div class="hero-chart %s">
+          <span class="sticker">Retainer · Phased · Performance</span>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Three pricing models: retainer, phased and performance based">
+            <g font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+              <rect x="40" y="70" width="70" height="90" rx="6" style="fill:var(--dark-ink)"/>
+              <rect x="125" y="40" width="70" height="120" rx="6" style="fill:var(--spark)"/>
+              <rect x="210" y="100" width="70" height="60" rx="6" fill="none" stroke-width="2" stroke-dasharray="5 5" style="stroke:var(--dark-soft)"/>
+              <line x1="20" y1="162" x2="300" y2="162" stroke-width="1.5" style="stroke:var(--dark-soft)"/>
+              <text x="75" y="184" style="fill:var(--dark-ink)">Retainer</text>
+              <text x="160" y="184" style="fill:var(--spark)">Phased</text>
+              <text x="245" y="184" style="fill:var(--dark-soft)">Performance</text>
             </g>
           </svg>
         </div>
@@ -542,23 +547,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="only-m chart-m">
-      <div class="hero-chart ">
-          <span class="sticker">3 proposals, 3 prices</span>
-          <svg viewBox="0 0 480 300" role="img" aria-label="Illustration: three proposals, a monthly fee of $900, a $3,500 project and a pay-when-you-rank promise, are not the same thing">
-            <g font-family="Inter, sans-serif">
-              <text x="16" y="44" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS TIME</text>
-              <text x="464" y="44" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$900 a month</text>
-              <g style="fill:var(--dark-ink)"><rect x="16" y="56" width="68" height="22" rx="5"/><rect x="94" y="56" width="68" height="22" rx="5"/><rect x="172" y="56" width="68" height="22" rx="5"/><rect x="250" y="56" width="68" height="22" rx="5"/><rect x="328" y="56" width="68" height="22" rx="5"/><rect x="406" y="56" width="58" height="22" rx="5"/></g>
-              <text x="16" y="136" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A DEFINED PIECE OF WORK</text>
-              <text x="464" y="136" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$3,500</text>
-              <rect x="16" y="148" width="448" height="22" rx="5" style="fill:var(--spark)"/>
-              <text x="16" y="228" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A PROMISE ABOUT GOOGLE</text>
-              <text x="464" y="228" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">pay when you rank</text>
-              <rect x="16" y="240" width="448" height="22" rx="5" fill="none" stroke-width="2" stroke-dasharray="6 6" style="stroke:var(--dark-soft)"/>
-              <text x="240" y="288" font-size="13" font-weight="700" text-anchor="middle" style="fill:var(--spark)">NOT THE SAME THING</text>
+      <div class="hero-chart %s">
+          <span class="sticker">Retainer · Phased · Performance</span>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Three pricing models: retainer, phased and performance based">
+            <g font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+              <rect x="40" y="70" width="70" height="90" rx="6" style="fill:var(--dark-ink)"/>
+              <rect x="125" y="40" width="70" height="120" rx="6" style="fill:var(--spark)"/>
+              <rect x="210" y="100" width="70" height="60" rx="6" fill="none" stroke-width="2" stroke-dasharray="5 5" style="stroke:var(--dark-soft)"/>
+              <line x1="20" y1="162" x2="300" y2="162" stroke-width="1.5" style="stroke:var(--dark-soft)"/>
+              <text x="75" y="184" style="fill:var(--dark-ink)">Retainer</text>
+              <text x="160" y="184" style="fill:var(--spark)">Phased</text>
+              <text x="245" y="184" style="fill:var(--dark-soft)">Performance</text>
             </g>
           </svg>
-</div>
+        </div>
   </div>
 
   <!-- 01 -->
@@ -605,14 +607,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="src-note">Sources: <a href="https://ahrefs.com/blog/seo-pricing/">Ahrefs</a>, <a href="https://seranking.com/blog/seo-pricing/">SE Ranking</a>, <a href="https://seranking.com/blog/pay-for-performance-seo/">SE Ranking on pay for performance</a>. The two surveys ask different questions, so do not add or compare the columns directly.</p>
 
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-bars-t">
-      <div class="fig-head">
-        <h4 id="fig-bars-t">Share of providers using each model</h4>
-        <p>Retainer leads in both surveys. Each survey on its own scale.</p>
-      </div>
+      <div class="fig-head"><h4 id="fig-bars-t">Retainer leads in both surveys</h4></div>
       <div class="bars2">
         <div class="bar-block">
           <h5>Ahrefs · 439 providers</h5>
-          <p class="sub">Could pick several models</p>
+          <p class="sub">Could pick several</p>
           <div class="bar-row top"><span class="nm">Monthly retainer</span><span class="val">78.2%</span><span class="track"><span class="fill" style="width:78.2%"></span></span></div>
           <div class="bar-row"><span class="nm">Per project</span><span class="val">48.9%</span><span class="track"><span class="fill" style="width:48.9%"></span></span></div>
           <div class="bar-row"><span class="nm">Hourly</span><span class="val">34.8%</span><span class="track"><span class="fill" style="width:34.8%"></span></span></div>
@@ -620,12 +619,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="bar-block">
           <h5>SE Ranking · 260 agencies</h5>
-          <p class="sub">Main model / used together with other models</p>
-          <div class="bar-row top"><span class="nm">Monthly retainer (main model)</span><span class="val">53%</span><span class="track"><span class="fill" style="width:53%"></span></span></div>
-          <div class="bar-row"><span class="nm">Performance based (together with other models)</span><span class="val">about 6%</span><span class="track"><span class="fill" style="width:6%"></span></span></div>
+          <p class="sub">Main model, or used with others</p>
+          <div class="bar-row top"><span class="nm">Monthly retainer</span><span class="val">53%</span><span class="track"><span class="fill" style="width:53%"></span></span></div>
+          <div class="bar-row"><span class="nm">Performance based</span><span class="val">about 6%</span><span class="track"><span class="fill" style="width:6%"></span></span></div>
         </div>
       </div>
-      <p class="fig-note"><b>Provider-reported</b>Providers, not buyers, answered both surveys. The two surveys ask different questions, so do not compare the panels directly. Sources: Ahrefs, SE Ranking.</p>
+      <p class="fig-note"><b>Provider-reported</b>Providers answered, not buyers. Two different surveys: do not compare the panels. Sources: Ahrefs, SE Ranking.</p>
     </figure>
 
     <p class="subhead"><strong>What retainers cost</strong></p>
@@ -644,33 +643,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="models-title">The three models in plain words</h2>
 
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-cmp-t">
-      <div class="fig-head">
-        <h4 id="fig-cmp-t">The three models side by side</h4>
-        <p>What each is good for, where it goes wrong, and the question to ask.</p>
-      </div>
+      <div class="fig-head"><h4 id="fig-cmp-t">The three models at a glance</h4></div>
       <div class="cmp">
         <div class="cmp-col">
-          <h5>1. Monthly retainer</h5>
+          <h5>Retainer</h5>
           <dl>
-            <div><dt>Good for</dt><dd>Steady content, links, fixes and monthly review.</dd></div>
-            <div><dt>Risk</dt><dd>You pay for time, not for results.</dd></div>
-            <div class="ask"><dt>Ask</dt><dd>What exactly will you deliver every month, and who implements it?</dd></div>
+            <div><dt>Good for</dt><dd>Steady monthly work</dd></div>
+            <div><dt>Risk</dt><dd>You pay for time, not results</dd></div>
+            <div class="ask"><dt>Ask</dt><dd>What do I get every month, and who does it?</dd></div>
           </dl>
         </div>
         <div class="cmp-col best">
-          <h5>2. Phased</h5>
+          <h5>Phased</h5>
           <dl>
-            <div><dt>Good for</dt><dd>Owners who are unsure what is wrong, or who want a lower first commitment.</dd></div>
-            <div><dt>Risk</dt><dd>Work can stop before results build up.</dd></div>
-            <div class="ask"><dt>Ask</dt><dd>What is in phase 1, what do I own at the end, and what does phase 2 cost?</dd></div>
+            <div><dt>Good for</dt><dd>Not sure what is wrong</dd></div>
+            <div><dt>Risk</dt><dd>Work stops before results build</dd></div>
+            <div class="ask"><dt>Ask</dt><dd>What is in phase 1, and what does phase 2 cost?</dd></div>
           </dl>
         </div>
         <div class="cmp-col skip">
-          <h5>3. Performance based</h5>
+          <h5>Performance</h5>
           <dl>
-            <div><dt>Good for</dt><dd>Only a base fee plus a bonus tied to business results.</dd></div>
-            <div><dt>Risk</dt><dd>The provider can pick easy keywords, hit the target, and your phone stays quiet.</dd></div>
-            <div class="ask"><dt>Ask</dt><dd>Ask for the formula in writing.</dd></div>
+            <div><dt>Good for</dt><dd>Only as base fee + bonus</dd></div>
+            <div><dt>Risk</dt><dd>Easy keywords, quiet phone</dd></div>
+            <div class="ask"><dt>Ask</dt><dd>Show me the formula in writing</dd></div>
           </dl>
         </div>
       </div>
@@ -694,17 +690,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p style="margin-top:18px">This is my label, not an industry standard. The closest pattern in the sources is "project first, then retainer", which agency newsletters describe. All five AI assistants described the same path when I asked (see below).</p>
 
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-tl-t">
-      <div class="fig-head">
-        <h4 id="fig-tl-t">The phased path</h4>
-        <p>A fixed price project first, then a smaller retainer with review points at about 90 and 180 days.</p>
-      </div>
+      <div class="fig-head"><h4 id="fig-tl-t">The phased path</h4></div>
       <ol class="tl">
-        <li><span class="dot" aria-hidden="true"></span><span class="kind">Phase 1</span><span class="ttl">Fixed price project</span><span class="sub">Usually a few weeks: audit, keyword plan, technical fixes, a roadmap.</span></li>
-        <li><span class="dot" aria-hidden="true"></span><span class="kind">Phase 2</span><span class="ttl">Smaller retainer</span><span class="sub">Ongoing work.</span></li>
-        <li class="rev"><span class="dot" aria-hidden="true"></span><span class="kind">Review</span><span class="ttl">At about 90 days</span></li>
-        <li class="rev"><span class="dot" aria-hidden="true"></span><span class="kind">Review</span><span class="ttl">At about 180 days</span></li>
+        <li><span class="dot" aria-hidden="true"></span><span class="kind">Phase 1</span><span class="ttl">Fixed price project</span><span class="sub">Audit, plan, fixes, roadmap</span></li>
+        <li><span class="dot" aria-hidden="true"></span><span class="kind">Phase 2</span><span class="ttl">Smaller monthly retainer</span></li>
+        <li class="rev"><span class="dot" aria-hidden="true"></span><span class="kind">Review</span><span class="ttl">Around day 90</span></li>
+        <li class="rev"><span class="dot" aria-hidden="true"></span><span class="kind">Review</span><span class="ttl">Around day 180</span></li>
       </ol>
-      <p class="fig-note">Schematic, not to scale. Scope must be written down.</p>
+      <p class="fig-note">Not to scale.</p>
     </figure>
 
     <h3><span class="model-n">3</span>Performance based</h3>
@@ -720,40 +713,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p><strong>The only version that survives:</strong> a base fee you would accept anyway, plus a bonus tied to business results (qualified leads or extra organic revenue, not rankings). The baseline, the keyword list, how results are measured and who owns the work if you leave must all be written before you start. Performance vendors rarely publish prices, so ask for the formula in writing.</p>
 
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-fee-t">
-      <div class="fig-head">
-        <h4 id="fig-fee-t">The only version that survives: base fee plus bonus</h4>
-        <p>The bonus should depend on business results, not on rankings.</p>
-      </div>
+      <div class="fig-head"><h4 id="fig-fee-t">The only version that holds up</h4></div>
       <div class="fee">
-        <div class="fee-box base">
-          <h5>Base fee</h5>
-          <p>A fee you would accept anyway.</p>
-        </div>
+        <div class="fee-box base"><h5>Base fee</h5><p>One you would pay anyway</p></div>
         <div class="fee-plus" aria-hidden="true">+</div>
-        <div class="fee-box bonus">
-          <h5>Bonus</h5>
-          <p>Tied to business results.</p>
-          <div class="depends">
-            <div class="dep yes">
-              <span class="mono">Should depend on</span>
-              <ul>
-                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Qualified leads</li>
-                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Extra organic revenue</li>
-              </ul>
-            </div>
-            <div class="dep no">
-              <span class="mono">Should not depend on</span>
-              <ul>
-                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Rankings</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <div class="fee-box bonus"><h5>Bonus</h5><p>Paid for business results</p></div>
       </div>
-      <div class="written">
-        <span class="mono">Written before you start</span>
-        <span class="c">Baseline</span><span class="c">Keyword list</span><span class="c">How results are measured</span><span class="c">Who owns the work if you leave</span>
-      </div>
+      <ul class="dep-row">
+        <li class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Qualified leads</li>
+        <li class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Extra organic revenue</li>
+        <li class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Rankings</li>
+      </ul>
+      <p class="fig-note">Write these down before you start: baseline, keyword list, how results are measured, who owns the work if you leave.</p>
     </figure>
 
     <p><strong>About guarantees:</strong> Ahrefs says the only guarantee it considers legitimate is a lawyer drafted one where the provider works for free if agreed results are not delivered, covers long term performance and excludes vanity metrics (<a href="https://ahrefs.com/blog/seo-guarantee/">Ahrefs</a>). Ahrefs also says don't sign a long contract on the strength of a short term guarantee.</p>
@@ -772,19 +743,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
 
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-ai-t">
-      <div class="fig-head">
-        <h4 id="fig-ai-t">Five assistants, one answer on performance</h4>
-        <p>Three put the phased project first, two the retainer. All five avoid pure performance based pricing.</p>
-      </div>
+      <div class="fig-head"><h4 id="fig-ai-t">All five avoid pure performance pricing</h4></div>
       <div class="ai">
-        <div class="ai-card retainer"><h5>ChatGPT</h5><div class="ai-lead">Retainer best overall<small>with a phased start</small></div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Avoids pure performance</div></div>
-        <div class="ai-card"><h5>Gemini</h5><div class="ai-lead">Phased project first<small>then a retainer</small></div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Avoids pure performance</div></div>
-        <div class="ai-card retainer"><h5>Grok</h5><div class="ai-lead">Retainer best overall<small>with a phased start</small></div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Avoids pure performance</div></div>
-        <div class="ai-card"><h5>Perplexity</h5><div class="ai-lead">Phased project first<small>then a retainer</small></div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Avoids pure performance</div></div>
-        <div class="ai-card"><h5>Claude</h5><div class="ai-lead">Phased project first<small>then a retainer</small></div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Avoids pure performance</div></div>
+        <div class="ai-card retainer"><h5>ChatGPT</h5><div class="ai-lead">Retainer first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
+        <div class="ai-card"><h5>Gemini</h5><div class="ai-lead">Phased first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
+        <div class="ai-card retainer"><h5>Grok</h5><div class="ai-lead">Retainer first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
+        <div class="ai-card"><h5>Perplexity</h5><div class="ai-lead">Phased first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
+        <div class="ai-card"><h5>Claude</h5><div class="ai-lead">Phased first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
       </div>
-      <p class="ai-key"><span><i></i>Phased project first</span><span><i class="r"></i>Retainer best overall, with a phased start</span></p>
-      <p class="fig-note"><b>Not independent evidence</b>My question used the words "phased project", so the answers used them too.</p>
+      <p class="fig-note"><b>Not independent evidence</b>My question used the words "phased project".</p>
     </figure>
 
     <p>Two cautions. My question used the words "phased project", so the answers used them too. And the assistants quote prices without sources, so I left their prices out. This is not independent evidence: when I checked, Perplexity's sources were all agency blogs. It shows that the advice above is where the common view has landed.</p>
