@@ -150,6 +150,12 @@ img { max-width: 100%; }
 .hero h1 { color: var(--dark-ink); font-size: clamp(2.5rem, 6.2vw, 4.1rem); font-weight: 900; letter-spacing: -.05em; line-height: .98; }
 .hero h1 .soft { color: var(--dark-soft); }
 .hero h1 .hl { color: var(--dark-ink); }
+.hero-chart { position: relative; border: 1px solid var(--dark-line); border-radius: 20px; padding: 20px 20px 14px; background: var(--dark-2); }
+.hero-chart svg { display: block; width: 100%; height: auto; }
+.sticker { position: absolute; top: -14px; right: 18px; transform: rotate(3deg); background: var(--spark); color: var(--spark-ink); font: 800 .82rem/1 var(--font-body); padding: 9px 14px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.only-d { display: none; }
+.chart-m { margin-top: 40px; }
+@media (min-width: 980px) { .only-d { display: block; } .only-m { display: none; } }
 .hero-author { position: relative; display: grid; grid-template-columns: 88px 1fr; gap: 16px; align-items: center; padding: 14px; border: 1px solid var(--dark-line); border-radius: 20px; background: var(--dark-2); }
 .hero-author img { width: 88px; height: 88px; border-radius: 14px; object-fit: cover; display: block; }
 .hero-author .mono { display: block; margin-bottom: 4px; color: var(--spark); }
@@ -455,13 +461,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a class="btn btn-ghost-d" href="#choose">How to choose</a>
           </div>
         </div>
-        <div class="hero-author">
-          <img src="/images/profile.jpg" alt="Pooya Hayati" width="800" height="800" fetchpriority="high">
-          <div class="txt">
-            <span class="mono">Written by</span>
-            <div class="who-name">Pooya Hayati</div>
-            <div class="who-role">SEO &amp; Digital Marketing Specialist</div>
-          </div>
+<div class="hero-chart only-d">
+          <span class="sticker">3 proposals, 3 prices</span>
+          <svg viewBox="0 0 480 300" role="img" aria-label="Illustration: three proposals, a monthly fee of $900, a $3,500 project and a pay-when-you-rank promise, are not the same thing">
+            <g font-family="Inter, sans-serif">
+              <text x="16" y="44" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS TIME</text>
+              <text x="464" y="44" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$900 a month</text>
+              <g style="fill:var(--dark-ink)"><rect x="16" y="56" width="68" height="22" rx="5"/><rect x="94" y="56" width="68" height="22" rx="5"/><rect x="172" y="56" width="68" height="22" rx="5"/><rect x="250" y="56" width="68" height="22" rx="5"/><rect x="328" y="56" width="68" height="22" rx="5"/><rect x="406" y="56" width="58" height="22" rx="5"/></g>
+              <text x="16" y="136" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A DEFINED PIECE OF WORK</text>
+              <text x="464" y="136" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$3,500</text>
+              <rect x="16" y="148" width="448" height="22" rx="5" style="fill:var(--spark)"/>
+              <text x="16" y="228" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A PROMISE ABOUT GOOGLE</text>
+              <text x="464" y="228" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">pay when you rank</text>
+              <rect x="16" y="240" width="448" height="22" rx="5" fill="none" stroke-width="2" stroke-dasharray="6 6" style="stroke:var(--dark-soft)"/>
+              <text x="240" y="288" font-size="13" font-weight="700" text-anchor="middle" style="fill:var(--spark)">NOT THE SAME THING</text>
+            </g>
+          </svg>
         </div>
       </div>
     </div>
@@ -524,6 +539,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="only-m chart-m">
+      <div class="hero-chart ">
+          <span class="sticker">3 proposals, 3 prices</span>
+          <svg viewBox="0 0 480 300" role="img" aria-label="Illustration: three proposals, a monthly fee of $900, a $3,500 project and a pay-when-you-rank promise, are not the same thing">
+            <g font-family="Inter, sans-serif">
+              <text x="16" y="44" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS TIME</text>
+              <text x="464" y="44" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$900 a month</text>
+              <g style="fill:var(--dark-ink)"><rect x="16" y="56" width="68" height="22" rx="5"/><rect x="94" y="56" width="68" height="22" rx="5"/><rect x="172" y="56" width="68" height="22" rx="5"/><rect x="250" y="56" width="68" height="22" rx="5"/><rect x="328" y="56" width="68" height="22" rx="5"/><rect x="406" y="56" width="58" height="22" rx="5"/></g>
+              <text x="16" y="136" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A DEFINED PIECE OF WORK</text>
+              <text x="464" y="136" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">$3,500</text>
+              <rect x="16" y="148" width="448" height="22" rx="5" style="fill:var(--spark)"/>
+              <text x="16" y="228" font-size="14" font-weight="700" style="fill:var(--dark-soft)">SELLS A PROMISE ABOUT GOOGLE</text>
+              <text x="464" y="228" font-size="18" font-weight="800" text-anchor="end" style="fill:var(--dark-ink)">pay when you rank</text>
+              <rect x="16" y="240" width="448" height="22" rx="5" fill="none" stroke-width="2" stroke-dasharray="6 6" style="stroke:var(--dark-soft)"/>
+              <text x="240" y="288" font-size="13" font-weight="700" text-anchor="middle" style="fill:var(--spark)">NOT THE SAME THING</text>
+            </g>
+          </svg>
+</div>
   </div>
 
   <!-- 01 -->
