@@ -286,11 +286,7 @@ tbody th { font-weight: 700; color: var(--ink); }
 .cmp { display: grid; gap: 12px; }
 @container (min-width: 720px) { .cmp { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .cmp-col { display: flex; flex-direction: column; border: 1.5px solid var(--ink); border-radius: 16px; overflow: hidden; background: var(--surface); }
-.cmp-col.best { border-color: var(--spark); }
-.cmp-col.skip { border-style: dashed; border-color: var(--ink-faint); }
 .cmp-col > h5 { margin: 0; padding: 12px 16px; font-size: 1.02rem; font-weight: 800; letter-spacing: -.02em; background: var(--ink); color: var(--bg); }
-.cmp-col.best > h5 { background: var(--spark); color: var(--spark-ink); }
-.cmp-col.skip > h5 { background: var(--surface); color: var(--ink); border-bottom: 1.5px dashed var(--ink-faint); }
 .cmp-col dl { margin: 0; padding: 4px 16px 8px; }
 .cmp-col dl > div { padding: 10px 0; border-bottom: 1px solid var(--line); }
 .cmp-col dl > div:last-child { border-bottom: 0; }
@@ -352,7 +348,7 @@ tbody th { font-weight: 700; color: var(--ink); }
 .written { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--line); }
 .written .mono { margin-right: 4px; color: var(--ink); }
 .written span.c { padding: 6px 10px; border: 1.5px solid var(--ink); border-radius: 999px; font-size: .82rem; font-weight: 600; line-height: 1.2; }
-.fee-box.bonus { border-color: var(--spark); }
+.fee-box.bonus { border-color: var(--ink); }
 
 /* AI assistants grid */
 .ai { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -378,14 +374,14 @@ tbody th { font-weight: 700; color: var(--ink); }
 .t-pick td, .t-pick th { vertical-align: middle; }
 .t-pick thead th { border-bottom: 2px solid var(--ink); }
 .pick { display: inline-block; padding: 6px 12px; border-radius: 999px; font-weight: 700; font-size: .9rem; line-height: 1.25; background: var(--ink); color: var(--bg); }
-.pick.best { background: var(--spark); color: var(--spark-ink); }
-.pick.skip { background: var(--surface); color: var(--bad); border: 1.5px dashed var(--bad); padding: 4.5px 10.5px; }
+.pick { background: var(--surface); color: var(--ink); border: 1.5px solid var(--ink); padding: 4.5px 10.5px; }
+
 
 /* Contract checklist */
 .check { display: grid; gap: 10px; margin: 18px 0 20px; }
 @media (min-width: 760px) { .check { grid-template-columns: 1fr 1fr; } }
 .check li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; max-width: none; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); line-height: 1.5; font-size: .98rem; }
-.check .ib { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--spark-wash); color: var(--ink); }
+.check .ib { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; border: 1.5px solid var(--ink); color: var(--ink); }
 .check li strong { display: block; }
 @media (min-width: 760px) { .check li:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 
@@ -421,13 +417,15 @@ tbody th { font-weight: 700; color: var(--ink); }
 .dep-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; max-width: none; }
 .dep-row li { display: inline-flex; align-items: center; gap: 8px; max-width: none; padding: 9px 14px; border-radius: 999px; font-weight: 700; font-size: .92rem; }
 .dep-row li svg { width: 15px; height: 15px; stroke-width: 3; }
-.dep-row .yes { background: var(--spark-wash); }
+.dep-row .yes { border: 1.5px solid var(--ink); }
 .dep-row .no { border: 1.5px dashed var(--bad); color: var(--ink); }
 .dep-row .no svg { stroke: var(--bad); }
 .ai-lead small { display: none; }
 .hero-chart svg { max-height: 300px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
   @media (min-width: 1400px) { .hero .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 80px; } }
+  .cmp-col dd { margin-top: 2px; }
+.fig-head p { margin-top: 2px; }
   </style>
 </head>
 <body>
@@ -520,175 +518,102 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="mono">00</span>
       <h2>Quick summary</h2>
       <ul class="tldr-list">
-        <li>Most SEO providers charge a monthly retainer. Project fees come second, hourly third.</li>
-        <li>"Phased" is not a standard industry term. In this post it means: one fixed-price first phase (audit and fixes), then a smaller monthly retainer with review dates.</li>
-        <li>Pure "pay only if you rank" deals are the weakest option. Even the providers who sell hybrids say a base fee plus a bonus on business results is the only version that holds up.</li>
-        <li>Every price and share in this post comes from providers, not buyers. No independent buyer survey exists, and I say so below.</li>
-        <li>Best default for a small business: phased start, then retainer, and a bonus only if your tracking is clean.</li>
+        <li>Most SEO providers charge a <strong>monthly retainer</strong>. Project fees come second, hourly third.</li>
+        <li><strong>Phased</strong> is my label: a fixed-price first phase (audit and fixes), then a smaller monthly retainer with review dates.</li>
+        <li><strong>Pay only if you rank</strong> is the weakest option. The only version that holds up is a base fee plus a bonus on business results.</li>
+        <li>All numbers here come from providers, not buyers. No independent buyer survey exists.</li>
+        <li><strong>Best default for a small business:</strong> phased start, then retainer. Add a bonus only if your tracking is clean.</li>
       </ul>
-      <div class="strip" role="list" aria-label="The three models in one line each">
-        <div class="strip-item" role="listitem">
-          <span class="tag">The standard</span>
-          <h4>Retainer</h4>
-          <p>A fixed fee each month for ongoing work.</p>
-        </div>
-        <div class="strip-item best" role="listitem">
-          <span class="tag">Best default</span>
-          <h4>Phased</h4>
-          <p>Fixed-price project first, then a smaller retainer with review dates.</p>
-        </div>
-        <div class="strip-item skip" role="listitem">
-          <span class="tag">Pure version: skip</span>
-          <h4>Performance</h4>
-          <p>Pay when an agreed result happens. Only a base fee plus a bonus on business results holds up.</p>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <div class="only-m chart-m">
-      <div class="hero-chart %s">
-          <span class="sticker">Retainer · Phased · Performance</span>
-          <svg viewBox="0 0 320 200" role="img" aria-label="Three pricing models: retainer, phased and performance based">
-            <g font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
-              <rect x="40" y="70" width="70" height="90" rx="6" style="fill:var(--dark-ink)"/>
-              <rect x="125" y="40" width="70" height="120" rx="6" style="fill:var(--spark)"/>
-              <rect x="210" y="100" width="70" height="60" rx="6" fill="none" stroke-width="2" stroke-dasharray="5 5" style="stroke:var(--dark-soft)"/>
-              <line x1="20" y1="162" x2="300" y2="162" stroke-width="1.5" style="stroke:var(--dark-soft)"/>
-              <text x="75" y="184" style="fill:var(--dark-ink)">Retainer</text>
-              <text x="160" y="184" style="fill:var(--spark)">Phased</text>
-              <text x="245" y="184" style="fill:var(--dark-soft)">Performance</text>
-            </g>
-          </svg>
-        </div>
   </div>
 
   <!-- 01 -->
   <section class="section" id="problem" aria-labelledby="problem-title">
     <div class="kicker"><span class="big-n">01</span><span class="mono">The problem</span></div>
-    <h2 id="problem-title">The problem: three proposals, three prices, no way to compare</h2>
+    <h2 id="problem-title">Three proposals, three prices</h2>
     <p>You asked three SEO providers for a quote. One wants $900 a month. One wants $3,500 for a "foundation project". One says "you only pay when you rank".</p>
-    <p>They are not selling the same thing. The first sells time. The second sells a defined piece of work. The third sells a promise about Google, which nobody controls. Google says it plainly: no one can guarantee a #1 ranking, and you should ask an SEO what results to expect, in what timeframe, and how success is measured (<a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo">Google, Do you need an SEO?</a>).</p>
-    <p>So the question is not "which is cheapest". It is "what am I actually paying for, and what happens if it does not work?"</p>
+    <p>They are not selling the same thing. The first sells time. The second sells a defined piece of work. The third sells a promise about Google, which nobody controls. Google says it plainly: no one can guarantee a #1 ranking (<a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo">Google, Do you need an SEO?</a>).</p>
+    <p><strong>So ask: what am I paying for, and what happens if it does not work?</strong></p>
   </section>
 
   <!-- 02 -->
   <section class="section" id="method" aria-labelledby="method-title">
     <div class="kicker"><span class="big-n">02</span><span class="mono">Method</span></div>
-    <h2 id="method-title">How I researched this, and what is missing</h2>
-    <p>I read the three large pricing surveys, Clutch's pricing data, Google's own guidance and about a dozen agency pricing pages. I also asked five AI assistants (ChatGPT, Gemini, Grok, Perplexity and Claude) the same question.</p>
-    <p>Three limits you should know:</p>
+    <h2 id="method-title">How I researched this</h2>
+    <p>I read the three large pricing surveys, Clutch's pricing data, Google's guidance and about a dozen agency pricing pages. I also asked five AI assistants the same question. Three limits:</p>
     <ol class="limits">
-      <li><strong>All the numbers are provider-reported.</strong> Ahrefs, SE Ranking and Backlinko asked SEO providers. All three sell SEO software. Clutch's figures come from agency profiles and client reviews, and Clutch earns fees from some listings.</li>
-      <li><strong>No buyer-side data.</strong> I could not find an independent survey of what small businesses actually pay. Forum and review data was too thin to show a pattern.</li>
-      <li><strong>The anti-performance articles come from firms that sell retainers.</strong> I flag where that matters.</li>
+      <li><strong>All numbers are provider-reported.</strong> Ahrefs, SE Ranking and Backlinko asked SEO providers, and all three sell SEO software. Clutch earns fees from some listings.</li>
+      <li><strong>No buyer-side data.</strong> I found no independent survey of what small businesses pay.</li>
+      <li><strong>The anti-performance articles come from firms that sell retainers.</strong></li>
     </ol>
-    <p>That is the honest state of the evidence. Treat the numbers as a map of what providers say, not proof of what works.</p>
+    <p>Read the numbers as what providers say, not proof of what works.</p>
   </section>
 
   <!-- 03 -->
   <section class="section" id="numbers" aria-labelledby="numbers-title">
     <div class="kicker"><span class="big-n">03</span><span class="mono">Data</span></div>
     <h2 id="numbers-title">What the numbers say</h2>
-    <p class="subhead"><strong>How providers charge</strong></p>
-    <div class="table-wrap">
-      <table class="t-pay">
-        <thead>
-          <tr><th scope="col">Model</th><th scope="col">Ahrefs, 439 providers (could pick several)</th><th scope="col">SE Ranking, 260 agencies</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Monthly retainer</th><td class="v">78.2%</td><td class="v">53% prefer it as their main model</td></tr>
-          <tr><th scope="row">Per project</th><td class="v">48.9%</td><td>most common range $500 to $2,000</td></tr>
-          <tr><th scope="row">Hourly</th><td class="v">34.8%</td><td>most common $50 to $100</td></tr>
-          <tr><th scope="row">Performance based</th><td>not asked</td><td>about 6% use it, together with other models</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="src-note">Sources: <a href="https://ahrefs.com/blog/seo-pricing/">Ahrefs</a>, <a href="https://seranking.com/blog/seo-pricing/">SE Ranking</a>, <a href="https://seranking.com/blog/pay-for-performance-seo/">SE Ranking on pay for performance</a>. The two surveys ask different questions, so do not add or compare the columns directly.</p>
-
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-bars-t">
-      <div class="fig-head"><h4 id="fig-bars-t">Retainer leads in both surveys</h4></div>
-      <div class="bars2">
-        <div class="bar-block">
-          <h5>Ahrefs · 439 providers</h5>
-          <p class="sub">Could pick several</p>
-          <div class="bar-row top"><span class="nm">Monthly retainer</span><span class="val">78.2%</span><span class="track"><span class="fill" style="width:78.2%"></span></span></div>
-          <div class="bar-row"><span class="nm">Per project</span><span class="val">48.9%</span><span class="track"><span class="fill" style="width:48.9%"></span></span></div>
-          <div class="bar-row"><span class="nm">Hourly</span><span class="val">34.8%</span><span class="track"><span class="fill" style="width:34.8%"></span></span></div>
-          <div class="bar-row none"><span class="nm">Performance based</span><span class="val">not asked</span><span class="track"></span></div>
-        </div>
-        <div class="bar-block">
-          <h5>SE Ranking · 260 agencies</h5>
-          <p class="sub">Main model, or used with others</p>
-          <div class="bar-row top"><span class="nm">Monthly retainer</span><span class="val">53%</span><span class="track"><span class="fill" style="width:53%"></span></span></div>
-          <div class="bar-row"><span class="nm">Performance based</span><span class="val">about 6%</span><span class="track"><span class="fill" style="width:6%"></span></span></div>
-        </div>
+      <div class="fig-head"><h4 id="fig-bars-t">How 439 providers charge (Ahrefs)</h4><p>Providers could pick several models.</p></div>
+      <div class="bar-block">
+        <div class="bar-row top"><span class="nm">Monthly retainer</span><span class="val">78.2%</span><span class="track"><span class="fill" style="width:78.2%"></span></span></div>
+        <div class="bar-row"><span class="nm">Per project</span><span class="val">48.9%</span><span class="track"><span class="fill" style="width:48.9%"></span></span></div>
+        <div class="bar-row"><span class="nm">Hourly</span><span class="val">34.8%</span><span class="track"><span class="fill" style="width:34.8%"></span></span></div>
       </div>
-      <p class="fig-note"><b>Provider-reported</b>Providers answered, not buyers. Two different surveys: do not compare the panels. Sources: Ahrefs, SE Ranking.</p>
+      <p class="fig-note"><b>Provider-reported</b>Providers answered, not buyers. Source: <a href="https://ahrefs.com/blog/seo-pricing/">Ahrefs</a>.</p>
     </figure>
-
+    <p><strong>SE Ranking, 260 agencies:</strong> 53% prefer a retainer as their main model. Projects most often cost $500 to $2,000, hourly work $50 to $100. About 6% use performance based pricing, together with other models. The two surveys ask different questions, so do not compare their numbers directly. Sources: <a href="https://seranking.com/blog/seo-pricing/">SE Ranking</a>, <a href="https://seranking.com/blog/pay-for-performance-seo/">SE Ranking on pay for performance</a>.</p>
     <p class="subhead"><strong>What retainers cost</strong></p>
     <ul class="body-list">
       <li>Ahrefs: the most common band is $501 to $1,000 a month (20.4%). Local SEO averages about $1,557.</li>
       <li>SE Ranking: 64% of agencies charge under $1,000 a month.</li>
-      <li>Clutch: the average monthly cost of projects reviewed on the platform is $3,199 (<a href="https://clutch.co/seo-firms/pricing">Clutch pricing guide</a>). That mix includes large accounts, so it runs higher than the small business bands above.</li>
-      <li>Clutch lists retainer, fixed package, project and hourly. It does not list performance based as a model.</li>
+      <li>Clutch: $3,199 a month on average, but that mix includes large accounts (<a href="https://clutch.co/seo-firms/pricing">Clutch pricing guide</a>). Clutch does not list performance based as a model.</li>
     </ul>
-    <p>Caveat: Ahrefs' averages assume the top of each price band, so they overstate. Use the bands, not the averages.</p>
+    <p>Ahrefs' averages assume the top of each price band, so they overstate. Use the bands, not the averages.</p>
   </section>
 
   <!-- 04 -->
   <section class="section" id="models" aria-labelledby="models-title">
     <div class="kicker"><span class="big-n">04</span><span class="mono">Models</span></div>
     <h2 id="models-title">The three models in plain words</h2>
-
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-cmp-t">
-      <div class="fig-head"><h4 id="fig-cmp-t">The three models at a glance</h4></div>
+      <div class="fig-head"><h4 id="fig-cmp-t">Side by side</h4></div>
       <div class="cmp">
         <div class="cmp-col">
-          <h5>Retainer</h5>
+          <h5>Monthly retainer</h5>
           <dl>
-            <div><dt>Good for</dt><dd>Steady monthly work</dd></div>
-            <div><dt>Risk</dt><dd>You pay for time, not results</dd></div>
-            <div class="ask"><dt>Ask</dt><dd>What do I get every month, and who does it?</dd></div>
+            <div><dt>You pay</dt><dd>A fixed fee each month for ongoing work</dd></div>
+            <div><dt>Good for</dt><dd>Steady content, links, fixes and monthly review</dd></div>
+            <div><dt>Risk</dt><dd>You pay for time, not for results</dd></div>
+            <div class="ask"><dt>Ask</dt><dd>What will you deliver every month, and who implements it?</dd></div>
           </dl>
         </div>
-        <div class="cmp-col best">
+        <div class="cmp-col">
           <h5>Phased</h5>
           <dl>
-            <div><dt>Good for</dt><dd>Not sure what is wrong</dd></div>
-            <div><dt>Risk</dt><dd>Work stops before results build</dd></div>
-            <div class="ask"><dt>Ask</dt><dd>What is in phase 1, and what does phase 2 cost?</dd></div>
+            <div><dt>You pay</dt><dd>A fixed price project first, then a smaller retainer</dd></div>
+            <div><dt>Good for</dt><dd>Owners who are unsure what is wrong, or want a lower first commitment</dd></div>
+            <div><dt>Risk</dt><dd>Work can stop before results build up</dd></div>
+            <div class="ask"><dt>Ask</dt><dd>What is in phase 1, what do I own at the end, and what does phase 2 cost?</dd></div>
           </dl>
         </div>
-        <div class="cmp-col skip">
-          <h5>Performance</h5>
+        <div class="cmp-col">
+          <h5>Performance based</h5>
           <dl>
-            <div><dt>Good for</dt><dd>Only as base fee + bonus</dd></div>
-            <div><dt>Risk</dt><dd>Easy keywords, quiet phone</dd></div>
-            <div class="ask"><dt>Ask</dt><dd>Show me the formula in writing</dd></div>
+            <div><dt>You pay</dt><dd>When an agreed result happens</dd></div>
+            <div><dt>Good for</dt><dd>Only the base fee plus bonus version (below)</dd></div>
+            <div><dt>Risk</dt><dd>Easy keywords, hit target, quiet phone</dd></div>
+            <div class="ask"><dt>Ask</dt><dd>What is the formula? Get it in writing</dd></div>
           </dl>
         </div>
       </div>
     </figure>
 
-    <h3><span class="model-n">1</span>Monthly retainer</h3>
-    <p>You pay a fixed fee each month for ongoing work. SEO is not a one time job, so this is the standard.</p>
-    <dl class="facts">
-      <div><dt>Good for</dt><dd>steady content, links, fixes and monthly review.</dd></div>
-      <div><dt>Risk</dt><dd>you pay for time, not for results. A retainer with no named monthly deliverables is the easiest place to lose money.</dd></div>
-      <div class="ask"><dt>Ask</dt><dd>what exactly will you deliver every month, and who implements it?</dd></div>
-    </dl>
+    <h3>Retainer</h3>
+    <p>SEO is not a one time job, so this is the standard. A retainer with no named monthly deliverables is the easiest place to lose money.</p>
 
-    <h3><span class="model-n">2</span>Phased (project first, then retainer)</h3>
-    <p>Phase 1 is a fixed price project, usually a few weeks: audit, keyword plan, technical fixes, a roadmap. Phase 2 is a smaller retainer for ongoing work, with a review at about 90 and 180 days.</p>
-    <dl class="facts">
-      <div><dt>Good for</dt><dd>owners who are unsure what is wrong, or who want a lower first commitment.</dd></div>
-      <div><dt>Risk</dt><dd>work can stop before results build up. Scope must be written down.</dd></div>
-      <div class="ask"><dt>Ask</dt><dd>what is in phase 1, what do I own at the end, and what does phase 2 cost?</dd></div>
-    </dl>
-    <p style="margin-top:18px">This is my label, not an industry standard. The closest pattern in the sources is "project first, then retainer", which agency newsletters describe. All five AI assistants described the same path when I asked (see below).</p>
-
+    <h3>Phased (project first, then retainer)</h3>
+    <p>Phase 1 is usually a few weeks: audit, keyword plan, technical fixes, a roadmap. Phase 2 is a smaller retainer with a review at about 90 and 180 days. Write the scope down. This is my label, not an industry standard, but agency newsletters describe the same "project first, then retainer" pattern, and all five AI assistants did too.</p>
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-tl-t">
       <div class="fig-head"><h4 id="fig-tl-t">The phased path</h4></div>
       <ol class="tl">
@@ -697,23 +622,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li class="rev"><span class="dot" aria-hidden="true"></span><span class="kind">Review</span><span class="ttl">Around day 90</span></li>
         <li class="rev"><span class="dot" aria-hidden="true"></span><span class="kind">Review</span><span class="ttl">Around day 180</span></li>
       </ol>
-      <p class="fig-note">Not to scale.</p>
     </figure>
 
-    <h3><span class="model-n">3</span>Performance based</h3>
-    <p>You pay when an agreed result happens: a keyword reaches a position, traffic reaches a number, or you get a lead or a sale.</p>
-    <p><strong>Why providers warn against it:</strong></p>
+    <h3>Performance based</h3>
+    <p>You pay when an agreed result happens: a keyword reaches a position, traffic reaches a number, or you get a lead or a sale. Providers warn against it because:</p>
     <ul class="body-list">
       <li>The provider can pick easy keywords with almost no searches, hit the target, and your phone stays quiet.</li>
       <li>A ranking target can reward short term tricks that cause penalties later.</li>
       <li>The result depends on things the provider may not control: your developers, your content, your hosting.</li>
       <li>Attribution is hard. Who gets credit for a lead?</li>
     </ul>
-    <p>SE Ranking, WebFX and Portent all argue against it, and Portent's argument (an agency owner's essay from 2009, still widely cited) adds that a smart SEO will not accept pure performance pricing without control of the site. All three sell retainers, so weigh that.</p>
-    <p><strong>The only version that survives:</strong> a base fee you would accept anyway, plus a bonus tied to business results (qualified leads or extra organic revenue, not rankings). The baseline, the keyword list, how results are measured and who owns the work if you leave must all be written before you start. Performance vendors rarely publish prices, so ask for the formula in writing.</p>
-
+    <p>SE Ranking, WebFX and Portent all argue against it. All three sell retainers, so weigh that.</p>
+    <p><strong>The only version that holds up:</strong> a base fee you would accept anyway, plus a bonus tied to business results, not rankings. Ask for the formula in writing.</p>
     <figure class="fig" style="margin-inline:0" aria-labelledby="fig-fee-t">
-      <div class="fig-head"><h4 id="fig-fee-t">The only version that holds up</h4></div>
+      <div class="fig-head"><h4 id="fig-fee-t">Base fee plus bonus</h4></div>
       <div class="fee">
         <div class="fee-box base"><h5>Base fee</h5><p>One you would pay anyway</p></div>
         <div class="fee-plus" aria-hidden="true">+</div>
@@ -724,37 +646,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Extra organic revenue</li>
         <li class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Rankings</li>
       </ul>
-      <p class="fig-note">Write these down before you start: baseline, keyword list, how results are measured, who owns the work if you leave.</p>
+      <p class="fig-note">Write down before you start: the baseline, the keyword list, how results are measured, and who owns the work if you leave.</p>
     </figure>
-
-    <p><strong>About guarantees:</strong> Ahrefs says the only guarantee it considers legitimate is a lawyer drafted one where the provider works for free if agreed results are not delivered, covers long term performance and excludes vanity metrics (<a href="https://ahrefs.com/blog/seo-guarantee/">Ahrefs</a>). Ahrefs also says don't sign a long contract on the strength of a short term guarantee.</p>
+    <p><strong>Guarantees:</strong> Ahrefs says the only legitimate one is lawyer drafted: the provider works for free if agreed results are not delivered, it covers long term performance and it excludes vanity metrics (<a href="https://ahrefs.com/blog/seo-guarantee/">Ahrefs</a>). Don't sign a long contract on the strength of a short term guarantee.</p>
   </section>
 
   <!-- 05 -->
   <section class="section" id="ai" aria-labelledby="ai-title">
     <div class="kicker"><span class="big-n">05</span><span class="mono">AI check</span></div>
     <h2 id="ai-title">What AI assistants say</h2>
-    <p>I gave the same question to ChatGPT, Gemini, Grok, Perplexity and Claude, each in a fresh chat: "Which SEO pricing model is best for a small business: retainer, phased project, or performance-based?"</p>
+    <p>I asked ChatGPT, Gemini, Grok, Perplexity and Claude the same question, each in a fresh chat: "Which SEO pricing model is best for a small business: retainer, phased project, or performance-based?"</p>
     <ul class="body-list">
-      <li>All five said to avoid pure performance based pricing.</li>
-      <li>All five suggested the same safer version: a base fee plus a bonus tied to leads or revenue, not rankings.</li>
-      <li>All five described a project or audit first, then a retainer. Three of them put the phased project first (Gemini, Claude, Perplexity). Two called the retainer best overall, with a phased start (ChatGPT, Grok).</li>
-      <li>All five said to write down deliverables, reporting and how you can exit.</li>
+      <li><strong>All five</strong> said to avoid pure performance pricing, to use a base fee plus a bonus on leads or revenue instead, and to write down deliverables, reporting and exit terms.</li>
+      <li><strong>All five</strong> described a project or audit first, then a retainer.</li>
+      <li><strong>Three</strong> put the phased project first (Gemini, Claude, Perplexity). <strong>Two</strong> called the retainer best overall, with a phased start (ChatGPT, Grok).</li>
     </ul>
-
-    <figure class="fig" style="margin-inline:0" aria-labelledby="fig-ai-t">
-      <div class="fig-head"><h4 id="fig-ai-t">All five avoid pure performance pricing</h4></div>
-      <div class="ai">
-        <div class="ai-card retainer"><h5>ChatGPT</h5><div class="ai-lead">Retainer first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
-        <div class="ai-card"><h5>Gemini</h5><div class="ai-lead">Phased first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
-        <div class="ai-card retainer"><h5>Grok</h5><div class="ai-lead">Retainer first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
-        <div class="ai-card"><h5>Perplexity</h5><div class="ai-lead">Phased first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
-        <div class="ai-card"><h5>Claude</h5><div class="ai-lead">Phased first</div><div class="ai-avoid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> No pure performance</div></div>
-      </div>
-      <p class="fig-note"><b>Not independent evidence</b>My question used the words "phased project".</p>
-    </figure>
-
-    <p>Two cautions. My question used the words "phased project", so the answers used them too. And the assistants quote prices without sources, so I left their prices out. This is not independent evidence: when I checked, Perplexity's sources were all agency blogs. It shows that the advice above is where the common view has landed.</p>
+    <p>This is not independent evidence. My question used the words "phased project", the assistants quote prices without sources (so I left them out), and Perplexity's sources were all agency blogs. It only shows where the common view has landed.</p>
   </section>
 
   <!-- 06 -->
@@ -762,19 +669,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="kicker"><span class="big-n">06</span><span class="mono">Decide</span></div>
     <h2 id="choose-title">How to choose: four questions</h2>
     <ol class="qs">
-      <li><strong>Do you know what is wrong with the site?</strong> No: start phased. Yes and it is a single fix: a project fee.</li>
-      <li><strong>Do you have someone to implement the work?</strong> SEO needs developer and writer time. If you do not, a retainer should include implementation, or you will pay for advice that never ships.</li>
-      <li><strong>Is your tracking clean?</strong> Can you see leads and sales from organic search? Only then is a bonus on business results worth discussing.</li>
+      <li><strong>Do you know what is wrong with the site?</strong> No: start phased. Yes, and it is a single fix: a project fee.</li>
+      <li><strong>Do you have someone to implement the work?</strong> If not, the retainer should include implementation, or you pay for advice that never ships.</li>
+      <li><strong>Is your tracking clean?</strong> Can you see leads and sales from organic search? Only then discuss a bonus.</li>
       <li><strong>Can you walk away?</strong> Check the exit before the price.</li>
     </ol>
     <div class="t-pick table-wrap">
       <table>
         <thead><tr><th scope="col">Your situation</th><th scope="col">Pick</th></tr></thead>
         <tbody>
-          <tr><td>Unsure what is wrong, small budget</td><td><span class="pick best">Phased</span></td></tr>
+          <tr><td>Unsure what is wrong, small budget</td><td><span class="pick">Phased</span></td></tr>
           <tr><td>Clear plan, no in-house team, growth goal</td><td><span class="pick">Retainer with named monthly deliverables</span></td></tr>
           <tr><td>Clean tracking and a base fee you would pay anyway</td><td><span class="pick">Retainer plus bonus on business results</span></td></tr>
-          <tr><td>"Pay only if you rank"</td><td><span class="pick skip">Skip</span></td></tr>
+          <tr><td>"Pay only if you rank"</td><td><span class="pick">Skip</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -783,18 +690,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 07 -->
   <section class="section" id="contract" aria-labelledby="contract-title">
     <div class="kicker"><span class="big-n">07</span><span class="mono">Contract</span></div>
-    <h2 id="contract-title">Contract checklist (vendor published norms, not research)</h2>
-    <p>These are typical terms that agencies and law firm guides describe. They are guides, not rules.</p>
+    <h2 id="contract-title">Contract checklist</h2>
+    <p>Typical terms from agency and law firm guides. Guides, not rules, and not research.</p>
     <ul class="check">
-      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><strong>Minimum term:</strong> 3 to 6 months is common, 12 on larger retainers. Be careful with 12 months and no break clause.</span></li>
+      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span><strong>Minimum term:</strong> 3 to 6 months is common, 12 on larger retainers. Avoid 12 months with no break clause.</span></li>
       <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></span><span><strong>Notice:</strong> 30 to 60 days. Watch auto renewal that locks you in once a year.</span></li>
       <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/></svg></span><span><strong>Ownership:</strong> you own the content, links and accounts (Search Console, Analytics, CMS). The provider keeps its tools.</span></li>
-      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span><strong>Access:</strong> you give read only Search Console access during an audit, as Google advises.</span></li>
-      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><span><strong>Reporting:</strong> a baseline recorded before work starts, a monthly report, and review dates at 90 and 180 days.</span></li>
-      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"/><path d="M4 4l16 16"/></svg></span><span><strong>No verbal promises:</strong> if a salesperson promised rankings, make sure it is in the contract. An "entire agreement" clause can remove everything that was said out loud.</span></li>
+      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span><strong>Access:</strong> read only Search Console access during an audit, as Google advises.</span></li>
+      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><span><strong>Reporting:</strong> a baseline before work starts, a monthly report, and reviews at 90 and 180 days.</span></li>
+      <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"/><path d="M4 4l16 16"/></svg></span><span><strong>No verbal promises:</strong> if a salesperson promised rankings, get it in the contract. An "entire agreement" clause can erase what was said out loud.</span></li>
       <li><span class="ib"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><strong>Late payment:</strong> check whether the provider can suspend work or keep deliverables.</span></li>
     </ul>
-    <p>A real example of what goes wrong: a 2013 forum thread where a buyer paid for a six month package after a phone sale, was verbally promised better rankings, found "no guarantee" in the contract, and could not cancel. It is one old story, not a statistic, but the pattern (sales promise, contract disclaimer, hard exit) is the one to avoid.</p>
+    <p>One real example (a 2013 forum thread, not a statistic): a buyer paid for a six month package after a phone sale, was promised better rankings out loud, found "no guarantee" in the contract, and could not cancel.</p>
   </section>
 
   <!-- 08 -->
@@ -803,7 +710,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="download-title">Download</h2>
     <div class="download">
       <span class="soon">Coming soon</span>
-      <p><strong>Proposal Comparison Sheet</strong> (coming soon): put up to three quotes side by side and score them on the questions above: model, monthly deliverables, who implements, baseline, exit terms, ownership.</p>
+      <p><strong>Proposal Comparison Sheet:</strong> put up to three quotes side by side and score them on the questions above: model, monthly deliverables, who implements, baseline, exit terms, ownership.</p>
       <!-- When the file exists, replace the note above with the shared lead-gate form (BLOG-COMPONENTS.md):
            in <head>:  <link rel="stylesheet" href="/assets/lead-gate.css">  <script src="/assets/lead-gate.js" defer></script>
            here:       <div data-lead-gate data-file="/downloads/FILE.xlsx" data-resource="Proposal Comparison Sheet" data-button="Download"></div> -->
