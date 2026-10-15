@@ -409,6 +409,9 @@ tbody th { font-weight: 700; color: var(--ink); }
 .site-footer .wide { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; max-width: var(--page-max); margin-inline: auto; padding-inline: var(--page-pad); }
 .site-footer p { margin: 0; color: var(--ink-soft); }
 
+/* Justified body text, as on the KPIs post; cards, tables and graphics stay left-aligned */
+.article-body .section > p, .article-body .section > ul > li, .article-body .section > ol > li, .article-body .tldr-list li, .article-body .src-note { text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; }
+.article-body .check li, .article-body .qs li, .article-body .fig li, .article-body .sources-list li, .article-body .facts dd, .article-body .t-pick td { text-align: left; hyphens: manual; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
   @media (min-width: 1400px) { .hero .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 80px; } }
   </style>
