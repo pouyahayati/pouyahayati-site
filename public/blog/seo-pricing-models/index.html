@@ -425,20 +425,29 @@ tbody th { font-weight: 700; color: var(--ink); }
 .download strong { color: var(--spark-ink); }
 
 /* Author + sources + footer */
-.author { display: grid; gap: 18px; align-items: center; margin-top: 56px; padding: 24px; border-radius: 22px; background: var(--dark); color: var(--dark-ink); }
+details.sources { margin-top: 48px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+details.sources summary { cursor: pointer; padding-block: 20px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; }
+details.sources summary::-webkit-details-marker { display: none; }
+details.sources summary::after { content: "+"; color: var(--spark); font-weight: 800; font-size: 1.3rem; line-height: 1; }
+details.sources[open] summary::after { content: "–"; }
+.src { padding-bottom: 24px; display: grid; gap: 24px; }
+.src ul { display: grid; gap: 6px; font-size: .9rem; line-height: 1.5; }
+.src li { max-width: none; }
+.src .mono { display: block; margin-bottom: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 20px; font: 700 .95rem/1 var(--font-body); border-radius: 999px; border: 2px solid transparent; text-decoration: none; transition: background-color .2s; }
+.btn-spark { background: var(--spark); color: var(--spark-ink); }
+.btn-spark:hover { background: var(--dark-ink); color: var(--spark-ink); }
+.author { display: grid; gap: 18px; align-items: center; margin-top: 48px; padding: 24px; border-radius: 22px; background: var(--dark); color: var(--dark-ink); }
 @media (min-width: 640px) { .author { grid-template-columns: 120px 1fr; gap: 28px; padding: 28px; } }
 .author .big { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; background: var(--dark-2); }
 @media (min-width: 640px) { .author .big { width: 120px; height: 120px; } }
 .author .big img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .author .mono { color: var(--spark); }
-.author h2 { margin: 4px 0 8px; max-width: none; font-size: 1.3rem; font-weight: 800; color: var(--dark-ink); }
-.author p { max-width: none; margin: 0 0 .5em; font-size: .98rem; line-height: 1.55; color: var(--dark-soft); }
-.author p:last-of-type { margin-bottom: 0; }
-.author .row { margin-top: 16px; }
-.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 20px; font: 700 .95rem/1 var(--font-body); border-radius: 999px; background: var(--spark); color: var(--spark-ink); text-decoration: none; transition: background-color .2s; }
-.btn:hover { background: var(--dark-ink); color: var(--spark-ink); }
-.sources-list { display: grid; gap: 8px; margin-top: 4px; font-size: .95rem; line-height: 1.5; }
-.sources-list li { max-width: none; }
+.author h4 { color: var(--dark-ink); margin: 4px 0 2px; font-size: 1.3rem; font-weight: 800; }
+.author .author-role { margin: 0 0 8px; color: var(--dark-ink); font-weight: 600; font-size: .95rem; }
+.author p { max-width: none; margin: 0; font-size: .98rem; line-height: 1.55; color: var(--dark-soft); }
+.author .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 18px; }
+.author .author-more { color: var(--dark-ink); font-weight: 600; font-size: .92rem; }
 .site-footer { margin-top: 56px; border-top: 1px solid var(--line); padding-block: 28px; font-size: .85rem; color: var(--ink-soft); }
 .site-footer .wide { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; max-width: var(--page-max); margin-inline: auto; padding-inline: var(--page-pad); }
 .site-footer p { margin: 0; color: var(--ink-soft); }
@@ -559,7 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><strong>Pay only if you rank</strong> is the weakest option. The only version that holds up is a base fee plus a bonus on business results.</li>
         <li>All numbers here come from providers, not buyers. No independent buyer survey exists.</li>
         <li><strong>Best default for a small business:</strong> phased start, then retainer. Add a bonus only if your tracking is clean.</li>
-        <li><a href="#experience"><strong>From my own projects:</strong></a> a fixed-scope first phase of about 3 months, then a retainer with agreed targets.</li>
+        <li><strong>From my own projects:</strong> a fixed-scope first phase of about 3 months, then a retainer with agreed targets.</li>
       </ul>
     </div>
   </div>
@@ -763,39 +772,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>No. Google says no one can guarantee a #1 ranking. Ahrefs considers only a lawyer drafted guarantee legitimate. Details are in the <a href="#guarantees">SEO guarantees section</a> above.</p>
   </section>
 
-  <!-- About the author -->
-  <section class="author" aria-labelledby="author-title">
-    <div class="big"><img src="/images/profile.jpg" alt="Pooya Hayati" width="120" height="120" loading="lazy"></div>
-    <div>
-      <span class="mono">Written by</span>
-      <h2 id="author-title">About the author</h2>
-      <p>I'm Pooya Hayati, an independent SEO and digital marketing specialist based in the Philippines.</p>
-      <p>I work with small and medium businesses on SEO, Google Ads and web development.</p>
-      <p>If you have a proposal you are not sure about, send it to me and I will tell you what to ask.</p>
-      <div class="row"><a class="btn" href="/#contact">Let's talk →</a></div>
+  <div class="col">
+    <details class="sources">
+      <summary>All sources</summary>
+      <div class="src">
+        <div>
+          <span class="mono">Google</span>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo">Google, Do you need an SEO?</a> (updated 2026-06-05)</li>
+          </ul>
+        </div>
+        <div>
+          <span class="mono">Pricing surveys and guides</span>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://ahrefs.com/blog/seo-pricing/">Ahrefs, SEO pricing (439 providers)</a></li>
+            <li><a target="_blank" rel="noopener" href="https://ahrefs.com/blog/seo-guarantee/">Ahrefs, Guaranteed SEO services</a></li>
+            <li><a target="_blank" rel="noopener" href="https://seranking.com/blog/seo-pricing/">SE Ranking, SEO pricing survey (260 agencies)</a></li>
+            <li><a target="_blank" rel="noopener" href="https://seranking.com/blog/pay-for-performance-seo/">SE Ranking, Pay for performance SEO</a></li>
+            <li><a target="_blank" rel="noopener" href="https://backlinko.com/seo-pricing">Backlinko, SEO pricing</a></li>
+            <li><a target="_blank" rel="noopener" href="https://clutch.co/seo-firms/pricing">Clutch, SEO agency pricing guide</a></li>
+            <li><a target="_blank" rel="noopener" href="https://theadminbar.com/seo-weekly/pricing-models-for-seo-agreements-aka-how-to-price-an-seo-retainer/">The Admin Bar, Pricing models for SEO agreements</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="mono">Performance based pricing, contracts and forums</span>
+          <ul>
+            <li><a target="_blank" rel="noopener" href="https://portent.com/blog/seo/performance-based-pricing-seo.htm">Portent, Performance based pricing</a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.webfx.com/seo/learn/pay-for-performance-seo/">WebFX, Why pay for performance is not the right choice</a></li>
+            <li><a target="_blank" rel="noopener" href="https://topify.ai/blog/seo-agency-contract-terms-explained">Topify, SEO contract terms</a>, <a target="_blank" rel="noopener" href="https://sprintlaw.com.au/articles/seo-services-agreements-in-australia-what-businesses-should-check-before-signing/">Sprintlaw</a>, <a target="_blank" rel="noopener" href="https://profiletree.com/performance-based-seo/">ProfileTree</a> (vendor and law firm guides)</li>
+            <li><a target="_blank" rel="noopener" href="https://www.sitepoint.com/community/t/seo-rip-off/36190">SitePoint forum thread, 2013</a></li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <div class="author">
+      <div class="big photo"><img src="/images/profile.jpg" alt="Pooya Hayati" width="120" height="120" loading="lazy"></div>
+      <div>
+        <span class="mono">Written by</span>
+        <h4>Pooya Hayati</h4>
+        <p class="author-role">SEO &amp; Digital Marketing Specialist</p>
+        <p>I help small businesses get more customers from Google, AI search and ads.</p>
+        <div class="row">
+          <a class="btn btn-spark" href="/#contact">Let's talk →</a>
+          <a class="author-more" href="/#work">See my results</a>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Sources -->
-  <section class="section" id="sources" aria-labelledby="sources-title">
-    <div class="kicker"><span class="mono">Sources</span></div>
-    <h2 id="sources-title">Sources</h2>
-    <ul class="sources-list body-list">
-      <li><a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo">Google, Do you need an SEO?</a> (updated 2026-06-05)</li>
-      <li><a href="https://ahrefs.com/blog/seo-pricing/">Ahrefs, SEO pricing (439 providers)</a></li>
-      <li><a href="https://ahrefs.com/blog/seo-guarantee/">Ahrefs, Guaranteed SEO services</a></li>
-      <li><a href="https://seranking.com/blog/seo-pricing/">SE Ranking, SEO pricing survey (260 agencies)</a></li>
-      <li><a href="https://seranking.com/blog/pay-for-performance-seo/">SE Ranking, Pay for performance SEO</a></li>
-      <li><a href="https://backlinko.com/seo-pricing">Backlinko, SEO pricing</a></li>
-      <li><a href="https://clutch.co/seo-firms/pricing">Clutch, SEO agency pricing guide</a></li>
-      <li><a href="https://portent.com/blog/seo/performance-based-pricing-seo.htm">Portent, Performance based pricing</a></li>
-      <li><a href="https://www.webfx.com/seo/learn/pay-for-performance-seo/">WebFX, Why pay for performance is not the right choice</a></li>
-      <li><a href="https://theadminbar.com/seo-weekly/pricing-models-for-seo-agreements-aka-how-to-price-an-seo-retainer/">The Admin Bar, Pricing models for SEO agreements</a></li>
-      <li><a href="https://topify.ai/blog/seo-agency-contract-terms-explained">Topify, SEO contract terms</a>, <a href="https://sprintlaw.com.au/articles/seo-services-agreements-in-australia-what-businesses-should-check-before-signing/">Sprintlaw</a>, <a href="https://profiletree.com/performance-based-seo/">ProfileTree</a> (vendor and law firm guides)</li>
-      <li><a href="https://www.sitepoint.com/community/t/seo-rip-off/36190">SitePoint forum thread, 2013</a></li>
-    </ul>
-  </section>
-
+  </div>
   </div><!-- /.article-body -->
   </div><!-- /.article-layout -->
 </main>
