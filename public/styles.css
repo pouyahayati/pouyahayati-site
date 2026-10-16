@@ -773,6 +773,8 @@ a:hover { text-decoration-thickness: 2px; }
 .cases .chart-head { flex-direction: column-reverse; align-items: flex-start; justify-content: flex-start; gap: 4px; }
 .cases .chart-value { font-size: 1.9rem; }
 .cases .chart-metric { font-size: .7rem; }
+.cases .chart-value { white-space: nowrap; }
+.chart-value .arr { color: var(--spark); margin: 0 .15em; font-weight: 700; }
 .cases .chart-plot { height: 48px; margin-top: 12px; }
 .cases .chart-start, .cases .chart-axis, .cases .case-totals { display: none; }
 .cases .case-work { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
