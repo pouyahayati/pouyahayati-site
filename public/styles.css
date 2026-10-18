@@ -935,3 +935,13 @@ a:hover { text-decoration-thickness: 2px; }
 .carousel-btn:disabled { opacity: .35; cursor: default; }
 .cert-issuer { display: flex; align-items: center; gap: 10px; }
 .cert-issuer img { width: 28px; height: 28px; border-radius: 6px; object-fit: contain; }
+
+/* ===== Mobile hero: exactly one dark screen, one compact stats box ===== */
+@media (max-width: 767px) {
+  .stat-how, .stat-wide { display: none; }
+  .hero { min-height: calc(100svh - var(--header-h)); padding: 20px 0 24px; display: flex; align-items: center; }
+  .hero > .container { display: block; }
+  .hero-stats { display: flex; gap: 0; margin-top: 20px; padding: 12px 16px; border: 1px solid #3A3A3A; border-radius: var(--radius); background: #1C1C1C; }
+  .hero-stats .stat { flex: 1; border-left: 0; padding-left: 0; }
+  .hero-stats .stat + .stat { padding-left: 16px; border-left: 2px solid var(--spark); }
+}
