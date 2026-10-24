@@ -78,18 +78,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .crumbs a:hover { color: var(--ink); }
     .crumbs [aria-current] { color: var(--ink); font-weight: 500; }
 
-    .blog-hero { padding: 28px 0 56px; }
-    .blog-hero .hero-title { font-size: clamp(2.2rem, 6.4vw, 4rem); }
-    .blog-hero .hero-sub { margin-bottom: 0; }
+    .blog-hero { padding: 28px 0 40px; }
+    .blog-hero .hero-title { font-size: clamp(2.2rem, 6.4vw, 4rem); color: var(--ink); margin-bottom: 0; }
 
-    .posts { padding: 56px 0 96px; border-top: 1px solid var(--line); }
-    .post-card { position: relative; max-width: 760px; }
-    .post-card h2 { margin: 0 0 10px; font-size: clamp(1.3rem, 3vw, 1.6rem); text-wrap: balance; }
+    .posts { padding: 0 0 96px; }
+    .post-card { position: relative; }
+    .post-card h2 { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2; letter-spacing: -.02em; text-wrap: balance; }
     /* whole card is clickable via the title link */
     .post-card h2 a { text-decoration: none; }
     .post-card h2 a::after { content: ""; position: absolute; inset: 0; }
     .post-card .case-link { margin-top: 4px; }
-    @media (min-width: 900px) { .blog-hero { padding: 40px 0 72px; } }
+    @media (min-width: 900px) { .blog-hero { padding: 40px 0 48px; } }
   </style>
 </head>
 <body>
@@ -121,8 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="blog-hero" id="top" aria-labelledby="blog-title">
       <div class="container">
-        <h1 id="blog-title" class="hero-title"><span class="line">Blog</span></h1>
-        <p class="hero-sub">Practical SEO and growth guides for business owners. No fluff, just what to measure and what to ask.</p>
+        <h1 id="blog-title" class="hero-title"><span class="line">Blogs</span></h1>
       </div>
     </section>
 
