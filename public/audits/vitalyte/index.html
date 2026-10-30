@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitalyte.com SEO Audit | Pouya Hayati</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="description" content="Private SEO audit of vitalyte.com.">
+<style>
+:root{--bg:#fafaf7;--card:#fff;--ink:#1b1f23;--mute:#5b6570;--line:#e4e4de;--acc:#0f6e56;--accbg:#e3f3ee;--red:#a32d2d;--redbg:#fbeaea;--amb:#8a5a00;--ambbg:#fdf3dc;--blu:#1d4f8c;--blubg:#e6eef8}
+@media(prefers-color-scheme:dark){:root{--bg:#14171a;--card:#1c2024;--ink:#eceae4;--mute:#9aa3ad;--line:#2d3339;--acc:#5fd0b0;--accbg:#12332b;--red:#f09595;--redbg:#3a1c1c;--amb:#f0c060;--ambbg:#3a2d10;--blu:#8ab8f0;--blubg:#16283f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+header.top .wrap{display:flex;gap:18px;align-items:center;overflow-x:auto;padding-top:12px;padding-bottom:12px;white-space:nowrap}
+header.top b{margin-right:auto}
+header.top a{color:var(--mute);text-decoration:none;font-size:14px}
+header.top a:hover{color:var(--acc)}
+.hero{padding:56px 0 30px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--accbg);color:var(--acc);padding:4px 10px;border-radius:99px;font-weight:600}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.lead{font-size:18px;color:var(--mute);max-width:720px;margin:0}
+.meta{margin-top:18px;font-size:14px;color:var(--mute)}
+h2{font-size:28px;margin:0 0 6px;letter-spacing:-.01em}
+h3{font-size:18px;margin:26px 0 8px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+.sub{color:var(--mute);margin:0 0 22px}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stat b{display:block;font-size:30px;line-height:1.1}
+.stat span{color:var(--mute);font-size:14px}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px;letter-spacing:.03em;vertical-align:middle}
+.crit{background:var(--redbg);color:var(--red)}.imp{background:var(--ambbg);color:var(--amb)}.min{background:var(--blubg);color:var(--blu)}.ok{background:var(--accbg);color:var(--acc)}
+.issue{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px}
+.issue h4{margin:0 0 6px;font-size:16px}
+.issue p{margin:4px 0;font-size:15px}
+.issue .fix{color:var(--ink)}.issue .fix b{color:var(--acc)}
+.issue .ev{color:var(--mute);font-size:14px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.tw{overflow-x:auto}
+.bar{height:8px;border-radius:4px;background:var(--acc);min-width:3px;margin-top:6px}
+pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;overflow-x:auto;font-size:13.5px;line-height:1.55}
+ul{padding-left:20px}li{margin:4px 0}
+.note{border-left:4px solid var(--amb);background:var(--ambbg);padding:12px 16px;border-radius:0 10px 10px 0;font-size:15px;margin:18px 0}
+.step{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.step:last-child{border:0}.step b{color:var(--acc)}
+footer{padding:36px 0 60px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:560px){.step{grid-template-columns:1fr;gap:4px}}
+@media print{header.top{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<b>Pouya Hayati</b>
+<a href="#summary">Summary</a><a href="#technical">Technical</a><a href="#keywords">Keywords</a><a href="#structure">Structure</a><a href="#offpage">Off-page</a><a href="#roadmap">Roadmap</a><a href="#limits">Limits</a>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+<span class="tag">SEO audit · private</span>
+<h1>vitalyte.com: on-site, keyword, structure and off-page analysis</h1>
+<p class="lead">Vitalyte is a Shopify store selling isotonic (glucose-based) electrolyte powder, with a brand history going back to 1969. The brand is strong, but the site is structured around product formats, not around what people search for. This page covers what is broken, what to target, and the order to fix it.</p>
+<p class="meta">Prepared by Pouya Hayati · pouyahayati.com · October 30, 2026</p>
+</div>
+
+<section id="summary">
+<h2>Summary</h2>
+<p class="sub">Key numbers, then the order of work.</p>
+<div class="grid g4">
+<div class="card stat"><b>3 of 3</b><span>biggest keyword themes (electrolyte drink, powder, packets) have no dedicated page or sit outside the menu</span></div>
+<div class="card stat"><b>DR 22</b><span>Ahrefs domain rating, low for a 50+ year brand. Links are clean but mostly old</span></div>
+<div class="card stat"><b>212 / 302</b><span>images are over 100 KB. Several PNGs are 4.6 to 6.5 MB</span></div>
+<div class="card stat"><b>4</b><span>placeholder products ("Example product title") live on the main collection page</span></div>
+</div>
+<h3>What to do first</h3>
+<ol>
+<li>Fix the trust and conversion errors: placeholder products, sold-out items with active Add to cart buttons, broken footer links.</li>
+<li>Rebuild the menu and collections around the searches people make: electrolyte packets, drink mix and powder.</li>
+<li>Compress images and clean up heading structure, meta descriptions and duplicate copy.</li>
+<li>Publish buying-guide content for mid-volume, fast-growing keywords before the June to August peak.</li>
+<li>Rebuild lost links and earn new editorial links with an original data asset.</li>
+</ol>
+</section>
+
+<section id="technical">
+<h2>1. Technical and on-page issues</h2>
+<p class="sub">Source: Screaming Frog crawl (503 URLs, 68 HTML pages) plus direct review of the home page, a collection, a product, the blog and the sitemap.</p>
+<div class="note"><b>Crawl caveat.</b> 49 of the 68 HTML pages returned HTTP 429 (rate limited), so only 19 pages were fully read. Findings on collections, the blog and products come from direct page review. Re-crawl at 0.5 URL/s to complete the data.</div>
+
+<h3>Critical</h3>
+<div class="issue"><h4>Placeholder products live on the main collection <span class="pill crit">CRITICAL</span></h4>
+<p class="ev">Four cards titled "Example product title" at $19.99 appear in the Best Sellers block of the Stand Up Pouches collection.</p>
+<p class="fix"><b>Fix:</b> remove or replace the featured-collection block content in the theme editor, and point it to a real collection.</p></div>
+<div class="issue"><h4>Sold-out products still show Add to cart <span class="pill crit">CRITICAL</span></h4>
+<p class="ev">All 7 pouches and several stick packs show "Sold out" in listings, while the Orange pouch page still shows an active Add to cart button.</p>
+<p class="fix"><b>Fix:</b> confirm real inventory. If stock is real, correct inventory and availability. If not, disable the button, add a back-in-stock notification, and make sure Product schema reports the right availability.</p></div>
+<div class="issue"><h4>Rate limiting (429) on 49 pages <span class="pill crit">CRITICAL</span></h4>
+<p class="ev">The default Screaming Frog user agent was blocked and a faster crawl triggered 429 on most pages.</p>
+<p class="fix"><b>Fix:</b> check Search Console → Crawl Stats for 429/5xx served to Googlebot. If Googlebot is affected, review CDN/bot-protection rules.</p></div>
+
+<h3>Important</h3>
+<div class="issue"><h4>Home page has no usable H1 <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">The crawl found an empty H1 on the home page. In the rendered page the only top heading is the logo text. Hero and H2s ("Pure hydration. No nonsense.", "Find your flavor") contain no keyword.</p>
+<p class="fix"><b>Fix:</b> use a real H1 such as "Isotonic Electrolyte Drink Mix and Powder" and turn the logo into a link or span.</p></div>
+<div class="issue"><h4>Cart text pollutes headings on every page <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">"Your cart is empty" is an H2 on all pages. The blog index also has two H1s. FAQ and "Why choose Vitalyte" blocks are plain text, not headings. Product pages carry 10 to 15 H2s with no hierarchy.</p>
+<p class="fix"><b>Fix:</b> change cart drawer headings to non-heading elements in the theme (<code>cart-drawer.liquid</code>), keep one H1 per page, mark real sections as H2 and sub-points as H3.</p></div>
+<div class="issue"><h4>Meta descriptions: duplicated, broken or missing <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">The 4 pouch products share the same description. Descriptions on collection and product pages contain line breaks and cut off mid-sentence. The blog post meta description is the first paragraph of the article (320 characters). FAQ, policies and cart have none. The home description contains a typo ("acheive").</p>
+<p class="fix"><b>Fix:</b> write one unique description of 140 to 155 characters per template and page. Use the Shopify "Search engine listing" fields, not the product body text.</p></div>
+<div class="issue"><h4>Titles too long or too short <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">Several product titles run 80 to 91 characters (for example "Lemon Electrolyte On The Go Stick Pack - Electrolyte Powder Packets | Vitalyte Electrolytes"). The FAQ title is 15 characters.</p>
+<p class="fix"><b>Fix:</b> target 50 to 60 characters, put the main keyword first, drop the repeated brand suffix.</p></div>
+<div class="issue"><h4>Duplicate and thin product copy <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">The same description block repeats across all 7 pouch cards and the "Also recommended" section. Variants are separate products, so flavors compete with each other.</p>
+<p class="fix"><b>Fix:</b> write unique copy per flavor (taste notes, use cases, who it is for) and move shared text into one tabbed block.</p></div>
+<div class="issue"><h4>Wrong internal links and typos <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">"Shop Pouches" and "Gear and Accessories" both point to <code>/collections/all</code>, though a real <code>/collections/gear</code> exists. A footer label reads "Punches". The cart drawer says "garantee". The best-sellers collection returned 429, and <code>/collections/electrolyte-powder-for-rapid-replenishment</code> is not in the menu.</p>
+<p class="fix"><b>Fix:</b> correct the menu link targets in Navigation and fix the typos.</p></div>
+<div class="issue"><h4>Heavy images hurt page speed <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">212 of 302 images are over 100 KB and 96 are over 300 KB. Several PNGs are 4.6 to 6.5 MB (for example <code>Artboard_6.png</code>, <code>Rectangle_28.png</code>). The home HTML is 1.1 MB with about 8,000 words of text. Some pages took 1 to 2.8 seconds to respond.</p>
+<p class="fix"><b>Fix:</b> re-export banners as WebP or AVIF at display size, lazy-load below the fold, set explicit width and height, and preload only the LCP image. Re-test with PageSpeed Insights.</p></div>
+<div class="issue"><h4>Weak or missing image alt text <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">Generic values such as "icon", "Icon 1", "main-image", "Background image", and empty alts on social icons. Nutrition facts exist only inside an image.</p>
+<p class="fix"><b>Fix:</b> descriptive alt on content images, empty alt on pure decoration, and publish nutrition and ingredients as real text.</p></div>
+<div class="issue"><h4>Content contradictions and unsupported claims <span class="pill imp">IMPORTANT</span></h4>
+<p class="ev">"Founded over 40 years ago" versus "since 1969" and "50+ years". Claims such as "3x faster than water" and "same as IV solution" have no source on the page. The FAQ says the drink is sweetened only with fructose while ingredients include glucose.</p>
+<p class="fix"><b>Fix:</b> one consistent company story, cite studies for health claims, and add a reviewer or author line. This supports E-E-A-T on a health-adjacent topic.</p></div>
+
+<h3>Minor</h3>
+<div class="issue"><h4>Social and meta tags <span class="pill min">MINOR</span></h4>
+<p class="ev">Home and collection <code>og:image</code> uses an http:// URL (collection image is 291×220). <code>twitter:card</code> is summary_large_image with no <code>twitter:image</code>. <code>og:title</code> differs from the page title. <code>theme-color</code> is empty.</p>
+<p class="fix"><b>Fix:</b> set a 1200×630 social image per template and align og:title with the title tag.</p></div>
+<div class="issue"><h4>URL slugs and variant links <span class="pill min">MINOR</span></h4>
+<p class="ev">Slugs like <code>grape-stick</code>, a <code>-copy</code> suffix and mixed naming across formats. Internal links to <code>?variant=</code> URLs are crawled (canonicals handle them, but they waste crawl budget).</p>
+<p class="fix"><b>Fix:</b> standardize slugs (see structure section) with 301 redirects, and link to clean product URLs.</p></div>
+<div class="issue"><h4>Reviews and pricing display <span class="pill min">MINOR</span></h4>
+<p class="ev">The same testimonial ("Kiali") repeats three times in the carousel. Prices show identical "Regular" and "Sale" values.</p>
+<p class="fix"><b>Fix:</b> show distinct reviews and hide the sale label when there is no discount.</p></div>
+<div class="issue"><h4>Blog: pagination and authorship <span class="pill min">MINOR</span></h4>
+<p class="ev">Around 20 paginated pages with no categories, tags or author names, and every post is labeled "Featured".</p>
+<p class="fix"><b>Fix:</b> add author bios with credentials, categories matching the pillars below, and remove the duplicate featured block.</p></div>
+
+<h3>To verify (not confirmed)</h3>
+<ul>
+<li><b>Structured data.</b> My page reader does not show JSON-LD, so "not detected" is not proof. Run the Rich Results Test on a product and the home page. Needed: Product with Offer and availability, AggregateRating (if reviews are real), BreadcrumbList, FAQPage where FAQs exist, Organization with sameAs.</li>
+<li><b>Redirects and headers.</b> http to https, www to non-www (canonical is non-www), and robots.txt content. Only 2 URLs were blocked in the crawl (<code>cart.js</code>, <code>checkouts/internal/preloads.js</code>), which is standard for Shopify.</li>
+<li><b>Sitemap.</b> The index lists products, pages, collections, blogs, articles and an unusual <code>sitemap_agentic_discovery.xml</code>. Check what it contains.</li>
+<li><b>Core Web Vitals.</b> Needs PageSpeed Insights field data or Search Console.</li>
+</ul>
+</section>
+
+<section id="keywords">
+<h2>2. Keyword research</h2>
+<p class="sub">Source: Keyword Tool, Google US, monthly volume. Competition on head terms is maxed out (LMNT, Liquid I.V., Pedialyte, Ultima, Gatorlyte). Brand searches for "Vitalyte" are only about 30 to 70 per month, so growth has to come from non-brand terms.</p>
+
+<h3>Key findings</h3>
+<ul>
+<li>Best opportunity is mid-volume, fast-growing terms: <b>hydration packets</b> (22.2K), <b>electrolyte packets</b> (14.8K, +83%), <b>best hydration packets</b> (8.1K, +125%), <b>best electrolyte packets</b> (1.6K, +173%).</li>
+<li><b>Differentiator:</b> low sodium (135 mg per serving) and an isotonic glucose formula. "Low sodium electrolyte drink" (2.9K, +53%) and "low sodium electrolyte powder" (1K, +81%) fit the brand while competitors push high sodium.</li>
+<li>Sugar-free, keto and zero-sugar terms do not fit a glucose formula. Do not target them.</li>
+<li>The current blog topics (hiking about 70, outdoor heat about 20, running about 10) have almost no search volume.</li>
+<li>Seasonality: demand peaks June to August (about 560 to 590K across the tracked set) and drops in September (about 290K). Publish between February and April.</li>
+</ul>
+
+<h3>Target keywords by priority</h3>
+<div class="tw"><table>
+<thead><tr><th>P</th><th>Keyword</th><th>Volume</th><th>Intent</th><th>Target page</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>electrolyte drink mix</td><td>90.5K<div class="bar" style="width:100%"></div></td><td>Commercial</td><td>Drink Mix collection</td></tr>
+<tr><td>1</td><td>electrolyte powder</td><td>60.5K<div class="bar" style="width:67%"></div></td><td>Commercial</td><td>Powder hub (mid-term)</td></tr>
+<tr><td>1</td><td>hydration packets</td><td>22.2K<div class="bar" style="width:25%"></div></td><td>Commercial</td><td>Packets collection</td></tr>
+<tr><td>1</td><td>electrolyte packets</td><td>14.8K<div class="bar" style="width:16%"></div></td><td>Commercial</td><td>Packets collection</td></tr>
+<tr><td>1</td><td>electrolyte powder packets</td><td>4.4K<div class="bar" style="width:5%"></div></td><td>Commercial</td><td>Packets collection</td></tr>
+<tr><td>1</td><td>low sodium electrolyte drink / powder</td><td>2.9K / 1K</td><td>Commercial</td><td>Dedicated landing page</td></tr>
+<tr><td>2</td><td>best electrolyte powder</td><td>33.1K<div class="bar" style="width:37%"></div></td><td>Comparison</td><td>Buying guide</td></tr>
+<tr><td>2</td><td>best hydration packets</td><td>8.1K<div class="bar" style="width:9%"></div></td><td>Comparison</td><td>Buying guide</td></tr>
+<tr><td>2</td><td>electrolyte tablets (powder vs tablets)</td><td>9.9K<div class="bar" style="width:11%"></div></td><td>Comparison</td><td>Comparison article</td></tr>
+<tr><td>2</td><td>hydration drink mix / electrolyte replacement drink</td><td>4.4K / 1.9K</td><td>Commercial</td><td>Drink Mix collection</td></tr>
+<tr><td>3</td><td>isotonic drink</td><td>49.5K<div class="bar" style="width:55%"></div></td><td>Informational</td><td>Isotonic pillar</td></tr>
+<tr><td>3</td><td>pedialyte for adults</td><td>18.1K<div class="bar" style="width:20%"></div></td><td>Informational</td><td>Rehydration cluster</td></tr>
+<tr><td>3</td><td>homemade electrolyte drink</td><td>12.1K<div class="bar" style="width:13%"></div></td><td>Informational</td><td>Isotonic cluster (low competition)</td></tr>
+<tr><td>3</td><td>best drink for dehydration / best rehydration drinks</td><td>4.4K / 3.6K</td><td>Informational</td><td>Rehydration pillar</td></tr>
+<tr><td>4</td><td>electrolyte drink / electrolyte water</td><td>135K / 33K<div class="bar" style="width:100%;opacity:.5"></div></td><td>Informational</td><td>After authority is built</td></tr>
+</tbody></table></div>
+<p class="sub" style="margin-top:12px">Competitor brand terms (LMNT, Liquid I.V., Pedialyte) should not be targeted on core pages. "Liquid IV alternative" style pages are worth testing, but volume was not measured.</p>
+
+<h3>Gap between current pages and demand</h3>
+<div class="tw"><table>
+<thead><tr><th>Keyword</th><th>Volume</th><th>Current page</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>electrolyte drink</td><td>135K</td><td>None</td><td>No target page</td></tr>
+<tr><td>electrolyte drink mix</td><td>90.5K</td><td>Pouches collection (title and H1)</td><td>Title right, URL and menu not</td></tr>
+<tr><td>electrolyte powder</td><td>60.5K</td><td>Rapid-replenishment collection</td><td>Not in menu, one link from home</td></tr>
+<tr><td>isotonic drink</td><td>49.5K</td><td>Mentioned in title only</td><td>No content hub</td></tr>
+<tr><td>hydration packets</td><td>22.2K</td><td>None</td><td>No page</td></tr>
+<tr><td>electrolyte packets</td><td>14.8K</td><td>None</td><td>Collections use "stick packs" / "single-serving"</td></tr>
+<tr><td>electrolyte stick packs</td><td>70</td><td>25-count collection</td><td>Almost no demand</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="structure">
+<h2>3. Site structure</h2>
+<p class="sub">The current structure follows product format and brand names ("On The Go"), not search demand.</p>
+<h3>Problems</h3>
+<ul>
+<li>Menu: Shop (Stand Up Pouches, On The Go Sticks, On The Go Stick Packs, Gear) · About · Blog. The three biggest keyword themes are not in it.</li>
+<li>Two overlapping stick collections (<code>single-serving-packets</code> and <code>25-single-serving-stick-packs</code>) target the same intent and risk cannibalization.</li>
+<li>Product slugs are inconsistent, and each flavor exists in several formats with similar titles.</li>
+<li>Blog has 4 posts in one week, on low-volume topics, with no structured links to collections.</li>
+</ul>
+<h3>Proposed architecture (pillar and cluster)</h3>
+<pre>Home  (H1: Isotonic Electrolyte Drink Mix &amp; Powder)
+│
+├─ Shop
+│  ├─ Electrolyte Packets &amp; Sticks    /collections/electrolyte-packets
+│  │     (merge the two stick collections)
+│  ├─ Electrolyte Drink Mix (Pouches) /collections/electrolyte-drink-mix
+│  ├─ Electrolyte Powder (hub)        /collections/electrolyte-powder
+│  ├─ Variety Packs
+│  └─ Gear
+│
+├─ Learn  (same blog, restructured)
+│  ├─ PILLAR 1  Isotonic Hydration       /blogs/learn/isotonic-drink-guide
+│  │     isotonic vs hypotonic vs hypertonic · glucose + sodium absorption
+│  │     sports drinks vs electrolyte mix · homemade electrolyte drink
+│  ├─ PILLAR 2  Electrolyte Powder &amp; Packets (buying guide)
+│  │     best electrolyte powder · best hydration packets · powder vs tablets
+│  │     low sodium electrolyte powder · best tasting
+│  ├─ PILLAR 3  Rehydration &amp; Dehydration
+│  │     best drink for dehydration · best rehydration drinks
+│  │     oral rehydration · pedialyte for adults
+│  └─ Use cases (support only): hiking, trail running, outdoor workers
+│
+└─ About · FAQs · Contact · Retailers</pre>
+<h3>Linking and URL rules</h3>
+<ul>
+<li>Each cluster links up to its pillar and to one commercial collection. Each pillar links to all its clusters and the related collection.</li>
+<li>One main keyword per collection (Packets = "electrolyte packets") to avoid cannibalization.</li>
+<li>Consistent product URLs: <code>/products/{flavor}-electrolyte-drink-mix-pouch</code> and <code>/products/{flavor}-electrolyte-packets</code>, with 301 redirects from old slugs.</li>
+<li>Flavor demand (for example "watermelon electrolytes", 1.6K) is served by sections inside collections, not separate pages.</li>
+</ul>
+</section>
+
+<section id="offpage">
+<h2>4. Off-page SEO</h2>
+<p class="sub">Source: Ahrefs free export (top ~20 rows), Moz free export (first 50 inbound links), public searches. No paid tools. The profile is a sample, not the full 1.1K domains.</p>
+<div class="grid g4">
+<div class="card stat"><b>DR 22</b><span>low for the brand's age</span></div>
+<div class="card stat"><b>~2.4K</b><span>backlinks from ~1.1K linking sites</span></div>
+<div class="card stat"><b>62% / 46%</b><span>of backlinks / linking domains are dofollow</span></div>
+<div class="card stat"><b>Natural</b><span>anchors: brand, "gookinaid", naked URLs. Low penalty risk</span></div>
+</div>
+<p><b>Verdict:</b> the profile is natural and clean, but driven by legacy links rather than an active link-building program.</p>
+<h3>Strengths</h3>
+<ul>
+<li>Real authority links: Times of San Diego, Las Vegas Review-Journal, OregonLive, Danish Wikipedia and Race Roster.</li>
+<li>Race and event sponsorships still create links (wcroadrunners.com, nwtrailruns.com, raceroster.com).</li>
+<li>Strong brand footprint: Amazon (700+ reviews, about 4.4), Target, Walmart, Faire, BevNET, 99boulders "Top Pick" and a Trailspace review.</li>
+</ul>
+<h3>Weaknesses</h3>
+<ul>
+<li>Most strong links date from 2007 to 2019, with few recent editorial links.</li>
+<li>About 30 of 50 Moz rows come from one domain (Grand View Research programmatic pages), so the real diversity is lower than it looks.</li>
+<li>A few questionable links (directory, an irrelevant 2007 post, a blog-network list, a likely sponsored UK magazine mention). Small share of the sample, so no disavow yet.</li>
+<li>Lost equity: <code>/pages/become-a-brand-ambassador</code> now 301s to the blog index, and an old PDF linked from Danish Wikipedia may now be a 404.</li>
+<li>No Organization schema with sameAs. Only Instagram and Facebook are linked. No press page, no active affiliate or ambassador program, no review platform widget.</li>
+<li>Not seen in 2025 to 2026 roundups (based on search snippets, not fully verified). Blog content is generic with nothing original to link to.</li>
+</ul>
+<h3>Actions</h3>
+<ol>
+<li>Restore the ambassador page, and 301 old PDFs to the closest relevant article (not the blog index).</li>
+<li>Unlinked-mention outreach to Times of San Diego, Review-Journal and the sponsored races.</li>
+<li>Pitch samples to current runner and hiker roundups.</li>
+<li>Add Organization schema with sameAs, and create YouTube, X and LinkedIn profiles.</li>
+<li>Publish one linkable asset: original sweat-sodium data or an isotonic vs hypotonic guide.</li>
+<li>Next data step: export the full referring-domain list and compare with LMNT, Skratch Labs and Liquid I.V.</li>
+</ol>
+</section>
+
+<section id="roadmap">
+<h2>5. Roadmap</h2>
+<p class="sub">Publish content before February to April so it is indexed and ranking ahead of the June to August peak.</p>
+<div class="step"><b>Month 1 to 2</b><div>Technical and trust fixes: remove placeholders, fix sold-out states and links, H1 and heading cleanup, titles and meta descriptions, image compression, schema check. Rebuild menu and collections, merge stick collections, set up 301 redirects.</div></div>
+<div class="step"><b>Month 2 to 4</b><div>Pillar 2 (buying guide) and clusters for "best electrolyte powder", "best hydration packets" and "low sodium". Restore the ambassador page, start link outreach.</div></div>
+<div class="step"><b>Month 4 to 7</b><div>Pillar 1 (Isotonic) and Pillar 3 (Rehydration) with clusters. Publish the linkable data asset.</div></div>
+<div class="step"><b>After authority</b><div>Go after "electrolyte drink" and "electrolyte powder" head terms.</div></div>
+<h3>How to measure</h3>
+<ul>
+<li>Search Console: impressions, clicks and average position for the P1 and P2 keywords, indexed pages, Crawl Stats.</li>
+<li>Core Web Vitals (LCP) before and after image work.</li>
+<li>Organic revenue and conversion rate on Packets and Drink Mix collections in GA4.</li>
+<li>Referring domains and DR in Ahrefs, tracked monthly.</li>
+</ul>
+</section>
+
+<section id="limits">
+<h2>Limits of this audit</h2>
+<ul>
+<li>The crawl is partial (49 of 68 HTML pages rate-limited). No Search Console, GA4 or Shopify admin access was available.</li>
+<li>Keyword volumes are Google US estimates and show related demand, not Vitalyte's actual rankings.</li>
+<li>Structured data, redirects, robots.txt and Core Web Vitals are listed as "to verify".</li>
+<li>Off-page data is a free sample and does not cover the full backlink profile or competitor gaps.</li>
+</ul>
+</section>
+</main>
+<footer><div class="wrap">Private working document by Pouya Hayati. Not indexed by search engines.</div></footer>
+</body>
+</html>
