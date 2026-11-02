@@ -29,6 +29,8 @@
   <h1>SEO Audit and 6-Month Strategy</h1>
   <p class="sub">whitecardwebinars.com.au &middot; Prepared by Pooya Hayati &middot; November 2026</p>
 
+  <p class="note" style="margin:-14px 0 24px">Data sources: a site crawl (run with Claude Code), Google PageSpeed Insights (speed and Core Web Vitals), Ahrefs (backlinks), KeywordTool.io (Google Australia search volume), and public Google Maps and competitor pages. Gathered November 2026.</p>
+
   <section>
     <h2>Summary</h2>
     <p>The site targets about 35,000 searches a month across the 32 terms I researched, and that demand is flat year over year. Almost all of it sits in state-level and city-level terms ("white card nsw", "white card qld", "white card sydney"), not suburb-level terms. The main problems are duplicate and overlapping pages, crawl waste, slow mobile speed, on-page gaps and missing Course schema. Fixing these and giving each state one strong page is the fastest route to better rankings.</p>
@@ -96,7 +98,34 @@
   </section>
 
   <section>
+    <h2>Competitor snapshot</h2>
+    <p class="note">From public pages and KeywordTool.io domain data for Google Australia. I have not checked their exact rankings.</p>
+    <table>
+      <tr><th>Competitor</th><th>What they do well</th></tr>
+      <tr><td>Eclipse Education</td><td>Many location pages (state, city and town), live online classes with dates and prices shown up front, FAQ answering whether an online white card is valid. Domain data shows it covers "white card" (33,100), "white card course" (5,400) and "white card training" (1,900).</td></tr>
+      <tr><td>Vigil Training College</td><td>Clear NSW online page with a visible price ($175), live delivery on Microsoft Teams, same-day statement of training. Domain data shows it covers "white card online" (8,100).</td></tr>
+      <tr><td>Inscope</td><td>One hub page that sends learners to a page per state, with the rule for each state spelled out.</td></tr>
+      <tr><td>NSTA, Edway and others</td><td>Face-to-face providers whose pages say online delivery may not be accepted in NSW. Their claims differ from the live-online providers, which is a content gap for a page that explains the rule clearly and accurately.</td></tr>
+    </table>
+    <ul>
+      <li><strong>What to copy:</strong> price and dates visible on the page, a short validity FAQ per state, and one clear hub page that links to every state page.</li>
+      <li><strong>Where White Card Webinars can win:</strong> a very large review base (4,354 Google reviews for Sydney), sessions that learners say run twice a day, and a state-level structure that is currently buried under suburb pages.</li>
+      <li><strong>Also worth adding to the keyword list:</strong> "white card online" (8,100) and "white card training" (1,900).</li>
+    </ul>
+    <p class="note">The validity rules differ between sources, so every claim on the pages should be checked against the official state regulator before publishing.</p>
+  </section>
+
+  <section>
     <h2>Strategy: months 1 to 6</h2>
+
+    <h3>First week: quick wins</h3>
+    <ul>
+      <li>Unblock CSS and JavaScript in robots.txt.</li>
+      <li>301-redirect the three -2 duplicate pages to the preferred versions.</li>
+      <li>Fix internal links that point to URLs without the trailing slash.</li>
+      <li>Shorten the 86-character homepage title.</li>
+      <li>Write the brief for a "white card replacement" page.</li>
+    </ul>
 
     <h3>Month 1: fix the foundations</h3>
     <ul>
@@ -108,7 +137,7 @@
 
     <h3>Months 2 to 3: restructure content</h3>
     <ul>
-      <li>Reduce the 42 suburb pages to the 8 to 10 with real demand and unique local content. Noindex or redirect the rest.</li>
+      <li>Reduce the 42 suburb pages to the 8 to 10 with real demand and unique local content. Noindex or redirect the rest. Before removing or redirecting any page (including the 58 old posts), I check its clicks, impressions and backlinks in Search Console and Ahrefs, keep pages that bring traffic or links, and redirect each one to its closest relevant page, never in bulk to the homepage.</li>
       <li>Give each state one strong page with a unique title, H1 and meta description, built around "white card [state]". Merge the four overlapping Sydney pages into one.</li>
       <li>Add Course schema to service pages and fix the review markup.</li>
       <li>Fix titles, meta descriptions, duplicate H1s and image alt text.</li>
@@ -120,7 +149,16 @@
       <li><strong>Content:</strong> FAQ and guide content for the questions learners ask (cost, same-day, online vs in-person by state, replacement), each page with a clear purpose and internal links to the state pages.</li>
       <li><strong>Backlinks:</strong> target industry bodies, construction and safety associations, training directories and relevant local sites, plus unlinked brand mentions.</li>
       <li><strong>Google Business Profile:</strong> request reviews from Queensland learners, link each profile to its state page, correct the inconsistent hours, and verify categories, services and photos.</li>
-      <li><strong>AI search visibility:</strong> make answers short and clear on the pages, keep schema complete, and check monthly whether the brand appears in ChatGPT and Google AI Overviews for "white card online" queries.</li>
+      <li><strong>AI search visibility:</strong> put a short, direct answer (two or three sentences) at the top of key pages, for example "Can I do a white card online in NSW?". Keep Course and FAQPage schema complete and facts consistent with the regulator's rules. Each month, check about 10 "white card online" queries in ChatGPT and Google AI Overviews and record whether the brand appears.</li>
+    </ul>
+
+    <h3>How success is measured</h3>
+    <ul>
+      <li>Internal redirect links and CSS/JS blocked in robots.txt: both reduced to zero.</li>
+      <li>Core Web Vitals on the state pages in the "good" range: LCP under 2.5 s and INP under 200 ms on mobile.</li>
+      <li>One indexable, unique page per state, with no duplicate titles or H1s.</li>
+      <li>Course schema on all service pages and the self-serving review markup removed.</li>
+      <li>Rankings, clicks and impressions for the main "white card [state]" terms, compared with the baseline set in month 1.</li>
     </ul>
 
     <h3>Reporting</h3>
