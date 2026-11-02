@@ -945,3 +945,18 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-stats .stat { flex: 1; border-left: 0; padding-left: 0; }
   .hero-stats .stat + .stat { padding-left: 16px; border-left: 2px solid var(--spark); }
 }
+
+/* Skills & experience */
+.skills { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; align-items: start; }
+.skills .case-list { gap: 10px; }
+.tools { margin: 0; display: grid; gap: 14px; }
+.tools dt { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.tools dd { margin: 2px 0 0; font-size: .92rem; line-height: 1.45; }
+.exp { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; max-width: 760px; }
+.exp-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+.exp-head h3 { font-size: 1.1rem; margin: 0; }
+.exp-date { font-size: .9rem; color: var(--ink-soft); }
+.exp-item p { margin: 6px 0 0; color: var(--ink-soft); }
+.exp-item .case-list { margin-top: 10px; }
+.exp-edu { margin-top: 28px; color: var(--ink-soft); font-size: .92rem; }
+@media (max-width: 760px) { .skills { grid-template-columns: 1fr; } }
