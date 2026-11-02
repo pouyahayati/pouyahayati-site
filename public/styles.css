@@ -946,17 +946,30 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-stats .stat + .stat { padding-left: 16px; border-left: 2px solid var(--spark); }
 }
 
+/* Current projects: one row */
+@media (min-width: 900px) { .wips { grid-template-columns: repeat(3, 1fr); } }
 /* Skills & experience */
-.skills { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; align-items: start; }
-.skills .case-list { gap: 10px; }
-.tools { margin: 0; display: grid; gap: 14px; }
-.tools dt { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
-.tools dd { margin: 2px 0 0; font-size: .92rem; line-height: 1.45; }
-.exp { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; max-width: 760px; }
-.exp-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
-.exp-head h3 { font-size: 1.1rem; margin: 0; }
-.exp-date { font-size: .9rem; color: var(--ink-soft); }
-.exp-item p { margin: 6px 0 0; color: var(--ink-soft); }
-.exp-item .case-list { margin-top: 10px; }
-.exp-edu { margin-top: 28px; color: var(--ink-soft); font-size: .92rem; }
-@media (max-width: 760px) { .skills { grid-template-columns: 1fr; } }
+.skill-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.skill { position: relative; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .2s, transform .2s; }
+.skill:hover { border-color: var(--ink); transform: translateY(-2px); }
+.skill-num { display: block; margin-bottom: 18px; font-size: .75rem; font-weight: 600; letter-spacing: .12em; color: var(--spark); }
+.skill h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.skill p { margin: 0; color: var(--ink-soft); font-size: .93rem; line-height: 1.5; }
+.toolbox { margin-top: 14px; padding: 8px 24px; background: var(--ink); color: var(--nav-ink); border-radius: var(--radius); }
+.tool-row { display: grid; gap: 10px; padding: 18px 0; border-bottom: 1px solid var(--nav-line); }
+.tool-row:last-child { border-bottom: 0; }
+.tool-label { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--spark); }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { padding: 6px 12px; font-size: .88rem; border: 1px solid var(--nav-line); border-radius: 999px; color: var(--nav-ink); }
+@media (min-width: 800px) { .tool-row { grid-template-columns: 160px 1fr; align-items: center; } }
+.timeline { list-style: none; margin: 0; padding: 0; max-width: 900px; }
+.tl { position: relative; display: grid; gap: 6px; padding: 0 0 36px 28px; border-left: 2px solid var(--line); margin-left: 6px; }
+.tl:last-child { padding-bottom: 8px; }
+.tl::before { content: ""; position: absolute; left: -7px; top: 3px; width: 12px; height: 12px; border-radius: 50%; background: var(--spark); box-shadow: 0 0 0 4px var(--bg); }
+.tl-date { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.tl-body h3 { margin: 0 0 8px; font-size: 1.2rem; }
+.tl-body p { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+.tl-body .case-list { margin-top: 6px; }
+.exp-edu { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .92rem; max-width: 900px; }
+.exp-edu span:not(.sep) { margin-right: 6px; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+@media (min-width: 900px) { .skill-grid { grid-template-columns: repeat(3, 1fr); } }
