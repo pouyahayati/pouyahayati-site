@@ -32,6 +32,11 @@
   <p class="note" style="margin:-14px 0 24px">Data sources: a site crawl (run with Claude Code), Google PageSpeed Insights (speed and Core Web Vitals), Ahrefs (backlinks), KeywordTool.io (Google Australia search volume), and public Google Maps and competitor pages. Gathered November 2026.</p>
 
   <section>
+    <h2>Scope of this audit</h2>
+    <p>This is a high-level review based on a crawl, public tools and public data. It shows where the biggest problems and opportunities are, but it is not a full audit. A much more detailed review is needed before changes go live, using Search Console and Analytics access, a full page-by-page content and backlink review, the site's server and CMS setup, and conversion data. The first step of the plan is to run that deeper review and set the baseline.</p>
+  </section>
+
+  <section>
     <h2>Summary</h2>
     <p>The site targets about 35,000 searches a month across the 32 terms I researched, and that demand is flat year over year. Almost all of it sits in state-level and city-level terms ("white card nsw", "white card qld", "white card sydney"), not suburb-level terms. The main problems are duplicate and overlapping pages, crawl waste, slow mobile speed, on-page gaps and missing Course schema. Fixing these and giving each state one strong page is the fastest route to better rankings.</p>
   </section>
@@ -129,6 +134,7 @@
 
     <h3>Month 1: fix the foundations</h3>
     <ul>
+      <li>Run the detailed audit with Search Console and Analytics access, and confirm the findings above before making large changes.</li>
       <li>Remove the robots.txt rules that block CSS and JavaScript files.</li>
       <li>301-redirect the -2 duplicates to the preferred pages, retire or redirect the 58 old posts, and update internal links to the correct URLs (with the trailing slash).</li>
       <li>Fix the highest-impact speed issues: defer non-essential scripts, enable caching, convert images to WebP. Focus first on the NSW page's INP.</li>
