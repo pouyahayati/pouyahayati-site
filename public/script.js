@@ -147,22 +147,23 @@
 })();
 
 (function () {
-  var c = document.querySelector('.carousel');
-  if (!c) return;
-  var list = c.querySelector('.posts'), nav = c.querySelector('.carousel-nav');
-  var btns = nav.querySelectorAll('.carousel-btn');
-  function update() {
-    var max = list.scrollWidth - list.clientWidth;
-    nav.hidden = max < 4;
-    btns[0].disabled = list.scrollLeft < 4;
-    btns[1].disabled = list.scrollLeft > max - 4;
-  }
-  btns.forEach(function (b) {
-    b.addEventListener('click', function () {
-      list.scrollBy({ left: Number(b.dataset.dir) * (list.firstElementChild.offsetWidth + 16), behavior: 'smooth' });
+  document.querySelectorAll('.carousel').forEach(function (c) {
+    var list = c.querySelector('.posts, .cases'), nav = c.querySelector('.carousel-nav');
+    if (!list || !nav) return;
+    var btns = nav.querySelectorAll('.carousel-btn');
+    function update() {
+      var max = list.scrollWidth - list.clientWidth;
+      nav.hidden = max < 4;
+      btns[0].disabled = list.scrollLeft < 4;
+      btns[1].disabled = list.scrollLeft > max - 4;
+    }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        list.scrollBy({ left: Number(b.dataset.dir) * (list.firstElementChild.offsetWidth + 16), behavior: 'smooth' });
+      });
     });
+    list.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   });
-  list.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  update();
 })();

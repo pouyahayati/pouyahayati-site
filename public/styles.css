@@ -995,3 +995,8 @@ a:hover { text-decoration-thickness: 2px; }
 .wip { height: 100%; }
 .wip-body { flex: 1; }
 .wip .case-link { margin-top: auto; padding-top: 4px; }
+
+/* Results carousel */
+.carousel .cases { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 4px 0 8px; }
+.carousel .cases::-webkit-scrollbar { display: none; }
+.carousel .cases .case { flex: 0 0 min(380px, 84%); scroll-snap-align: start; }

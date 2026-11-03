@@ -204,7 +204,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="work-group" aria-labelledby="seo-title">
           <h3 class="group-title reveal" id="seo-title">Selected Results</h3>
-          <ul class="cases">
+          <div class="carousel">
+          <ul class="cases" tabindex="0" aria-label="Selected results">
             <li class="case reveal">
               <div class="case-body">
                 <p class="case-meta">Dermatology clinic <span class="nowrap"><span class="sep" aria-hidden="true">·</span> 10 months</span></p>
@@ -261,31 +262,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="case-work"><span class="case-work-label">What I did</span><ul class="case-list"><li>SEO and content</li><li>Web development</li></ul></div>
               </div>
             </li>
-            <li class="case reveal">
-              <div class="case-body">
-                <p class="case-meta">Dermatology clinic <span class="nowrap"><span class="sep" aria-hidden="true">·</span> 8 months</span></p>
-                <h4>Dr. Jalalian Clinic</h4>
-                <figure class="chart" data-from="0" data-from-label="0" data-to="600" data-months="8">
-                  <figcaption class="chart-head"><span class="chart-metric">Monthly Google clicks</span><span class="chart-value">0 <span class="arr" aria-label="to">→</span> 600</span></figcaption>
-                </figure>
-                <div class="case-work"><span class="case-work-label">What I did</span><ul class="case-list"><li>SEO</li><li>Google Ads</li><li>Tracking setup</li></ul></div>
-                <a class="case-link" href="https://drjalalianclinic.com" target="_blank" rel="noopener">drjalalianclinic.com <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-              </div>
-            </li>
-            <li class="case reveal">
-              <div class="case-body">
-                <p class="case-meta">Beauty clinic <span class="nowrap"><span class="sep" aria-hidden="true">·</span> 7 months</span></p>
-                <h4>Amoon Clinic</h4>
-                <figure class="chart" data-from="80" data-from-label="~80" data-to="250" data-months="7">
-                  <figcaption class="chart-head"><span class="chart-metric">Daily Google visits</span><span class="chart-value">~80 <span class="arr" aria-label="to">→</span> ~250+</span></figcaption>
-                </figure>
-                <dl class="case-totals"><div><dt>Total visits</dt><dd>~35K</dd></div><div><dt>Times shown on Google</dt><dd>~700K</dd></div></dl>
-                <div class="case-work"><span class="case-work-label">What I did</span><ul class="case-list"><li>SEO</li><li>Google Ads</li><li>Tracking setup</li></ul></div>
-                <a class="case-link" href="https://amoonclinic.com" target="_blank" rel="noopener">amoonclinic.com <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-              </div>
-            </li>
-          
           </ul>
+          <div class="carousel-nav" hidden>
+            <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous results">←</button>
+            <button type="button" class="carousel-btn" data-dir="1" aria-label="Next results">→</button>
+          </div>
+          </div>
           <p class="chart-note reveal">Lines connect each project’s starting and ending numbers.</p>
         </div>
       </div>
