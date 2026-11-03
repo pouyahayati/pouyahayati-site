@@ -991,3 +991,7 @@ a:hover { text-decoration-thickness: 2px; }
 .tool-card { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .tool-card h3 { margin: 0 0 14px; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--spark); }
 .tool-card .pills li { font-size: .9rem; padding: 6px 14px; background: var(--surface); }
+/* Align project links on one row */
+.wip { height: 100%; }
+.wip-body { flex: 1; }
+.wip .case-link { margin-top: auto; padding-top: 4px; }
