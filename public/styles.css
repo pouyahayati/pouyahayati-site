@@ -567,17 +567,6 @@ a:hover { text-decoration-thickness: 2px; }
 .site-footer a { color: var(--ink-soft); text-decoration: none; }
 .site-footer a:hover { color: var(--ink); }
 
-/* ==========================================================================
-   Scroll reveal (only when JS is running)
-   ========================================================================== */
-@media (prefers-reduced-motion: no-preference) {
-  .js .reveal {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity .6s ease, transform .6s ease;
-  }
-  .js .reveal.is-visible { opacity: 1; transform: none; }
-}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
@@ -985,3 +974,20 @@ a:hover { text-decoration-thickness: 2px; }
 .ts-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .ts-chips li { padding: 6px 12px; font-size: .88rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
 @media (min-width: 800px) { .ts-row { grid-template-columns: 190px 1fr; align-items: center; } }
+
+/* Currently working on: clean cards */
+.wips { gap: 16px; }
+.wip { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.wip-body { gap: 14px; padding: 24px; }
+.wip-tags { align-items: center; justify-content: space-between; }
+.wip h4 { font-size: 1.3rem; }
+.wip .case-work { gap: 10px; display: grid; }
+.pills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.pills li { padding: 5px 12px; font-size: .85rem; background: var(--bg-alt); border: 1px solid var(--line); border-radius: 999px; }
+.wip .case-link { margin-top: 4px; }
+/* Tools section */
+.tool-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .tool-grid { grid-template-columns: repeat(2, 1fr); } }
+.tool-card { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.tool-card h3 { margin: 0 0 14px; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--spark); }
+.tool-card .pills li { font-size: .9rem; padding: 6px 14px; background: var(--surface); }

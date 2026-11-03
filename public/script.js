@@ -15,22 +15,6 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  // Scroll reveal
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-  }
-
   // Growth charts: an area + line from the start to the end figure, on a zero baseline
   var SVG = 'http://www.w3.org/2000/svg';
   var chartId = 0;
