@@ -973,3 +973,15 @@ a:hover { text-decoration-thickness: 2px; }
 .exp-edu { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .92rem; max-width: 900px; }
 .exp-edu span:not(.sep) { margin-right: 6px; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
 @media (min-width: 900px) { .skill-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Hero certifications and tools strip */
+.hero-cert { margin: 14px 0 0; font-size: .85rem; color: var(--nav-ink-soft, #bdbdbd); max-width: 62ch; }
+.hero-cert a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.hero-cert a:hover { color: #fff; }
+.hero-cert + .hero-actions { margin-top: 20px; }
+.tools-strip { margin-top: 28px; display: grid; gap: 14px; }
+.ts-row { display: grid; gap: 8px; }
+.ts-label { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+.ts-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.ts-chips li { padding: 6px 12px; font-size: .88rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+@media (min-width: 800px) { .ts-row { grid-template-columns: 190px 1fr; align-items: center; } }
