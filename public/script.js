@@ -150,7 +150,7 @@
       })
       .catch(function (err) {
         var detail = err && err.message ? ' (' + err.message + ')' : '';
-        setStatus('Something went wrong sending your message' + detail + '. Please email me at contact@pouyahayati.com instead.', 'error');
+        setStatus('Something went wrong sending your message' + detail + '. Please email me at contact@pooyahayati.me instead.', 'error');
       })
       .then(function () {
         button.disabled = false;
