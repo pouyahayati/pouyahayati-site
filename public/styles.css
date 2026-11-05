@@ -1000,3 +1000,19 @@ a:hover { text-decoration-thickness: 2px; }
 .carousel .cases { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 4px 0 8px; }
 .carousel .cases::-webkit-scrollbar { display: none; }
 .carousel .cases .case { flex: 0 0 min(380px, 84%); scroll-snap-align: start; }
+
+/* ===== Design polish: readable text, aligned grids (final overrides) ===== */
+:root { --ink: #0A0A0A; --ink-soft: #1F1F1F; --nav-ink-soft: #E4E4E4; }
+.hero-sub { color: #E8E8E8; }
+.hero-stats dt { color: #D6D6D6; }
+.hero-cert { color: #E4E4E4; }
+.tool-label, .tool-card h3, .skill-num { color: #C2410C; }
+p, li { text-wrap: pretty; }
+h1, h2, h3, h4, .hero-title { text-wrap: balance; }
+.blog-intro { max-width: 56ch; }
+/* Carousels: cards always fill the container width exactly (3 / 2 / 1 per view) */
+.carousel .cases .case, .carousel .posts .post { flex: 0 0 84%; }
+@media (min-width: 600px) { .carousel .cases .case, .carousel .posts .post { flex-basis: calc((100% - 16px) / 2); } }
+@media (min-width: 960px) { .carousel .cases .case, .carousel .posts .post { flex-basis: calc((100% - 32px) / 3); } }
+/* Mobile hero: natural height, no empty black gap above the profile card */
+@media (max-width: 767px) { .hero { min-height: 0; align-items: flex-start; padding: 24px 0 32px; } }
