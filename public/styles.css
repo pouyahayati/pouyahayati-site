@@ -1016,3 +1016,13 @@ h1, h2, h3, h4, .hero-title { text-wrap: balance; }
 @media (min-width: 960px) { .carousel .cases .case, .carousel .posts .post { flex-basis: calc((100% - 32px) / 3); } }
 /* Mobile hero: natural height, no empty black gap above the profile card */
 @media (max-width: 767px) { .hero { min-height: 0; align-items: flex-start; padding: 24px 0 32px; } }
+
+/* ===== About: heading beside the paragraph, cards full width below ===== */
+#about .prose { max-width: 68ch; }
+#about .prose p { font-size: clamp(1.1rem, 2.2vw, 1.3rem); line-height: 1.65; font-weight: 500; color: var(--ink); }
+@media (min-width: 960px) {
+  #about .split { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 0 48px; align-items: start; }
+  #about .split > .section-head { margin-bottom: 40px; }
+  #about .split > .about-cards { grid-column: 1 / -1; }
+}
+@media (min-width: 960px) { #about .split > .prose { margin-bottom: 40px; } }
