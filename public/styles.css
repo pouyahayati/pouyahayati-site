@@ -1026,3 +1026,18 @@ h1, h2, h3, h4, .hero-title { text-wrap: balance; }
   #about .split > .about-cards { grid-column: 1 / -1; }
 }
 @media (min-width: 960px) { #about .split > .prose { margin-bottom: 40px; } }
+
+/* About: heading in the first card column, paragraph spans the next three (same grid as the cards) */
+@media (min-width: 960px) {
+  #about .split { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 20px; }
+  #about .split > .section-head { grid-column: 1; }
+  #about .split > .prose { grid-column: 2 / -1; max-width: none; }
+}
+
+/* Portfolio carousel: next card peeks in, arrows sit top-right next to the title */
+.work-group { position: relative; }
+.work-group .carousel-nav { position: absolute; top: -6px; right: 0; margin: 0; }
+.carousel-btn { width: 44px; height: 44px; border-color: var(--ink); font-size: 1.1rem; }
+.carousel-btn:disabled { border-color: var(--line); }
+@media (min-width: 600px) { .carousel .cases .case { flex-basis: calc((100% - 16px) / 2.2); } }
+@media (min-width: 960px) { .carousel .cases .case { flex-basis: calc((100% - 32px) / 3.2); } }
