@@ -148,7 +148,7 @@
 
 (function () {
   document.querySelectorAll('.carousel').forEach(function (c) {
-    var list = c.querySelector('.posts, .cases'), nav = c.querySelector('.carousel-nav');
+    var list = c.querySelector('.posts, .cases, .cert-track'), nav = c.querySelector('.carousel-nav');
     if (!list || !nav) return;
     var btns = nav.querySelectorAll('.carousel-btn');
     function update() {
