@@ -1076,3 +1076,4 @@ h1, h2, h3, h4, .hero-title { text-wrap: balance; }
   #about .cards > .card { grid-column: span 2; }
   #about .cards > .card:nth-child(n+4) { grid-column: span 3; }
 }
+#about .split > .section-head { grid-column: 1 / -1; margin-bottom: 28px; }
