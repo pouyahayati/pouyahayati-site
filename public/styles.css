@@ -1059,3 +1059,4 @@ h1, h2, h3, h4, .hero-title { text-wrap: balance; }
 .cert-card .case-link { margin-top: auto; padding-top: 8px; }
 #certifications .carousel { position: relative; }
 #certifications .carousel-nav { position: static; justify-content: flex-end; margin: -64px 0 16px; }
+@media (min-width: 1024px) { .hero-sub { max-width: 46rem; } }
