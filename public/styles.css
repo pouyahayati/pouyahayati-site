@@ -1041,3 +1041,6 @@ h1, h2, h3, h4, .hero-title { text-wrap: balance; }
 .carousel-btn:disabled { border-color: var(--line); }
 @media (min-width: 600px) { .carousel .cases .case { flex-basis: calc((100% - 16px) / 2.2); } }
 @media (min-width: 960px) { .carousel .cases .case { flex-basis: calc((100% - 32px) / 3.2); } }
+
+/* Tools: odd last card spans the full row */
+@media (min-width: 800px) { .tool-grid > li:last-child:nth-child(odd) { grid-column: 1 / -1; } }
