@@ -1077,3 +1077,14 @@ h1, h2, h3, h4, .hero-title { text-wrap: balance; }
   #about .cards > .card:nth-child(n+4) { grid-column: span 3; }
 }
 #about .split > .section-head { grid-column: 1 / -1; margin-bottom: 28px; }
+
+/* Certifications: compact cards so all 5 fit on desktop */
+@media (min-width: 1024px) {
+  .cert-track { gap: 12px; }
+  .cert-card { flex-basis: calc((100% - 48px) / 5); padding: 16px; gap: 8px; }
+  .cert-top { gap: 10px; }
+  .cert-logo { width: 32px; height: 32px; }
+  .cert-issuer-name { font-size: .62rem; letter-spacing: .08em; }
+  .cert-card h3 { font-size: .95rem; }
+  .cert-year, .cert-card .case-link { font-size: .8rem; }
+}
