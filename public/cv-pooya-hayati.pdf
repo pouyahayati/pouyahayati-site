@@ -12,7 +12,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Length 11305 >>
+<< /Length 11561 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -428,50 +428,57 @@ BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (Google Analytic
 Q
 Q
 q
-1 0 0 1 42 229.5 cm
+q
+1 0 0 1 42 225.3 cm
+q
+BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
+BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (Generative Engine Optimization (GEO) Specialization) Tj 0 0 0 rg (, Edureka, Coursera \(2026\)) Tj T* ET
+Q
+Q
+1 0 0 1 42 219.3 cm
 Q
 q
-1 0 0 1 42 219.5 cm
+1 0 0 1 42 209.3 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (EDUCATION) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 217.7 cm
+1 0 0 1 42 207.5 cm
 q
 .8 w
 1 J
 0 0 0 RG
 n 0 0 m 528 0 l S
-Q
-Q
-q
-1 0 0 1 42 204.5 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (MBA, Islamic Azad University, Tehran, Iran \(2019\2262022\)) Tj T* ET
 Q
 Q
 q
 1 0 0 1 42 194.3 cm
 q
 0 0 0 rg
+BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (MBA, Islamic Azad University, Tehran, Iran \(2019\2262022\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 42 184.1 cm
+q
+0 0 0 rg
 BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (BSc in Anesthesia, Qazvin University of Medical Sciences, Iran \(2015\2262019\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 188.3 cm
+1 0 0 1 42 178.1 cm
 Q
 q
-1 0 0 1 42 178.3 cm
+1 0 0 1 42 168.1 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (LANGUAGES) Tj T* ET
 Q
 Q
 q
-1 0 0 1 42 176.5 cm
+1 0 0 1 42 166.3 cm
 q
 .8 w
 1 J
@@ -480,7 +487,7 @@ n 0 0 m 528 0 l S
 Q
 Q
 q
-1 0 0 1 42 163.3 cm
+1 0 0 1 42 153.1 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (English: Professional working proficiency \267 Persian: Native) Tj T* ET
@@ -491,7 +498,7 @@ Q
 endstream
 endobj
 6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R] >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R 12 0 R] >>
 endobj
 7 0 obj
 << /Type /Annot /Subtype /Link /Rect [42.000 706.500 126.735 715.500] /Border [0 0 0] /A << /S /URI /URI (mailto:contact@pooyahayati.me) >> >>
@@ -508,22 +515,26 @@ endobj
 11 0 obj
 << /Title (Pooya Payapat Hayati - Resume) /Author (Pooya Payapat Hayati) >>
 endobj
+12 0 obj
+<< /Type /Annot /Subtype /Link /Rect [51.000 225.800 235.400 240.848] /Border [0 0 0] /A << /S /URI /URI (https://www.coursera.org/account/accomplishments/specialization/JEGJ4LTPA3CB) >> >>
+endobj
 xref
-0 12
+0 13
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
 0000000212 00000 n 
 0000000314 00000 n 
-0000011672 00000 n 
-0000011843 00000 n 
-0000012001 00000 n 
-0000012153 00000 n 
-0000012319 00000 n 
-0000012525 00000 n 
+0000011928 00000 n 
+0000012106 00000 n 
+0000012264 00000 n 
+0000012416 00000 n 
+0000012582 00000 n 
+0000012788 00000 n 
+0000012880 00000 n 
 trailer
-<< /Size 12 /Root 1 0 R /Info 11 0 R >>
+<< /Size 13 /Root 1 0 R /Info 11 0 R >>
 startxref
-12617
+13086
 %%EOF
