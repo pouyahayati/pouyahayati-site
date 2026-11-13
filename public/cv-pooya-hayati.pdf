@@ -1,44 +1,318 @@
-%PDF-1.4
+%PDF-1.3
+%‚„œ”
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/Producer (pypdf)
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R] /Count 1 >>
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+<<
+/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R ]
+/Contents 23 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 24 0 R
+/F2 25 0 R
+>>
+>>
+/Type /Page
+/Parent 2 0 R
+>>
 endobj
 5 0 obj
-<< /Length 11561 >>
+<<
+/A <<
+/S /URI
+/URI (mailto\072contact\100pooyahayati\056me)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 42 706.5 126.735 715.5 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+6 0 obj
+<<
+/A <<
+/S /URI
+/URI (https\072\057\057pooyahayati\056me)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 199.92 706.5 252.863 715.5 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/A <<
+/S /URI
+/URI (https\072\057\057linkedin\056com\057in\057pooya\055hayati)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 259.118 706.5 353.738 715.5 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+8 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 132.99 706.4475 193.665 713.9475 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057wa\056me\057639681884599)
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 458.644 99.448 466.644 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057zesto\056coffee)
+>>
+>>
+endobj
+10 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 448.444 66.12 456.444 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057qali\056art)
+>>
+>>
+endobj
+11 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 438.244 71 446.244 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057letro\056com)
+>>
+>>
+endobj
+12 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 393.444 69.68 401.444 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057saeeclinic\056com)
+>>
+>>
+endobj
+13 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 383.244 74.12 391.244 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057telina\056ir)
+>>
+>>
+endobj
+14 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 373.044 92.784 381.044 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057didarhome\056com)
+>>
+>>
+endobj
+15 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 362.844 88.344 370.844 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057taktennis\056com)
+>>
+>>
+endobj
+16 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 352.644 120.344 360.644 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057englishdownload\056ir)
+>>
+>>
+endobj
+17 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 218.504 339.444 275.856 347.444 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057ramkastudio\056com)
+>>
+>>
+endobj
+18 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 266.644 231.936 274.644 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057www\056coursera\056org\057account\057accomplishments\057specialization\0575QYLUIN1EO39)
+>>
+>>
+endobj
+19 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 256.444 138.152 264.444 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057www\056coursera\056org\057account\057accomplishments\057specialization\057MBNFSS2WHLLF)
+>>
+>>
+endobj
+20 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 246.244 201.272 254.244 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057skillshop\056credential\056net\057011f3375\05595d5\0554b43\0558cac\0555e8ccdbbc080\043acc\0567nHJ0DF6)
+>>
+>>
+endobj
+21 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 236.044 155.48 244.044 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057skillshop\056credential\056net\057506bab55\0553a15\05543ec\0559ae7\0556ac7c5745102\043acc\056Y3qTBa7b)
+>>
+>>
+endobj
+22 0 obj
+<<
+/Type /Annot
+/Subtype /Link
+/Rect [ 51 225.8 240.848 233.8 ]
+/Border [ 0 0 0 ]
+/A <<
+/S /URI
+/URI (https\072\057\057www\056coursera\056org\057account\057accomplishments\057specialization\057JEGJ4LTPA3CB)
+>>
+>>
+endobj
+23 0 obj
+<<
+/Length 11376
+>>
 stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
 q
 1 0 0 1 42 738 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 16 Tf 18 TL (Pooya Payapat Hayati) Tj T* ET
+BT
+1 0 0 1 0 2 Tm
+/F2 16 Tf
+18 TL
+(Pooya Payapat Hayati) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 725.5 cm
 q
-BT 1 0 0 1 0 2.5 Tm 12.5 TL /F2 10 Tf 0 0 0 rg (SEO Lead | GEO & Google Ads Specialist) Tj T* ET
+BT
+1 0 0 1 0 2.5 Tm
+12.5 TL
+/F2 10 Tf
+0 0 0 rg
+(SEO Lead | GEO & Google Ads Specialist) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 715.5 cm
 q
-.333333 .333333 .333333 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Nationality: Filipino \267 Based in Manila, Philippines \(GMT+8\) \267 Remote \267 Available for US, AU/NZ, and UK/EU time zones) Tj T* ET
+0.333333 0.333333 0.333333 rg
+BT
+1 0 0 1 0 2.5 Tm
+/F1 7.5 Tf
+10 TL
+(Nationality: Filipino ∑ Based in Manila, Philippines \(GMT+8\) ∑ Remote ∑ Available for US, AU/NZ, and UK/EU time zones) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 705.5 cm
 q
-BT 1 0 0 1 0 2.5 Tm 10 TL /F1 7.5 Tf .101961 .309804 .721569 rg (contact@pooyahayati.me) Tj ( \267 +63 968 188 4599 \267 ) Tj (pooyahayati.me) Tj ( \267 ) Tj (linkedin.com/in/pooya-hayati) Tj T* ET
+BT
+1 0 0 1 0 2.5 Tm
+10 TL
+/F1 7.5 Tf
+0.101961 0.309804 0.721569 rg
+(contact@pooyahayati.me) Tj
+( ∑ +63 968 188 4599 ∑ ) Tj
+(pooyahayati.me) Tj
+<20b720> Tj
+(linkedin.com/in/pooya-hayati) Tj
+T*
+ET
 Q
 Q
 q
@@ -48,23 +322,46 @@ q
 1 0 0 1 42 689.5 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (SUMMARY) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(SUMMARY) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 687.7 cm
 q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
 Q
 Q
 q
 1 0 0 1 42 654.1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 22.6 Tm /F1 8 Tf 10.2 TL 1.457333 Tw (Certified AI-driven SEO, GEO, and Google Ads specialist with 8+ years of experience leading ROI-focused search strategy across healthcare,) Tj T* 0 Tw .5656 Tw (e-commerce, software, and e-learning, in both agency and independent roles. Embeds AI into every stage of the workflow and delivers end-to-end) Tj T* 0 Tw (execution: strategy, technical SEO, content, link building, paid campaigns, web development, and performance reporting.) Tj T* ET
+BT
+1 0 0 1 0 22.6 Tm
+/F1 8 Tf
+10.2 TL
+1.457333 Tw
+(Certified AI-driven SEO, GEO, and Google Ads specialist with 8+ years of experience leading ROI-focused search strategy across healthcare,) Tj
+T*
+0 Tw
+0.5656 Tw
+(e-commerce, software, and e-learning, in both agency and independent roles. Embeds AI into every stage of the workflow and delivers end-to-end) Tj
+T*
+0 Tw
+(execution: strategy, technical SEO, content, link building, paid campaigns, web development, and performance reporting.) Tj
+T*
+ET
 Q
 Q
 q
@@ -74,58 +371,157 @@ q
 1 0 0 1 42 638.1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (CORE SKILLS) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(CORE SKILLS) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 636.3 cm
 q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
 Q
 Q
 q
 1 0 0 1 42 623.1 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (AI-powered SEO:) Tj /F1 8 Tf ( integrating AI into every stage of the workflow with Claude and the OpenAI API) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(AI-powered SEO:) Tj
+/F1 8 Tf
+( integrating AI into every stage of the workflow with Claude and the OpenAI API) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 612.9 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (SEO leadership:) Tj /F1 8 Tf ( strategy, roadmap, and the metrics and KPIs to track progress) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(SEO leadership:) Tj
+/F1 8 Tf
+( strategy, roadmap, and the metrics and KPIs to track progress) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 602.7 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (GEO / AI search:) Tj /F1 8 Tf ( visibility in ChatGPT, Google AI Overviews, Gemini, and Perplexity) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(GEO / AI search:) Tj
+/F1 8 Tf
+( visibility in ChatGPT, Google AI Overviews, Gemini, and Perplexity) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 592.5 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Technical SEO and web development:) Tj /F1 8 Tf ( hands-on with WordPress, Shopify, and Webflow, plus UI/UX and site-flow design) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(Technical SEO and web development:) Tj
+/F1 8 Tf
+( hands-on with WordPress, Shopify, and Webflow, plus UI/UX and site-flow design) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 582.3 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (On-page and off-page SEO:) Tj /F1 8 Tf ( keyword research, site structure, internal links, backlinks, brand search, and social signals) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(On-page and off-page SEO:) Tj
+/F1 8 Tf
+( keyword research, site structure, internal links, backlinks, brand search, and social signals) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 572.1 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Google Ads:) Tj /F1 8 Tf ( campaigns, conversion tracking \(GTM, GA4\), and sales funnel optimization) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(Google Ads:) Tj
+/F1 8 Tf
+( campaigns, conversion tracking \(GTM, GA4\), and sales funnel optimization) Tj
+T*
+ET
 Q
 Q
 q
@@ -135,44 +531,113 @@ q
 1 0 0 1 42 556.1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (TOOLS) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(TOOLS) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 554.3 cm
 q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
 Q
 Q
 q
 1 0 0 1 42 541.1 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (AI & Automation) Tj /F1 8 Tf ( \(across SEO, GEO, and Google Ads\): Claude Code \177 Claude API \177 OpenAI API \177 Google AI Studio \177 n8n) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(AI & Automation) Tj
+/F1 8 Tf
+( \(across SEO, GEO, and Google Ads\): Claude Code \177 Claude API \177 OpenAI API \177 Google AI Studio \177 n8n) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 530.9 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (SEO & GEO:) Tj /F1 8 Tf ( Google Search Console \177 Ahrefs \177 Semrush \177 Screaming Frog \177 KeywordTool.io \177 Moz \177 Google Business Profile) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(SEO & GEO:) Tj
+/F1 8 Tf
+( Google Search Console \177 Ahrefs \177 Semrush \177 Screaming Frog \177 KeywordTool.io \177 Moz \177 Google Business Profile) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 520.7 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Google Ads & Analytics:) Tj /F1 8 Tf ( GA4 \177 GTM \177 Keyword Planner \177 Looker Studio \177 Microsoft Clarity \177 Merchant Center) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(Google Ads & Analytics:) Tj
+/F1 8 Tf
+( GA4 \177 GTM \177 Keyword Planner \177 Looker Studio \177 Microsoft Clarity \177 Merchant Center) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 510.5 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Development & CMS:) Tj /F1 8 Tf ( GitHub \177 WordPress \177 Shopify \177 Webflow) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(Development & CMS:) Tj
+/F1 8 Tf
+( GitHub \177 WordPress \177 Shopify \177 Webflow) Tj
+T*
+ET
 Q
 Q
 q
@@ -182,16 +647,25 @@ q
 1 0 0 1 42 494.5 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (EXPERIENCE) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(EXPERIENCE) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 492.7 cm
 q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
 Q
 Q
 q
@@ -201,19 +675,34 @@ q
 1 0 0 1 42 478.5 cm
 q
 0 0 0 rg
-BT /F1 10 Tf 12 TL ET
+BT
+/F1 10 Tf
+12 TL
+ET
 q
 1 0 0 1 0 1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F2 8 Tf 10.2 TL (Independent SEO Lead and Digital Marketing Manager) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F2 8 Tf
+10.2 TL
+(Independent SEO Lead and Digital Marketing Manager) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 461.736 1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (Sep 2026\226Present) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(Sep 2026\226Present) Tj
+T*
+ET
 Q
 Q
 q
@@ -224,317 +713,678 @@ q
 1 0 0 1 42 468.3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F2 8 Tf 10.2 TL (Current projects) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F2 8 Tf
+10.2 TL
+(Current projects) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 458.1 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf .101961 .309804 .721569 rg (Zesto Coffee) Tj /F1 8 Tf 0 0 0 rg ( \(UK\): Leading SEO and digital marketing, Google Ads, web development \(Shopify\), and Amazon marketplace management) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(Zesto Coffee) Tj
+/F1 8 Tf
+0 0 0 rg
+( \(UK\): Leading SEO and digital marketing, Google Ads, web development \(Shopify\), and Amazon marketplace management) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 447.9 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf .101961 .309804 .721569 rg (Qali) Tj /F1 8 Tf 0 0 0 rg ( \(Germany\): Leading SEO and digital marketing, web development \(WordPress\), and marketplace listings) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(Letro) Tj
+/F1 8 Tf
+0 0 0 rg
+( \(Switzerland and UK\): Google Ads and web development \(Webflow\)) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 437.7 cm
-q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf .101961 .309804 .721569 rg (Letro) Tj /F1 8 Tf 0 0 0 rg ( \(Switzerland and UK\): Google Ads and web development \(Webflow\)) Tj T* ET
-Q
+1 0 0 1 42 444.9 cm
 Q
 q
-1 0 0 1 42 434.7 cm
-Q
-q
-1 0 0 1 42 423.5 cm
+1 0 0 1 42 433.7 cm
 q
 0 0 0 rg
-BT /F1 10 Tf 12 TL ET
+BT
+/F1 10 Tf
+12 TL
+ET
 q
 1 0 0 1 0 1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F2 8 Tf 10.2 TL (Independent SEO and Digital Marketing Manager \267 Remote) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F2 8 Tf
+10.2 TL
+(Independent SEO and Digital Marketing Manager ∑ Remote) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 471.512 1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (2023\226Aug 2026) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(2023\226Aug 2026) Tj
+T*
+ET
 Q
 Q
 q
 Q
+Q
+Q
+q
+1 0 0 1 42 423.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 2.2 Tm
+/F2 8 Tf
+10.2 TL
+(Selected projects) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 413.3 cm
 q
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F2 8 Tf 10.2 TL (Selected projects) Tj T* ET
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(FestivalNexus) Tj
+/F1 8 Tf
+( \(US festival guide; co-founder\): Grew organic Google traffic ) Tj
+/F2 8 Tf
+(from zero to 150K+ monthly users in 10 months) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 403.1 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (FestivalNexus) Tj /F1 8 Tf ( \(US festival guide; co-founder\): Grew organic Google traffic ) Tj /F2 8 Tf (from zero to 150K+ monthly users in 10 months) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(Saee) Tj
+0 0 0 rg
+/F1 8 Tf
+( \(healthcare\): Grew organic Google clicks ) Tj
+/F2 8 Tf
+(from 14K to 60K monthly in 10 months) Tj
+/F1 8 Tf
+(; managed and optimized Google Ads) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 392.9 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Saee) Tj /F1 8 Tf ( \(healthcare\): Grew organic Google clicks ) Tj /F2 8 Tf (from 14K to 60K monthly in 10 months) Tj /F1 8 Tf (; managed and optimized Google Ads) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(Telina) Tj
+0 0 0 rg
+/F1 8 Tf
+( \(cloud telephony SaaS\): Delivered SEO and GEO; generated leads from ChatGPT and earned citations in AI answers for core queries) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 382.7 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Telina) Tj /F1 8 Tf ( \(cloud telephony SaaS\): Delivered SEO and GEO; generated leads from ChatGPT and earned citations in AI answers for core queries) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(Didarhome) Tj
+0 0 0 rg
+/F1 8 Tf
+( \(e-commerce\): Grew organic Google clicks ) Tj
+/F2 8 Tf
+(from 700 to 3,500+ monthly in 10 months) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 372.5 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Didarhome) Tj /F1 8 Tf ( \(e-commerce\): Grew organic Google clicks ) Tj /F2 8 Tf (from 700 to 3,500+ monthly in 10 months) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(Taktennis) Tj
+0 0 0 rg
+/F1 8 Tf
+( \(e-commerce\): Increased monthly sales ) Tj
+/F2 8 Tf
+(8x in 6 months) Tj
+/F1 8 Tf
+( through SEO and PPC ads) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 362.3 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (Taktennis) Tj /F1 8 Tf ( \(e-commerce\): Increased monthly sales ) Tj /F2 8 Tf (8x in 6 months) Tj /F1 8 Tf ( through SEO and PPC ads) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0.101961 0.309804 0.721569 rg
+(English Download) Tj
+0 0 0 rg
+/F1 8 Tf
+( \(e-learning\): Increased monthly sales ) Tj
+/F2 8 Tf
+(4x in one year) Tj
+/F1 8 Tf
+( through SEO, PPC ads, and retention marketing \(SMS and email\)) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 352.1 cm
-q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (English Download) Tj /F1 8 Tf ( \(e-learning\): Increased monthly sales ) Tj /F2 8 Tf (4x in one year) Tj /F1 8 Tf ( through SEO, PPC ads, and retention marketing \(SMS and email\)) Tj T* ET
-Q
+1 0 0 1 42 359.3 cm
 Q
 q
-1 0 0 1 42 349.1 cm
-Q
-q
-1 0 0 1 42 337.9 cm
+1 0 0 1 42 348.1 cm
 q
 0 0 0 rg
-BT /F1 10 Tf 12 TL ET
+BT
+/F1 10 Tf
+12 TL
+ET
 q
 1 0 0 1 0 1 cm
 q
-BT 1 0 0 1 0 2.2 Tm 10.2 TL /F2 8 Tf 0 0 0 rg (SEO and Performance Marketing Specialist \227 ) Tj .101961 .309804 .721569 rg (Ramka Agency) Tj 0 0 0 rg (, Iran) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+10.2 TL
+/F2 8 Tf
+0 0 0 rg
+(SEO and Performance Marketing Specialist \227 ) Tj
+0.101961 0.309804 0.721569 rg
+(Ramka Agency) Tj
+0 0 0 rg
+(, Iran) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 487.968 1 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (2018\2262023) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(2018\2262023) Tj
+T*
+ET
 Q
 Q
 q
 Q
+Q
+Q
+q
+1 0 0 1 42 337.9 cm
+q
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+0 0 0 rg
+BT
+1 0 0 1 9 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(Led SEO and paid search strategy for a diverse portfolio of client accounts) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 327.7 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
 0 0 0 rg
-BT 1 0 0 1 9 2.2 Tm /F1 8 Tf 10.2 TL (Led SEO and paid search strategy for a diverse portfolio of client accounts) Tj T* ET
+<7f> Tj
+ET
+0 0 0 rg
+BT
+1 0 0 1 9 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(Directed content teams and developers to ship SEO fixes on schedule) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 317.5 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
 0 0 0 rg
-BT 1 0 0 1 9 2.2 Tm /F1 8 Tf 10.2 TL (Directed content teams and developers to ship SEO fixes on schedule) Tj T* ET
+<7f> Tj
+ET
+0 0 0 rg
+BT
+1 0 0 1 9 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(Managed Google Ads budgets using GTM and Google Analytics tracking to lower cost per lead) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 307.3 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
 0 0 0 rg
-BT 1 0 0 1 9 2.2 Tm /F1 8 Tf 10.2 TL (Managed Google Ads budgets using GTM and Google Analytics tracking to lower cost per lead) Tj T* ET
-Q
-Q
-q
-1 0 0 1 42 297.1 cm
-q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
+<7f> Tj
+ET
 0 0 0 rg
-BT 1 0 0 1 9 2.2 Tm /F1 8 Tf 10.2 TL (Delivered monthly reports \(Google Analytics, GSC, Ahrefs\) and client presentations) Tj T* ET
+BT
+1 0 0 1 9 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(Delivered monthly reports \(Google Analytics, GSC, Ahrefs\) and client presentations) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 291.1 cm
+1 0 0 1 42 301.3 cm
 Q
 q
-1 0 0 1 42 281.1 cm
+1 0 0 1 42 291.3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (CERTIFICATIONS) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(CERTIFICATIONS) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 279.3 cm
+1 0 0 1 42 289.5 cm
 q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
+Q
+Q
+q
+1 0 0 1 42 276.3 cm
+q
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F1 8 Tf
+0.101961 0.309804 0.721569 rg
+(Google Digital Marketing & E-commerce Certificate) Tj
+0 0 0 rg
+(, Coursera \(2026\)) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 266.1 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (Google Digital Marketing & E-commerce Certificate) Tj 0 0 0 rg (, Coursera \(2026\)) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F1 8 Tf
+0.101961 0.309804 0.721569 rg
+(Google AI Specialization) Tj
+0 0 0 rg
+(, Coursera \(2026\)) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 255.9 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (Google AI Specialization) Tj 0 0 0 rg (, Coursera \(2026\)) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F1 8 Tf
+0.101961 0.309804 0.721569 rg
+(AI-Powered Performance Ads Certification) Tj
+0 0 0 rg
+(, Google Skillshop \(2026\)) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 245.7 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (AI-Powered Performance Ads Certification) Tj 0 0 0 rg (, Google Skillshop \(2026\)) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F1 8 Tf
+0.101961 0.309804 0.721569 rg
+(Google Analytics Certification) Tj
+0 0 0 rg
+(, Google \(2026\)) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 235.5 cm
 q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (Google Analytics Certification) Tj 0 0 0 rg (, Google \(2026\)) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+9.6 TL
+0 0 0 rg
+<7f> Tj
+ET
+BT
+1 0 0 1 9 2.2 Tm
+10.2 TL
+/F1 8 Tf
+0.101961 0.309804 0.721569 rg
+(Generative Engine Optimization (GEO) Specialization) Tj
+0 0 0 rg
+(, Edureka, Coursera \(2026\)) Tj
+T*
+ET
 Q
 Q
 q
-q
-1 0 0 1 42 225.3 cm
-q
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 9.6 TL 0 0 0 rg (\177) Tj ET
-BT 1 0 0 1 9 2.2 Tm 10.2 TL /F1 8 Tf .101961 .309804 .721569 rg (Generative Engine Optimization (GEO) Specialization) Tj 0 0 0 rg (, Edureka, Coursera \(2026\)) Tj T* ET
-Q
-Q
-1 0 0 1 42 219.3 cm
+1 0 0 1 42 229.5 cm
 Q
 q
-1 0 0 1 42 209.3 cm
+1 0 0 1 42 219.5 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (EDUCATION) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(EDUCATION) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 207.5 cm
+1 0 0 1 42 217.7 cm
 q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
+Q
+Q
+q
+1 0 0 1 42 204.5 cm
+q
+0 0 0 rg
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(MBA, Islamic Azad University, Tehran, Iran \(2019\2262022\)) Tj
+T*
+ET
 Q
 Q
 q
 1 0 0 1 42 194.3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (MBA, Islamic Azad University, Tehran, Iran \(2019\2262022\)) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(BSc in Anesthesia, Qazvin University of Medical Sciences, Iran \(2015\2262019\)) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 184.1 cm
+1 0 0 1 42 188.3 cm
+Q
+q
+1 0 0 1 42 178.3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (BSc in Anesthesia, Qazvin University of Medical Sciences, Iran \(2015\2262019\)) Tj T* ET
+BT
+1 0 0 1 0 1.5 Tm
+/F2 8.5 Tf
+10 TL
+(LANGUAGES) Tj
+T*
+ET
 Q
 Q
 q
-1 0 0 1 42 178.1 cm
-Q
+1 0 0 1 42 176.5 cm
 q
-1 0 0 1 42 168.1 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 1.5 Tm /F2 8.5 Tf 10 TL (LANGUAGES) Tj T* ET
-Q
-Q
-q
-1 0 0 1 42 166.3 cm
-q
-.8 w
+0.8 w
 1 J
 0 0 0 RG
-n 0 0 m 528 0 l S
+n
+0 0 m
+528 0 l
+S
 Q
 Q
 q
-1 0 0 1 42 153.1 cm
+1 0 0 1 42 163.3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 2.2 Tm /F1 8 Tf 10.2 TL (English: Professional working proficiency \267 Persian: Native) Tj T* ET
+BT
+1 0 0 1 0 2.2 Tm
+/F1 8 Tf
+10.2 TL
+(English: Professional working proficiency ∑ Persian: Native) Tj
+T*
+ET
 Q
 Q
- 
-
 endstream
 endobj
-6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R 12 0 R] >>
+24 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Subtype /Type1
+/Type /Font
+>>
 endobj
-7 0 obj
-<< /Type /Annot /Subtype /Link /Rect [42.000 706.500 126.735 715.500] /Border [0 0 0] /A << /S /URI /URI (mailto:contact@pooyahayati.me) >> >>
-endobj
-8 0 obj
-<< /Type /Annot /Subtype /Link /Rect [199.920 706.500 252.863 715.500] /Border [0 0 0] /A << /S /URI /URI (https://pooyahayati.me) >> >>
-endobj
-9 0 obj
-<< /Type /Annot /Subtype /Link /Rect [259.118 706.500 353.738 715.500] /Border [0 0 0] /A << /S /URI /URI (https://linkedin.com/in/pooya-hayati) >> >>
-endobj
-10 0 obj
-<< /Type /Annot /Subtype /Link /Rect [51.000 256.400 138.152 266.000] /Border [0 0 0] /A << /S /URI /URI (https://www.coursera.org/account/accomplishments/specialization/MBNFSS2WHLLF) >> >>
-endobj
-11 0 obj
-<< /Title (Pooya Payapat Hayati - Resume) /Author (Pooya Payapat Hayati) >>
-endobj
-12 0 obj
-<< /Type /Annot /Subtype /Link /Rect [51.000 225.800 235.400 240.848] /Border [0 0 0] /A << /S /URI /URI (https://www.coursera.org/account/accomplishments/specialization/JEGJ4LTPA3CB) >> >>
+25 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 13
+0 26
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000212 00000 n 
-0000000314 00000 n 
-0000011928 00000 n 
-0000012106 00000 n 
-0000012264 00000 n 
-0000012416 00000 n 
-0000012582 00000 n 
-0000012788 00000 n 
-0000012880 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000162 00000 n 
+0000000436 00000 n 
+0000000599 00000 n 
+0000000762 00000 n 
+0000000949 00000 n 
+0000001125 00000 n 
+0000001285 00000 n 
+0000001441 00000 n 
+0000001595 00000 n 
+0000001757 00000 n 
+0000001914 00000 n 
+0000002076 00000 n 
+0000002238 00000 n 
+0000002406 00000 n 
+0000002576 00000 n 
+0000002809 00000 n 
+0000003042 00000 n 
+0000003290 00000 n 
+0000003537 00000 n 
+0000003766 00000 n 
+0000015196 00000 n 
+0000015294 00000 n 
 trailer
-<< /Size 13 /Root 1 0 R /Info 11 0 R >>
+<<
+/Size 26
+/Root 3 0 R
+/Info 1 0 R
+>>
 startxref
-13086
+15397
 %%EOF
