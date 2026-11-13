@@ -1,2 +1,5 @@
 /audits/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/downloads/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
